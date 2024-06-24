@@ -1,0 +1,109 @@
+{
+  "saga": [
+    {
+      "name": "TERRES DE GUERRES",
+      "volumes": [
+        {
+          "name": "Terres de Guerres",
+          "volume": 1,
+          "characters": [
+            {
+              "nom": "5O72Y",
+              "prenom": "Onia",
+              "picture": "REMPLIS PAS",
+              "description": "Onia est une loïde B de type espion qui a connu la guerre sur les îles de Phaure. Lorsqu'elle revient au pays, leurs ennemis, les Sylfaens, ont envahi et détruit son chez elle, qu'elle tentera de libérer à tout prix. Portée par une détermination hésitante, Onia est confrontée au dilemme de savoir si les améliorations des loïdes font d'eux des sauveurs ou des abominations.",
+              "relatifs": {
+                "mother": "osef",
+                "father": "osef",
+                "siblings": ["/"]
+              }
+            },
+            {
+              "nom": "1T63Y",
+              "prenom": "Thadée",
+              "picture": "blablabla",
+              "description": "Frère adoptif d'Onia, Thadée est sûr d'une chose : leur gouvernement les manipule et ils doivent s'en libérer s'ils veulent un jour espérer voir un monde meilleur renaître.",
+              "relatifs": {
+                "mother": "osef",
+                "father": "osef",
+                "siblings": []
+              }
+            }
+          ],
+          "synopsis": "Onia une Malachite de type Espion, entraînée ",
+          "contexte": "Terres de Guerres s'inspire de tous les conflits du 20ème siècle et imagine comment seront ceux du prochain siècle. Il pose les questionnements à venir sur la démocratisation du transhumanisme. Cette évolution sera-t-elle employée pour nous sauver ou nous détruire ?"
+        }
+      ]
+    },
+    {
+      "name": "FOUS-PAPILLONS",
+      "volumes": [
+        {
+          "name": "Fous-Papillons",
+          "volume": 1,
+          "characters": [
+            {
+              "nom": "Kassassin",
+              "prenom": "Ethan",
+              "picture": "REMPLIS PAS",
+              "description": "Garçon a priori originaire du Moyen-Orient, Ethan est poursuivi par des rumeurs de sorcellerie qui font de lui le paria du village. S'il survit à cette enfance de famine et de pauvreté, c'est uniquement grâce à Esther qui lui apprendra à lire.",
+              "relatifs": {
+                "mother": "osef",
+                "father": "osef",
+                "siblings": ["/"]
+              }
+            },
+            {
+              "nom": "Dêtres",
+              "prenom": "Esther",
+              "picture": "blablabla",
+              "description": "Fille du médecin et cadette d'une famille de trois enfants, Esther est promise à un mariage difficile pour son comportement et son caractère défiant les règles de l'époque. Elle est pourtant loin de se laisser faire et déclare la guerre à son fiancé dès leur rencontre. Son souhait est pourtant simple : vivre dans la forêt avec Ethan, libre de toute obligation.",
+              "relatifs": {
+                "mother": "osef",
+                "father": "osef",
+                "siblings": []
+              }
+            }
+          ],
+          "synopsis": "Mariée de force au général de l'Etat major, Esther se retrouve embourbée dans les conflits politiques d'une France de 1890. Son cœur est pourtant ailleurs, loin de Paris, dans une forêt où l'attend un garçon ayant vendu son âme au diable pour elle. Entre Frantz, son mystérieux mari aussi froid que manipulateur et Ethan, cet amoureux d'enfance qu'elle veut à tout prix protéger, Esther ne sait plus qui aimer. Malheureusement, à cette époque où les tensions sont aussi vives que les conflits sont destructeurs, ils devront parvenir à survivre sans que le monde n'apprenne leurs machinations sans quoi... ils risquent tous l'exécution.",
+          "contexte": "Fous-Papillons est une romance aux airs de tragédie, où s'aimer frôle la haine, voire s'y confond lorsqu'il ne reste plus d'autre solution pour rester dans le cœur de l'autre."
+        }
+      ]
+    },
+    {
+      "name": "DOUZE DIVINS",
+      "volumes": [
+        {
+          "name": "Les Anges Mortels",
+          "volume": 1,
+          "characters": [
+            {
+              "nom": "osef",
+              "prenom": "Aspen",
+              "picture": "REMPLIS PAS",
+              "description": "Garçon longiforme et pâle aux cheveux blancs et aux yeux violets, Aspen n'a rien d'un héro.",
+              "relatifs": {
+                "mother": "osef",
+                "father": "osef",
+                "siblings": ["/"]
+              }
+            },
+            {
+              "nom": "osef",
+              "prenom": "Vassily",
+              "picture": "blablabla",
+              "description": "Sans corps et piégé dans le crâne d'Aspen, Vassily n'est qu'une voix étrange qui parle d'un autre monde.",
+              "relatifs": {
+                "mother": "osef",
+                "father": "osef",
+                "siblings": []
+              }
+            }
+          ],
+          "synopsis": "Les portes de l’enfer se sont ouvertes et ont déversé sur le monde le Chaos, grouillant de garmes, harpies et démons. Aspen vit à Saint-Pétersbourg, l’une des ultimes villes habitables, et travaille pour le Violetta, la dernière mafia russe encore existante. Alors qu'il devait simplement livrer une valise dans un quartier ravagé par le Chaos, un démon va s'immiscer dans sa tête. Il s'appellerait Vassily et proclame être un humain datant du monde précédent l'apocalypse. Mensonge ou vérité ? Aspen a encore beaucoup à apprendre pour survivre au Violetta et à ce monde qui se referme sur lui.",
+          "contexte": "Mêlant post-apocalypse et fantastique, les Douze Divins est un récit sur un peuple réprimé et manipulé pour une raison qui reste à découvrir."
+        }
+      ]
+    }
+  ]
+}
