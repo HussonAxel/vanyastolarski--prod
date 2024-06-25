@@ -8,9 +8,9 @@ const Header: React.FC = () => {
         <div className="mx-auto">
           <nav className="flex justify-between items-center py-4 border-b border-gray-300 mx-auto w-4/5">
             <ul className="uppercase flex space-x-4">
-              <li>
-                <Link to="/books">Livres</Link>
-              </li>
+              {/* <li>
+                <Link to="/livres">Livres</Link>
+              </li> */}
               <li>
                 <Link to="/shop">Boutique</Link>
               </li>
@@ -28,7 +28,7 @@ const Header: React.FC = () => {
             </ul>
           </nav>
         </div>
-        <div className="text-section text-center m-auto w-fit font-myfont py-16">
+        <div className="text-section text-center m-auto w-fit font-myfont py-12">
           <h2 className="text-6xl">LES DOUZE DIVINS</h2>
           <p className="text-3xl">TOME 1 : LES ANGES MORTELS</p>
         </div>

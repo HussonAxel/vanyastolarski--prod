@@ -4,11 +4,11 @@ import { QuoteTemplateProps } from "./QuoteTemplate.type";
 
 const QuoteTemplate: React.FC<QuoteTemplateProps> = ({BookQuote, DateQuote, SentenceQuote, AuthorSentence, BookCover, BookCoverAlt}) => {
   return (
-    <section className="bg-white">
-      <article className="flex  md:flex-row justify-between items-start w-4/5  text-green m-auto py-10 font-Poppins">
+    <>
+      <article className="flex  md:flex-row justify-between items-start w-8/12  text-green m-auto py-16 font-Poppins">
         <div className="md:w-1/4">
-          <h2 className="font-bold text-xl">{BookQuote}</h2>
-          <p className="text-md italic">{DateQuote}</p>
+          <h2 className="font-bold text-xl mb-2">{BookQuote}</h2>
+          <p className="text-sm italic">{DateQuote}</p>
         </div>
         <div className="md:w-2/4 flex flex-col">
           <p className="font-semibold text-lg mb-6">{SentenceQuote}</p>
@@ -22,8 +22,8 @@ const QuoteTemplate: React.FC<QuoteTemplateProps> = ({BookQuote, DateQuote, Sent
           />
         </div>
       </article>
-      <hr className="m-auto w-4/5 border-solid border-1 bg-green" />
-    </section>
+      <hr className="m-auto w-8/12 border-solid border-2 border-green" />
+    </>
   );
 };
 

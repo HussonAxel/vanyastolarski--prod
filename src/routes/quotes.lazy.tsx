@@ -9,7 +9,7 @@ export const Route = createLazyFileRoute("/quotes")({
 
 const LivresComponents = () => {
   return (
-    <>
+    <section className='pt-12 bg-white'>
       <QuoteTemplate
         BookQuote={"LES DOUZE DIVINS"}
         DateQuote={"24 Sept. 2024"}
@@ -66,7 +66,7 @@ const LivresComponents = () => {
           "Un récit poignant d'amour et de survie dans une époque de grandes incertitudes."
         }
       />
-    </>
+    </section>
   );
 }
 
