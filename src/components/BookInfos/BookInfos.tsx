@@ -8,11 +8,11 @@ const BookInfos = ({ Synopsis, Contexte, picture }: BookInfosProps) => {
         alt=""
         className="rounded-md h-full w-auto max-h-[700px]"
       />
-      <div className="flex flex-col justify-center w-2/3 pl-20 max-w-3xl">
+      <div className="flex flex-col justify-center w-2/3 pl-20 max-w-3xl leading-relaxed">
         <h2 className="font-myfont text-6xl text-green pb-8">Synopsis</h2>
-        <p className="mb-32 text-balance">{Synopsis}</p>
+        <p className="mb-16 text-balance text-black font-Poppins font-light">{Synopsis}</p>
         <h2 className="font-myfont text-6xl text-green pb-8">Contexte</h2>
-        <p className="text-balance ">{Contexte}</p>
+        <p className="text-balance text-black font-Poppins font-light">{Contexte}</p>
       </div>
     </section>
   );

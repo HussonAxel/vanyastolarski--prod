@@ -3,8 +3,9 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     colors: {
-      white: "#FFF5EA",
+      white: "#DCD4D1",
       green: "#364540",
+      black: "#2F2F33",
     },
     extend: {
       fontFamily: {
