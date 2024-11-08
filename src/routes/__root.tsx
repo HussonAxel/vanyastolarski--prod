@@ -1,15 +1,15 @@
 import { createRootRoute, Outlet } from "@tanstack/react-router";
 import { TanStackRouterDevtools } from "@tanstack/router-devtools";
-import '../index.css';
+import ColoredSection from "../components/ColoredSection";
+import "../index.css";
 
-
-
-import Header
- from "@components/Header/Header";
+import Header from "@components/Header/Header";
 export const Route = createRootRoute({
   component: () => (
     <>
-      <Header />
+      <ColoredSection bgColor="bg-green">
+        <Header />
+      </ColoredSection>
       <Outlet />
       <TanStackRouterDevtools />
     </>

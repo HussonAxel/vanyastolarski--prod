@@ -1,21 +1,44 @@
 import { createLazyFileRoute } from "@tanstack/react-router";
-import cover from "../../assets/covers/12_divins_couverture.webp";
-
+import { useParams } from "@tanstack/react-router";
 import BookInfos from "@components/BookInfos/BookInfos";
+import CharacterPanel from "@components/CharacterPanel/CharacterPanel";
+import ColoredSection from "@components/ColoredSection.tsx";
+
+import data from "../../data/data.json";
 
 const LivreComponents = () => {
+  const { id } = useParams({ from: "/livres/$id" });
+  const book = data.books.find((book) => book.id === id);
+
+  if (!book) {
+    return <div>Book not found</div>;
+  }
+
   return (
-    <BookInfos
-      Synopsis={
-        "« Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat.  Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat.Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat."
-      }
-      Contexte={
-        "« Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat.  Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat.Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat."
-      }
-      picture={cover}
-    />
+    <>
+      <ColoredSection bgColor="bg-white">
+        <BookInfos
+          SynopsisSectionContent="Synopsis"
+          Synopsis={book.synopsis}
+          ContexteSectionContent="Contexte"
+          Contexte={book.contexte}
+          picture={`../${book.cover}`}
+        />
+      </ColoredSection>
+      <ColoredSection bgColor="bg-green">
+        <h2 className="font-myfont text-6xl text-white pb-4">Personnages</h2>
+        {book.characters.map((character, index) => (
+          <CharacterPanel
+            key={index}
+            name={`${character.prenom} ${character.nom}`}
+            resume={character.description}
+            picture={`../${character.picture}`}
+          />
+        ))}
+      </ColoredSection>
+    </>
   );
-}
+};
 
 export const Route = createLazyFileRoute("/livres/$id")({
   component: LivreComponents,

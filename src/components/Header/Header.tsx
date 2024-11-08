@@ -1,44 +1,46 @@
-import { Link } from "@tanstack/react-router";
-// import Breadcrumb from "@components/Breadcrumb/Breadcrumb";
+import React from "react";
+import NavBarOpenedMenu from "@components/NavBarOpenedMenu/NavBarOpenedMenu";
 
 const Header: React.FC = () => {
-  return (
-    <>
-      <header className="bg-green font-Poppins text-white">
-        <div className="mx-auto">
-          <nav className="flex justify-between items-center py-4 border-b border-gray-300 mx-auto w-4/5">
-            <ul className="uppercase flex space-x-4">
-              {/* <li>
-                <Link to="/livres">Livres</Link>
-              </li> */}
-              <li>
-                <Link to="/shop">Boutique</Link>
-              </li>
-            </ul>
-            <span className="text-7xl font-myfont font-thin mx-auto">
-              <Link to="/">VS</Link>
-            </span>
-            <ul className="uppercase flex space-x-4">
-              <li>
-                <Link to="/quotes">Lectures</Link>
-              </li>
-              <li>
-                <Link to="/blog">Actus</Link>
-              </li>
-            </ul>
-          </nav>
-        </div>
-        <div className="text-section text-center m-auto w-fit font-myfont py-12">
-          <h2 className="text-6xl">LES DOUZE DIVINS</h2>
-          <p className="text-3xl">TOME 1 : LES ANGES MORTELS</p>
-        </div>
-      </header>
-      {/* <Breadcrumb
-        title={"LES DOUZE DIVINS"}
-        subtitle={"TOME 1 : LES ANGES MORTELS"}
-      /> */}
-    </>
-  );
+    return (
+      <>
+        <header className="font-Cinzel text-white pb-32 m-auto bg-green">
+          <div className="mx-auto border-b-2 flex justify-between items-center h-[100px]">
+            <a href={"/"} className="text-4xl">
+              Vanya Stolarski
+            </a>
+            <svg
+              className="cursor-pointer"
+              width="48"
+              height="42"
+              viewBox="0 0 48 42"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect
+                className="pwm-anim"
+                width="48"
+                height="1"
+                rx="0.5"
+                fill="#EDE3D4"
+              ></rect>
+              <rect
+                y="7.15625"
+                width="48"
+                height="1"
+                rx="0.5"
+                fill="#EDE3D4"
+              ></rect>
+              <path
+                d="M3.84082 31.8906L4.99805 35.4453L6.24805 31.8906H7.37109V39H6.49219V36.1631L6.56543 33.1943L5.25195 37.0225H4.73438L3.52832 33.2969L3.60156 36.1631V39H2.72266V31.8906H3.84082ZM19.1666 35.7139H16.1979V38.2334H19.6598V39H15.2945V31.8906H19.6158V32.6621H16.1979V34.9473H19.1666V35.7139ZM32.1145 39H31.1965L28.4377 33.6875L28.423 39H27.51V31.8906H28.4279L31.1867 37.1934L31.2014 31.8906H32.1145V39ZM44.5301 31.8906L44.5398 36.7051C44.5333 37.0371 44.4731 37.348 44.3592 37.6377C44.2452 37.9274 44.0857 38.1813 43.8807 38.3994C43.6756 38.6143 43.4314 38.7852 43.1482 38.9121C42.865 39.0358 42.5542 39.0977 42.2156 39.0977C41.8706 39.0977 41.5564 39.0358 41.2732 38.9121C40.99 38.7884 40.7475 38.6191 40.5457 38.4043C40.3439 38.1862 40.186 37.9323 40.0721 37.6426C39.9581 37.3496 39.8995 37.0371 39.8963 36.7051L39.9061 31.8906H40.7654L40.785 36.7051C40.7882 36.9167 40.8208 37.1201 40.8826 37.3154C40.9477 37.5107 41.0389 37.6833 41.1561 37.833C41.2765 37.9827 41.4246 38.1032 41.6004 38.1943C41.7794 38.2855 41.9845 38.3311 42.2156 38.3311C42.4467 38.3311 42.6502 38.2871 42.826 38.1992C43.0018 38.1081 43.1482 37.9876 43.2654 37.8379C43.3859 37.6849 43.477 37.5107 43.5389 37.3154C43.6007 37.1201 43.6349 36.9167 43.6414 36.7051L43.6561 31.8906H44.5301Z"
+                fill="#EDE3D4"
+              ></path>
+            </svg>
+          </div>
+          <NavBarOpenedMenu />
+        </header>
+      </>
+    );
 };
 
 export default Header;

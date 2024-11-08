@@ -1,5 +1,8 @@
 export interface BookInfosProps {
-    Synopsis: string;
-    Contexte: string;
-    picture: string
+  Synopsis: string;
+  SynopsisSectionContent: string;
+  Contexte: string;
+  ContexteSectionContent: string;
+  picture: string;
+  
 }

@@ -16,7 +16,6 @@ import { Route as rootRoute } from './routes/__root'
 
 // Create Virtual Routes
 
-const TestLazyImport = createFileRoute('/test')()
 const ShopLazyImport = createFileRoute('/shop')()
 const QuotesLazyImport = createFileRoute('/quotes')()
 const BlogLazyImport = createFileRoute('/blog')()
@@ -24,11 +23,6 @@ const IndexLazyImport = createFileRoute('/')()
 const LivresIdLazyImport = createFileRoute('/livres/$id')()
 
 // Create/Update Routes
-
-const TestLazyRoute = TestLazyImport.update({
-  path: '/test',
-  getParentRoute: () => rootRoute,
-} as any).lazy(() => import('./routes/test.lazy').then((d) => d.Route))
 
 const ShopLazyRoute = ShopLazyImport.update({
   path: '/shop',
@@ -87,13 +81,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ShopLazyImport
       parentRoute: typeof rootRoute
     }
-    '/test': {
-      id: '/test'
-      path: '/test'
-      fullPath: '/test'
-      preLoaderRoute: typeof TestLazyImport
-      parentRoute: typeof rootRoute
-    }
     '/livres/$id': {
       id: '/livres/$id'
       path: '/livres/$id'
@@ -111,7 +98,6 @@ export const routeTree = rootRoute.addChildren({
   BlogLazyRoute,
   QuotesLazyRoute,
   ShopLazyRoute,
-  TestLazyRoute,
   LivresIdLazyRoute,
 })
 

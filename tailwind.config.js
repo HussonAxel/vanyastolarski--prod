@@ -3,16 +3,16 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     colors: {
-      white: "#DCD4D1",
-      green: "#364540",
+      white: "#F4EFEB",
+      green: "#535F4A",
+      lightgreen: "#BDC6C2",
       black: "#2F2F33",
     },
     extend: {
       fontFamily: {
         Poppins: ["Poppins"],
-        // marckScript: ["Marck Script"],
-        // playwrite: ["Playwrite MX", "sans-serif"],
-        myfont: ["MyFont", "sans-serif"],
+        Cinzel: ["Cinzel", "sans-serif"],
+        Cormorant: ["Cormorant"],
       },
       maxWidth: {
         xl: "1440px",
