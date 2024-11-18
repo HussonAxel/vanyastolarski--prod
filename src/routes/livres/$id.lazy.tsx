@@ -7,7 +7,7 @@ import ColoredSection from "@components/ColoredSection";
 import Pagination from "@components/ui/Pagination/Pagination";
 import data from "../../data/data.json";
 import OtherBooks from "@components/OtherBooks/OtherBooks";
-import BookData from "@components/BookData/BookData";
+// import BookData from "@components/BookData/BookData";
 
 
 const LivreComponents = () => {
@@ -49,9 +49,9 @@ const LivreComponents = () => {
         />
       </ColoredSection>
 
-      <ColoredSection bgColor="bg-green">
+      {/* <ColoredSection bgColor="bg-green">
         <BookData BookTitle={book.title} />
-      </ColoredSection>
+      </ColoredSection> */}
 
       <ColoredSection bgColor="bg-white">
         <h2 className="font-WorkSans text-3xl md:text-5xl text-green pb-4 text-center relative underline">

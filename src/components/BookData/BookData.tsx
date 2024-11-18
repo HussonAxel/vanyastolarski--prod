@@ -1,7 +1,7 @@
-import data from "../../data/data.json";
-import { BookDataProps } from "./BookData.type";
+// import data from "../../data/data.json";
+// import { BookDataProps } from "./BookData.type";
 
-const BookData = ({BookTitle}: BookDataProps) => {
+const BookData = () => {
   return (
     <div className="p-4 mb-8 text-white">
       <h2 className="font-WorkSans text-5xl text-white pb-4 text-center underline">
