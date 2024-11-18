@@ -1,0 +1,33 @@
+import { createLazyFileRoute } from "@tanstack/react-router";
+import ColoredSection from "../../components/ColoredSection";
+import BooksData from "@data/data.json";
+import Book from "@components/Book/Book";
+
+export const Route = createLazyFileRoute("/livres/")({
+  component: () => <LivresComponents />,
+});
+
+const LivresComponents = () => {
+  return (
+    <>
+      <ColoredSection bgColor="bg-white">
+        <section className="pt-12">
+          {BooksData.books.map((book) => (
+            <Book
+              key={book.id}
+              BookSaga={book.saga}
+              BookTitle={book.title}
+              BookResume={book.synopsis}
+              isbn={book.ISBN}
+              BookCover={book.cover}
+              BookCoverAlt={`${book.title} cover`}
+              bookID={book.id}
+              BookPages={book.pages}
+              firstChapterLink={book.firstChapterLink}
+            />
+          ))}
+        </section>
+      </ColoredSection>
+    </>
+  );
+};

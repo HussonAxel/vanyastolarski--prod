@@ -1,0 +1,56 @@
+import React from "react";
+import data from "../../data/data.json";
+import { Link } from "@tanstack/react-router";
+
+const OtherBooks: React.FC = () => {
+  const otherBooks = data.books.slice(0, 4);
+
+  return (
+    <section className="py-8 md:py-12 lg:py-16 px-4">
+      <div className="max-w-7xl mx-auto">
+        <h2 className="font-WorkSans text-3xl sm:text-4xl lg:text-5xl text-white mb-8 md:mb-12 text-center">
+          <span className="border-b-2 border-white pb-2">
+            Mes autres livres
+          </span>
+        </h2>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 lg:gap-10">
+          {otherBooks.map((book) => (
+            <Link
+              key={book.id}
+              to={`/livres/${book.id}`}
+              className="group block"
+            >
+              <article className="flex flex-col items-center p-4 rounded-lg transition-all duration-300 hover:bg-white/5">
+                {/* Image Container */}
+                <div className="relative w-full aspect-[2/3] mb-4">
+                  <img
+                    src={`../${book.cover}`}
+                    alt={book.title}
+                    className="w-full h-full object-cover rounded-lg shadow-lg group-hover:shadow-xl group-hover:scale-[1.02] transition-all duration-300"
+                  />
+                </div>
+
+                {/* Title */}
+                <h3 className="text-base sm:text-lg text-white text-center font-WorkSans group-hover:text-white/90 transition-colors duration-300 line-clamp-2">
+                  {book.title}
+                </h3>
+              </article>
+            </Link>
+          ))}
+        </div>
+
+        <div className="text-center mt-8 md:mt-12">
+          <Link
+            to="/livres"
+            className="inline-block px-6 py-3 text-white border border-white rounded-lg hover:bg-white hover:text-black transition-colors duration-300"
+          >
+            Voir tous les livres
+          </Link>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default OtherBooks;
