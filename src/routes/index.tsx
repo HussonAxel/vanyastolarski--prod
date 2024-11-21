@@ -1,65 +1,67 @@
-import { createFileRoute } from "@tanstack/react-router";
-import { Helmet } from "react-helmet-async";
-import ColoredSection from "@components/ColoredSection";
-import BooksData from "@data/data.json";
-import Book from "@components/Book/Book";
+import {createFileRoute} from '@tanstack/react-router'
+import LatestRelease from "@components/LatestRelease/LatestRelease.tsx";
+import BookResume from "@components/BookResume/BookResume";
+import LatestReading from '@components/LatestReading/LatestReading';
+import ServicesList from '@components/ServicesList/ServicesList';
+import { Helmet } from 'react-helmet-async';
 
-export const Route = createFileRoute("/")({
-  component: () => <LivresComponents />,
-});
+import ColoredSection from "@components/ColoredSection.tsx";
+import data from "@data/data.json";
 
-const LivresComponents = () => {
+export const Route = createFileRoute('/')({
+    component: () => <IndexComponent/>,
+})
+
+const IndexComponent = () => {
   return (
     <>
       <Helmet>
-        <title>Livres | Vanya Stolarski</title>
+        <title>Vanya Stolarski | Auteure de romans</title>
         <meta
           name="description"
-          content="Découvrez tous les livres de Vanya Stolarski. Romans contemporains explorant des thèmes profonds et touchants."
+          content="Découvrez l'univers littéraire de Vanya Stolarski, auteure de romans contemporains. Explorez ses œuvres, son dernier livre 'Fous Papillons' et ses actualités."
         />
-        <meta property="og:title" content="Bibliographie | Vanya Stolarski" />
+
+        <meta property="og:title" content="Vanya Stolarski | Romancière" />
         <meta
           property="og:description"
-          content="Explorez la collection complète des œuvres de Vanya Stolarski, auteure de romans contemporains."
+          content="Plongez dans l'univers de Vanya Stolarski, auteure de romans qui explore [thèmes principaux]. Découvrez ses œuvres et son actualité littéraire."
         />
         <meta property="og:type" content="website" />
-        <meta
-          property="og:image"
-          content="https://www.vanyastolarski.fr/assets/covers/FP_Cover.webp"
-        />
-        <meta
-          property="og:url"
-          content="https://www.vanyastolarski.fr/livres"
-        />{" "}
+        <meta property="og:image" content="[URL-photo-auteur]" />
+        <meta property="og:url" content="[URL-site]" />
+
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Les Livres de Vanya Stolarski" />
+        <meta name="twitter:title" content="Vanya Stolarski | Écrivaine" />
         <meta
           name="twitter:description"
-          content="Découvrez la bibliographie complète de Vanya Stolarski."
+          content="Romans, actualités et rencontres littéraires de Vanya Stolarski, auteure contemporaine."
         />
+
         <meta
           name="keywords"
-          content="Vanya Stolarski, livres, romans, bibliographie, œuvres littéraires"
+          content="Vanya Stolarski, roman contemporain, littérature française, Fous Papillons, auteure, écrivaine, romans"
         />
-        <link rel="canonical" href="https://www.vanyastolarski.fr/livres" />
+        <meta name="author" content="Vanya Stolarski" />
+        <link rel="canonical" href="https://www.vanyastolarski.fr/" />
       </Helmet>
       <ColoredSection bgColor="bg-white">
-        <section className="pt-12">
-          {BooksData.books.map((book) => (
-            <Book
-              key={book.id}
-              BookSaga={book.saga}
-              BookTitle={book.title}
-              BookResume={book.synopsis}
-              isbn={book.ISBN}
-              BookCover={book.cover}
-              BookCoverAlt={`${book.title} cover`}
-              bookID={book.id}
-              BookPages={book.pages}
-              firstChapterLink={book.firstChapterLink}
-            />
-          ))}
-        </section>
+        <LatestRelease
+          LatestReleaseName="Fous Papillons"
+          LatestReleaseSynopsis={data.books[2].synopsis}
+          youtubeEmbedUrl="https://www.youtube.com/embed/oMXpFLSyzow"
+          latestReleasePageUrl="livres/2"
+          latestReleasePictureUrl={""}
+        />
+      </ColoredSection>
+      <ColoredSection bgColor="bg-green">
+        <BookResume />
+      </ColoredSection>
+      <ColoredSection bgColor="bg-white">
+        <LatestReading />
+      </ColoredSection>
+      <ColoredSection bgColor="bg-green">
+        <ServicesList />
       </ColoredSection>
     </>
   );
