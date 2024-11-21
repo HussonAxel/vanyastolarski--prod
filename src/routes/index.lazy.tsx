@@ -43,7 +43,7 @@ const IndexComponent = () => {
           content="Vanya Stolarski, roman contemporain, littérature française, Fous Papillons, auteure, écrivaine, romans"
         />
         <meta name="author" content="Vanya Stolarski" />
-        <link rel="canonical" href="[URL-site]" />
+        <link rel="canonical" href="https://www.vanyastolarski.fr/" />
       </Helmet>
       <ColoredSection bgColor="bg-white">
         <LatestRelease

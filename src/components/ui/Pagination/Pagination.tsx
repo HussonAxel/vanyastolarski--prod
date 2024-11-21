@@ -19,7 +19,7 @@ const PastilleButton = ({
 }) => (
   <button
     onClick={onClick}
-    className={`w-3 h-3 mx-1 rounded-full transition-all duration-300 ${
+    className={`w-3 h-3 mx-2 rounded-full transition-all duration-300 ${
       isGreen
         ? isActive 
           ? "bg-green scale-125" 
