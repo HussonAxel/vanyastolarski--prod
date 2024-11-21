@@ -82,6 +82,7 @@ const Footer: React.FC = () => {
               </div>
               <div className="flex justify-center sm:justify-start gap-6">
                 <a
+                  aria-label="Visit notre page Instagram"
                   href="https://www.instagram.com/vanyastolar.auteure/"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -90,6 +91,7 @@ const Footer: React.FC = () => {
                   <FaInstagram className="hover:rotate-6" />
                 </a>
                 <a
+                  aria-label="Visite notre page ulule"
                   href="https://ulule.com/edition-reliee-et-brochee---fous-papillons"
                   target="_blank"
                   rel="noopener noreferrer"
