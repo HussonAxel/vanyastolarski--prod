@@ -13,7 +13,7 @@
         {
           "nom": "5O72Y",
           "prenom": "Onia",
-          "picture": "/assets/Characters/Fill_BG.png",
+          "picture": "/assets/Characters/Fill_BG.webp",
           "description": "Onia est une loïde B de type espion qui a connu la guerre sur les îles de Phaure. Lorsqu'elle revient au pays, leurs ennemis, les Sylfaens, ont envahi et détruit son chez elle, qu'elle tentera de libérer à tout prix. Portée par une détermination hésitante, Onia est confrontée au dilemme de savoir si les améliorations des loïdes font d'eux des sauveurs ou des abominations.",
           "relatifs": {
             "mother": "osef",
@@ -24,7 +24,7 @@
         {
           "nom": "5O72Y",
           "prenom": "Onia",
-          "picture": "/assets/Characters/Fill_BG.png",
+          "picture": "/assets/Characters/Fill_BG.webp",
           "description": "Onia est une loïde B de type espion qui a connu la guerre sur les îles de Phaure. Lorsqu'elle revient au pays, leurs ennemis, les Sylfaens, ont envahi et détruit son chez elle, qu'elle tentera de libérer à tout prix. Portée par une détermination hésitante, Onia est confrontée au dilemme de savoir si les améliorations des loïdes font d'eux des sauveurs ou des abominations.",
           "relatifs": {
             "mother": "osef",
@@ -35,7 +35,7 @@
         {
           "nom": "5O72Y",
           "prenom": "Onia",
-          "picture": "/assets/Characters/Fill_BG.png",
+          "picture": "/assets/Characters/Fill_BG.webp",
           "description": "Onia est une loïde B de type espion qui a connu la guerre sur les îles de Phaure. Lorsqu'elle revient au pays, leurs ennemis, les Sylfaens, ont envahi et détruit son chez elle, qu'elle tentera de libérer à tout prix. Portée par une détermination hésitante, Onia est confrontée au dilemme de savoir si les améliorations des loïdes font d'eux des sauveurs ou des abominations.",
           "relatifs": {
             "mother": "osef",
@@ -46,7 +46,7 @@
         {
           "nom": "1T63Y",
           "prenom": "Thadée",
-          "picture": "/assets/Characters/Fill_BG.png",
+          "picture": "/assets/Characters/Fill_BG.webp",
           "description": "Frère adoptif d'Onia, Thadée est sûr d'une chose : leur gouvernement les manipule et ils doivent s'en libérer s'ils veulent un jour espérer voir un monde meilleur renaître.",
           "relatifs": {
             "mother": "osef",
@@ -57,7 +57,7 @@
         {
           "nom": "1T63Y",
           "prenom": "Thadée",
-          "picture": "/assets/Characters/Fill_BG.png",
+          "picture": "/assets/Characters/Fill_BG.webp",
           "description": "Frère adoptif d'Onia, Thadée est sûr d'une chose : leur gouvernement les manipule et ils doivent s'en libérer s'ils veulent un jour espérer voir un monde meilleur renaître.",
           "relatifs": {
             "mother": "osef",
@@ -68,7 +68,7 @@
         {
           "nom": "1T63Y",
           "prenom": "Thadée",
-          "picture": "/assets/Characters/Fill_BG.png",
+          "picture": "/assets/Characters/Fill_BG.webp",
           "description": "Frère adoptif d'Onia, Thadée est sûr d'une chose : leur gouvernement les manipule et ils doivent s'en libérer s'ils veulent un jour espérer voir un monde meilleur renaître.",
           "relatifs": {
             "mother": "osef",
@@ -87,13 +87,13 @@
       "id": "2",
       "title": "Fous-Papillons",
       "volume": 1,
-      "cover": "/assets/covers/FP_Cover.png",
+      "cover": "/assets/covers/FP_Cover.webp",
       "tags": ["Fantasy", "Science-fiction", "ennemy to lover"],
       "characters": [
         {
           "nom": "Kassassin",
           "prenom": "Ethan",
-          "picture": "/assets/Characters/Fill_BG.png",
+          "picture": "/assets/Characters/Fill_BG.webp",
           "description": "Garçon a priori originaire du Moyen-Orient, Ethan est poursuivi par des rumeurs de sorcellerie qui font de lui le paria du village. S'il survit à cette enfance de famine et de pauvreté, c'est uniquement grâce à Esther qui lui apprendra à lire.",
           "relatifs": {
             "mother": "osef",
@@ -104,7 +104,7 @@
         {
           "nom": "Dêtres",
           "prenom": "Esther",
-          "picture": "/assets/Characters/Fill_BG.png",
+          "picture": "/assets/Characters/Fill_BG.webp",
           "description": "Fille du médecin et cadette d'une famille de trois enfants, Esther est promise à un mariage difficile pour son comportement et son caractère défiant les règles de l'époque. Elle est pourtant loin de se laisser faire et déclare la guerre à son fiancé dès leur rencontre. Son souhait est pourtant simple : vivre dans la forêt avec Ethan, libre de toute obligation.",
           "relatifs": {
             "mother": "osef",
@@ -130,7 +130,7 @@
         {
           "nom": "osef",
           "prenom": "Aspen",
-          "picture": "/assets/Characters/Fill_BG.png",
+          "picture": "/assets/Characters/Fill_BG.webp",
           "description": "Garçon longiforme et pâle aux cheveux blancs et aux yeux violets, Aspen n'a rien d'un héro.",
           "relatifs": {
             "mother": "osef",
@@ -141,7 +141,7 @@
         {
           "nom": "osef",
           "prenom": "Vassily",
-          "picture": "/assets/Characters/Fill_BG.png",
+          "picture": "/assets/Characters/Fill_BG.webp",
           "description": "Sans corps et piégé dans le crâne d'Aspen, Vassily n'est qu'une voix étrange qui parle d'un autre monde.",
           "relatifs": {
             "mother": "osef",
@@ -166,7 +166,7 @@
         {
           "nom": "osef",
           "prenom": "Aspen",
-          "picture": "/assets/Characters/Fill_BG.png",
+          "picture": "/assets/Characters/Fill_BG.webp",
           "description": "Garçon longiforme et pâle aux cheveux blancs et aux yeux violets, Aspen n'a rien d'un héro.",
           "relatifs": {
             "mother": "osef",
@@ -177,7 +177,7 @@
         {
           "nom": "osef",
           "prenom": "Vassily",
-          "picture": "/assets/Characters/Fill_BG.png",
+          "picture": "/assets/Characters/Fill_BG.webp",
           "description": "Sans corps et piégé dans le crâne d'Aspen, Vassily n'est qu'une voix étrange qui parle d'un autre monde.",
           "relatifs": {
             "mother": "osef",
