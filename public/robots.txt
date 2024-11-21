@@ -1,5 +1,16 @@
 User-agent: *
-Allow: /Livres
-Allow: /Reviews
-Allow: /Citations
-Allow: /Galerie
+Disallow: /admin/
+Disallow: /private/
+Disallow: /tmp/
+Disallow: /node_modules/
+Disallow: /build/
+Disallow: /scripts/
+Disallow: /src/
+Disallow: /*.json$
+Disallow: /*.md$
+
+# Allow indexing of the rest of the site
+Allow: /
+
+# Sitemap location
+Sitemap: https://www.vanyastolarski.fr/sitemap.xml
