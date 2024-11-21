@@ -3,21 +3,30 @@ interface PaginationProps {
   totalPages: number;
   onPageChange: (page: number) => void;
   className?: string;
+  isGreen?: boolean;
 }
 
 const PastilleButton = ({
   page,
   isActive,
   onClick,
+  isGreen = true,
 }: {
   page: number;
   isActive: boolean;
   onClick: () => void;
+  isGreen: boolean;
 }) => (
   <button
     onClick={onClick}
     className={`w-3 h-3 mx-1 rounded-full transition-all duration-300 ${
-      isActive ? "bg-green scale-125" : "bg-green/30 hover:bg-green/50"
+      isGreen
+        ? isActive 
+          ? "bg-green scale-125" 
+          : "bg-green/30 hover:bg-green/50"
+        : isActive 
+          ? "bg-white scale-125" 
+          : "bg-white/30 hover:bg-white/50"
     }`}
     aria-label={`Page ${page}`}
   />
@@ -28,13 +37,14 @@ const Pagination = ({
   totalPages,
   onPageChange,
   className = "",
+  isGreen = true,
 }: PaginationProps) => {
   return (
     <div className={`flex justify-center items-center ${className}`}>
       <button
         onClick={() => onPageChange(currentPage - 1)}
         disabled={currentPage === 1}
-        className="p-2 text-white opacity-70 hover:opacity-100 disabled:opacity-30 transition-opacity"
+        className={`p-2 ${isGreen ? 'text-green' : 'text-white'} opacity-70 hover:opacity-100 disabled:opacity-30 transition-opacity`}
         aria-label="Previous page"
       >
       </button>
@@ -46,6 +56,7 @@ const Pagination = ({
             page={page}
             isActive={currentPage === page}
             onClick={() => onPageChange(page)}
+            isGreen={isGreen}
           />
         ))}
       </div>
@@ -53,7 +64,7 @@ const Pagination = ({
       <button
         onClick={() => onPageChange(currentPage + 1)}
         disabled={currentPage === totalPages}
-        className="p-2 text-white opacity-70 hover:opacity-100 disabled:opacity-30 transition-opacity"
+        className={`p-2 ${isGreen ? 'text-green' : 'text-white'} opacity-70 hover:opacity-100 disabled:opacity-30 transition-opacity`}
         aria-label="Next page"
       >
       </button>

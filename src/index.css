@@ -1,13 +1,16 @@
-@import '@fontsource/cinzel/400.css';
-@import '@fontsource/cinzel/500.css';
-@import '@fontsource/cinzel/600.css';
-@import '@fontsource/cinzel/700.css';
-@import '@fontsource/cinzel/800.css';
-@import '@fontsource/cinzel/900.css';
+@font-face {
+  font-family: 'Large';
+  src: url('../public/assets/fonts/Large-Roman.otf') format('opentype');
+  font-weight: normal;
+}
 
-@import '@fontsource/cormorant/300.css';
-@import '@fontsource/cormorant/500.css';
-@import '@fontsource/cormorant/700.css';
+@font-face {
+  font-family: 'Large-Italic';
+  src: url('../public/assets/fonts/Large-Italic.otf') format('opentype');
+  font-style: italic;
+  font-weight: normal;
+}
+
 
 
 @tailwind base;

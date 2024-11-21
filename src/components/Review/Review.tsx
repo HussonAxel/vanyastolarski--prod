@@ -28,7 +28,7 @@ const ReviewRating = ({
 
 const Section = ({ title, content }: { title: string; content: string }) => (
   <div className="mb-6 md:mb-8">
-    <h3 className="text-xl md:text-2xl font-bold mb-3 md:mb-4 text-green">
+    <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold font-Large text-green mb-4">
       {title}
     </h3>
     <p className="text-base md:text-lg leading-relaxed">{content}</p>
@@ -51,7 +51,7 @@ const ReviewSection = ({
     className="space-y-4"
   >
     <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 sm:gap-0">
-      <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold">{title}</h3>
+      <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold font-Large">{title}</h3>
       <ReviewRating rating={rating} size="large" />
     </div>
     <p className="text-base md:text-lg leading-relaxed">{content}</p>
@@ -75,8 +75,8 @@ const ReviewPage = () => {
       <ColoredSection bgColor="bg-white">
         <div className="px-4 md:px-6 lg:px-8">
           {/* Title Section */}
-          <div className="text-lightgreen font-WorkSans text-center mb-12 md:mb-20 lg:mb-32">
-            <h1 className="text-4xl md:text-5xl lg:text-7xl mb-2 md:mb-4 border-b border-lightgreen inline-block pb-2">
+          <div className="text-green font-Large text-center mb-12 md:mb-20 lg:mb-32">
+            <h1 className="text-4xl md:text-5xl lg:text-7xl mb-2 md:mb-4 border-b border-green inline-block pb-2">
               {review.bookSaga}
             </h1>
             <h2 className="text-2xl md:text-3xl lg:text-4xl mt-4">
@@ -96,7 +96,7 @@ const ReviewPage = () => {
               <img
                 src={review.bookCover}
                 alt={review.bookTitle}
-                className="rounded-lg shadow-2xl w-auto max-w-full h-auto max-h-[400px] md:max-h-[500px] lg:max-h-[700px] object-contain"
+                className="rounded-lg shadow-2xl w-auto max-w-full h-auto max-h-[300px] md:max-h-[400px] lg:max-h-[500px] object-contain"
               />
             </motion.div>
 

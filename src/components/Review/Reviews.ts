@@ -25,7 +25,7 @@ export interface ReviewData {
 export const reviewsData: ReviewData[] = [
   {
     id: "1",
-    bookCover: "../src/assets/covers/12_divins_couverture.webp",
+    bookCover: "/assets/covers/12_divins_couverture.webp",
     bookSaga: "LES DOUZE DIVINS",
     bookTitle: "Les Anges Mortels",
     synopsis:

@@ -1,7 +1,9 @@
 import React from "react";
-import { FaInstagram, FaTwitter } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { Link } from "@tanstack/react-router";
+import UluleIcon from "@components/ululeIcon/UluleIcon";
+
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -23,7 +25,7 @@ const Footer: React.FC = () => {
   const LinkWithUnderline = ({ to, text }: { to: string; text: string }) => (
     <Link
       to={to}
-      className="relative group inline-block transition-all duration-300 ease-in-out hover:text-green/80"
+      className="relative group inline-block transition-all duration-300 ease-in-out hover:text-green/80 text-md"
     >
       {text}
       <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-green transition-all duration-300 ease-in-out group-hover:w-full" />
@@ -36,7 +38,7 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12 mb-8">
           {/* Navigation Section */}
           <div className="text-center sm:text-left">
-            <h3 className="text-xl lg:text-2xl mb-4 font-bold hover:text-green/80 transition-all duration-300 ease-in-out">
+            <h3 className="text-lg lg:text-xl mb-4 font-bold hover:text-green/80 transition-all duration-300 ease-in-out font-Large">
               Navigation
             </h3>
             <ul className="space-y-2">
@@ -50,7 +52,7 @@ const Footer: React.FC = () => {
 
           {/* Books Section */}
           <div className="text-center sm:text-left">
-            <h3 className="text-xl lg:text-2xl mb-4 font-bold hover:text-green/80 transition-all duration-300 ease-in-out">
+            <h3 className="text-lg lg:text-xl mb-4 font-bold hover:text-green/80 transition-all duration-300 ease-in-out font-Large">
               Mes Livres
             </h3>
             <ul className="space-y-2">
@@ -64,7 +66,7 @@ const Footer: React.FC = () => {
 
           {/* Contact Section */}
           <div className="text-center sm:text-left">
-            <h3 className="text-xl lg:text-2xl mb-4 font-bold hover:text-green/80 transition-all duration-300 ease-in-out">
+            <h3 className="text-lg lg:text-xl mb-4 font-bold hover:text-green/80 transition-all duration-300 ease-in-out font-Large">
               Contact
             </h3>
             <div className="space-y-4">
@@ -80,20 +82,20 @@ const Footer: React.FC = () => {
               </div>
               <div className="flex justify-center sm:justify-start gap-6">
                 <a
-                  href="https://instagram.com/your-handle"
+                  href="https://www.instagram.com/vanyastolar.auteure/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-2xl hover:text-lightgreen transition-all duration-300 ease-in-out transform hover:scale-110"
+                  className="text-2xl hover:text-green transition-all duration-300 ease-in-out transform hover:scale-110"
                 >
                   <FaInstagram className="hover:rotate-6" />
                 </a>
                 <a
-                  href="https://twitter.com/your-handle"
+                  href="https://ulule.com/edition-reliee-et-brochee---fous-papillons"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-2xl hover:text-lightgreen transition-all duration-300 ease-in-out transform hover:scale-110"
+                  className="text-2xl hover:text-green transition-all duration-300 ease-in-out transform hover:scale-110"
                 >
-                  <FaTwitter className="hover:-rotate-6" />
+                  <UluleIcon />
                 </a>
               </div>
             </div>

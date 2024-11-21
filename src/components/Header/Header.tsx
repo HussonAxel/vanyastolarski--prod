@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import { FaInstagram, FaTwitter, FaBars, FaTimes } from "react-icons/fa";
+import { FaInstagram, FaBars, FaTimes } from "react-icons/fa";
 import { Link } from "@tanstack/react-router";
 import { motion, AnimatePresence } from "framer-motion";
+import UluleIcon from "@components/ululeIcon/UluleIcon";
 
 const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,14 +16,14 @@ const Header: React.FC = () => {
 
   const socialLinks = [
     {
-      href: "https://instagram.com/your-handle",
+      href: "https://www.instagram.com/vanyastolar.auteure/",
       icon: FaInstagram,
       label: "Follow on Instagram",
     },
     {
-      href: "https://twitter.com/your-handle",
-      icon: FaTwitter,
-      label: "Follow on Twitter",
+      href: "https://ulule.com/edition-reliee-et-brochee---fous-papillons",
+      icon: UluleIcon,
+      label: "Follow on Ulule",
     },
   ];
 
@@ -78,7 +79,7 @@ const Header: React.FC = () => {
                   href={link.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-2xl hover:text-lightgreen"
+                  className="text-2xl hover:text-green"
                   aria-label={link.label}
                   whileHover={{
                     scale: 1.1,

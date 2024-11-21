@@ -3,19 +3,16 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     colors: {
-      white: "#ffefd3",
+      white: "#FBF9DB",
       green: "#4a6f63",
-      lightgreen: "#4a6f63",
       black: "#2F2F33",
     },
 
     extend: {
       fontFamily: {
-        Poppins: ["Poppins"],
-        Cinzel: ["Cinzel", "sans-serif"],
-        Cormorant: ["Cormorant"],
-        Libre: ["Libre Baskerville"],
         WorkSans: ["Work Sans"],
+        Large: ["Large", "sans-serif"],
+        LargeItalic: ["Large-Italic", "sans-serif"]
       },
       maxWidth: {
         xl: "1440px",

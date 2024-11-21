@@ -6,10 +6,10 @@ const OtherBooks: React.FC = () => {
   const otherBooks = data.books.slice(0, 4);
 
   return (
-    <section className="py-8 md:py-12 lg:py-16 px-4">
+    <section className="px-4">
       <div className="max-w-7xl mx-auto">
-        <h2 className="font-WorkSans text-3xl sm:text-4xl lg:text-5xl text-white mb-8 md:mb-12 text-center">
-          <span className="border-b-2 border-white pb-2">
+        <h2 className="font-Large text-3xl sm:text-4xl lg:text-5xl text-green mb-8 md:mb-12 text-center">
+          <span className="border-b-2 border-green pb-2">
             Mes autres livres
           </span>
         </h2>
@@ -32,7 +32,7 @@ const OtherBooks: React.FC = () => {
                 </div>
 
                 {/* Title */}
-                <h3 className="text-base sm:text-lg text-white text-center font-WorkSans group-hover:text-white/90 transition-colors duration-300 line-clamp-2">
+                <h3 className="text-base sm:text-lg text-green text-center font-WorkSans group-hover:text-white/90 transition-colors duration-300 line-clamp-2">
                   {book.title}
                 </h3>
               </article>

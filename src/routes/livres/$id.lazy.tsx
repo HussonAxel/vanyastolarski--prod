@@ -53,8 +53,8 @@ const LivreComponents = () => {
         <BookData BookTitle={book.title} />
       </ColoredSection> */}
 
-      <ColoredSection bgColor="bg-white">
-        <h2 className="font-WorkSans text-3xl md:text-5xl text-green pb-4 text-center relative underline">
+      <ColoredSection bgColor="bg-green">
+        <h2 className="font-Large text-3xl md:text-5xl text-white pb-4 text-center relative underline">
           Personnages
         </h2>
         <div className="space-y-8 w-full lg:w-10/12 m-auto px-4">
@@ -73,11 +73,12 @@ const LivreComponents = () => {
             totalPages={totalPages}
             onPageChange={setCurrentPage}
             className="mt-8 pb-4"
+            isGreen={false}
           />
         )}
       </ColoredSection>
 
-      <ColoredSection bgColor="bg-green">
+      <ColoredSection bgColor="bg-white">
         <OtherBooks />
       </ColoredSection>
     </main>

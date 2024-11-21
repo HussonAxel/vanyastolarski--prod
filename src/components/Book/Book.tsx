@@ -18,7 +18,7 @@ const Book: React.FC<BookProps> = ({
       {/* Book Cover */}
       <div className="w-full sm:w-2/3 lg:w-1/3 flex justify-center">
         <img
-          className="w-[250px] sm:w-[300px] lg:w-[350px] h-auto max-h-[500px] rounded-lg shadow-xl object-contain"
+          className="w-[250px] sm:w-[300px] lg:w-[350px] h-auto max-h-[500px] rounded-lg object-contain"
           src={BookCover}
           alt={BookCoverAlt || "Book cover"}
         />
@@ -29,18 +29,18 @@ const Book: React.FC<BookProps> = ({
         {/* Title and Details */}
         <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-4">
           {/* Title Section */}
-          <div className="font-WorkSans text-center sm:text-left">
+          <div className="font-Large text-center sm:text-left">
             {BookSaga ? (
               <>
-                <h1 className="text-3xl sm:text-4xl font-semibold text-lightgreen mb-2">
+                <h1 className="text-3xl sm:text-4xl font-semibold text-green mb-2 ">
                   {BookSaga}
                 </h1>
-                <h2 className="text-lg sm:text-xl text-lightgreen">
+                <h2 className="text-lg sm:text-xl text-green">
                   {BookTitle}
                 </h2>
               </>
             ) : (
-              <h1 className="text-3xl sm:text-4xl font-semibold text-lightgreen">
+              <h1 className="text-3xl sm:text-4xl font-semibold text-green">
                 {BookTitle}
               </h1>
             )}
@@ -55,7 +55,7 @@ const Book: React.FC<BookProps> = ({
 
         {/* Book Resume */}
         <div className="text-black">
-          <p className="text-center sm:text-left text-sm sm:text-base leading-relaxed">
+          <p className="text-center sm:text-left text-sm sm:text-base leading-relaxed max-w-[850px]">
             {BookResume}
           </p>
         </div>

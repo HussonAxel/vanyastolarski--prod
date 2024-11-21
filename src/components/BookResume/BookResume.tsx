@@ -10,18 +10,20 @@ const BookResume = () => {
         {BooksData.books.map((BookData) => (
           <article
             key={BookData.title}
-            className="flex flex-col md:flex-row items-center gap-5 pb-6 border-b border-white"
+            className="flex flex-col lg:flex-row gap-8 pb-6 border-b border-white"
           >
             <img
               src={BookData.cover}
               alt={`Couverture de ${BookData.title}`}
-              className="md:w-[300px] h-auto md:h-[450px] object-cover mb-5 md:mb-0 rounded-md drop-shadow-lg"
+              className="lg:w-[300px] h-auto lg:h-[450px] max-h-[450px] object-cover mb-5 md:mb-0 rounded-md drop-shadow-lg"
             />
-            <div className="flex flex-col gap-y-10 gap-x-5 pl-4 text-white">
-              <h2 className="text-4xl font-semibold text-white mb-2">
+            <div className="flex flex-col gap-y-8 gap-x-5 pl-4 text-white">
+              <h2 className="text-3xl font-semibold text-white mb-2 font-Large">
                 {BookData.title}
               </h2>
-              <p className=" font-WorkSans text-md">{BookData.synopsis}</p>
+              <p className="font-WorkSans text-md max-h-[300px] overflow-hidden line-clamp-[10]">
+                {BookData.synopsis}
+              </p>
               <Button
                 text={"EN SAVOIR PLUS"}
                 isPrimary={true}

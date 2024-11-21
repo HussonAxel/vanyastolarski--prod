@@ -9,7 +9,7 @@ const ServicesList = () => {
       <SectionTitle title="Services" isGreen={true} />
       {Services.map((service, index) => (
         <div key={index} className="border-t p-4 mb-6 text-white">
-          <h2 className="font-WorkSans text-3xl font-semibold mb-8 mt-4">
+          <h2 className="font-Large text-3xl font-semibold mb-8 mt-4">
             {service.title}
           </h2>
           <div className="flex flex-row justify-between">

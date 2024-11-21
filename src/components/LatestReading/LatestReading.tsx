@@ -71,7 +71,7 @@ const LatestReading = () => {
       />
       <div className="flex flex-col gap-8 text-black max-w-[80%] md:max-w-3xl">
         <div className="font-WorkSans text-black">
-          <h1 className="text-2xl md:text-4xl semibold mb-2 underline text-green">
+          <h1 className="text-2xl md:text-4xl semibold mb-2 underline text-green font-Large">
             {saga}
           </h1>
           <h2 className="text-md md:text-lg">{title}</h2>
