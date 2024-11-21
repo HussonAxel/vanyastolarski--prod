@@ -1,5 +1,6 @@
 import { useParams } from "@tanstack/react-router";
 import { motion } from "framer-motion";
+import { Helmet } from "react-helmet-async";
 import { reviewsData } from "./Reviews";
 import ColoredSection from "@components/ColoredSection";
 
@@ -11,7 +12,6 @@ const ReviewRating = ({
   size?: "small" | "large";
 }) => {
   const dotSize = size === "large" ? "w-5 h-5" : "w-3 h-3 sm:w-4 sm:h-4";
-
   return (
     <div className="flex items-center gap-1">
       {[...Array(5)].map((_, index) => (
@@ -51,7 +51,9 @@ const ReviewSection = ({
     className="space-y-4"
   >
     <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 sm:gap-0">
-      <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold font-Large">{title}</h3>
+      <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold font-Large">
+        {title}
+      </h3>
       <ReviewRating rating={rating} size="large" />
     </div>
     <p className="text-base md:text-lg leading-relaxed">{content}</p>
@@ -70,11 +72,53 @@ const ReviewPage = () => {
     );
   }
 
+  const fullTitle = review.bookSaga
+    ? `${review.bookSaga} : ${review.bookTitle}`
+    : review.bookTitle;
+
   return (
     <main className="font-WorkSans">
+      <Helmet>
+        <title>Review: {fullTitle} | Vanya Stolarski</title>
+        <meta
+          name="description"
+          content={`Découvrez la critique de ${fullTitle}. Note globale: ${review.globalRating}/5. ${review.synopsis.substring(0, 150)}...`}
+        />
+        <meta
+          property="og:title"
+          content={`Critique: ${fullTitle} | Vanya Stolarski`}
+        />
+        <meta
+          property="og:description"
+          content={`Critique littéraire de ${fullTitle}. Découvrez l'analyse de l'univers, de l'histoire et des personnages.`}
+        />
+        <meta property="og:type" content="article" />
+        <meta
+          property="og:image"
+          content={`https://www.vanyastolarski.fr${review.bookCover}`}
+        />
+        <meta
+          property="og:url"
+          content={`https://www.vanyastolarski.fr/reviews/${id}`}
+        />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={`Review: ${fullTitle}`} />
+        <meta
+          name="twitter:description"
+          content={`Découvrez la critique détaillée de ${fullTitle} par Vanya Stolarski.`}
+        />
+        <meta
+          name="keywords"
+          content={`critique ${review.bookTitle}, review ${review.bookSaga || ""}, avis lecture, critique littéraire, Vanya Stolarski`}
+        />
+        <link
+          rel="canonical"
+          href={`https://www.vanyastolarski.fr/reviews/${id}`}
+        />
+      </Helmet>
+
       <ColoredSection bgColor="bg-white">
         <div className="px-4 md:px-6 lg:px-8">
-          {/* Title Section */}
           <div className="text-green font-Large text-center mb-12 md:mb-20 lg:mb-32">
             <h1 className="text-4xl md:text-5xl lg:text-7xl mb-2 md:mb-4 border-b border-green inline-block pb-2">
               {review.bookSaga}
@@ -84,9 +128,7 @@ const ReviewPage = () => {
             </h2>
           </div>
 
-          {/* Book Details Section */}
           <div className="flex flex-col lg:flex-row gap-8 lg:gap-16 max-w-7xl mx-auto">
-            {/* Book Cover */}
             <motion.div
               className="flex justify-center lg:justify-start flex-shrink-0"
               initial={{ opacity: 0, scale: 0.9 }}
@@ -100,7 +142,6 @@ const ReviewPage = () => {
               />
             </motion.div>
 
-            {/* Synopsis and Context */}
             <div className="flex flex-col justify-center w-full lg:w-2/3 lg:pl-8 xl:pl-20 max-w-3xl">
               <Section title="Synopsis" content={review.synopsis} />
               <Section title="Contexte" content={review.context} />
@@ -109,7 +150,6 @@ const ReviewPage = () => {
         </div>
       </ColoredSection>
 
-      {/* Reviews Section */}
       <ColoredSection bgColor="bg-green">
         <div className="w-full md:w-10/12 lg:w-9/12 mx-auto px-4 md:px-6">
           <div className="text-white space-y-8 md:space-y-12">
@@ -129,7 +169,6 @@ const ReviewPage = () => {
               rating={review.charactersReview.rating}
             />
 
-            {/* Global Rating */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}

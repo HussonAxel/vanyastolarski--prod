@@ -1,14 +1,13 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useParams } from "@tanstack/react-router";
 import { useState } from "react";
+import { Helmet } from "react-helmet-async";
 import BookInfos from "@components/BookInfos/BookInfos";
 import CharacterPanel from "@components/CharacterPanel/CharacterPanel";
 import ColoredSection from "@components/ColoredSection";
 import Pagination from "@components/ui/Pagination/Pagination";
 import data from "../../data/data.json";
 import OtherBooks from "@components/OtherBooks/OtherBooks";
-// import BookData from "@components/BookData/BookData";
-
 
 const LivreComponents = () => {
   const { id } = useParams({ from: "/livres/$id" });
@@ -34,9 +33,39 @@ const LivreComponents = () => {
   const totalPages = Math.ceil(book.characters.length / charactersPerPage);
   const displayedSagaTitle = book.saga || book.title;
   const displayedBookTitle = book.saga ? book.title : undefined;
+  const fullTitle = book.saga ? `${book.saga} : ${book.title}` : book.title;
 
   return (
     <main className="w-full">
+      <Helmet>
+        <title>{fullTitle} | Vanya Stolarski</title>
+        <meta name="description" content={book.synopsis} />
+        <meta property="og:title" content={`${fullTitle} | Vanya Stolarski`} />
+        <meta property="og:description" content={book.synopsis} />
+        <meta property="og:type" content="book" />
+        <meta
+          property="og:image"
+          content={`https://www.vanyastolarski.fr${book.cover}`}
+        />
+        <meta
+          property="og:url"
+          content={`https://www.vanyastolarski.fr/livres/${id}`}
+        />
+        <meta property="book:isbn" content={book.ISBN} />
+        <meta property="book:author" content="Vanya Stolarski" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={fullTitle} />
+        <meta name="twitter:description" content={book.synopsis} />
+        <meta
+          name="keywords"
+          content={`Vanya Stolarski, ${book.title}, ${book.saga || ""}, roman contemporain, littérature française`}
+        />
+        <link
+          rel="canonical"
+          href={`https://www.vanyastolarski.fr/livres/${id}`}
+        />
+      </Helmet>
+
       <ColoredSection bgColor="bg-white">
         <BookInfos
           SynopsisSectionContent="Synopsis"
@@ -48,10 +77,6 @@ const LivreComponents = () => {
           BookTitle={displayedBookTitle || ""}
         />
       </ColoredSection>
-
-      {/* <ColoredSection bgColor="bg-green">
-        <BookData BookTitle={book.title} />
-      </ColoredSection> */}
 
       <ColoredSection bgColor="bg-green">
         <h2 className="font-Large text-3xl md:text-5xl text-white pb-4 text-center relative underline">

@@ -32,7 +32,7 @@ const OtherBooks: React.FC = () => {
                 </div>
 
                 {/* Title */}
-                <h3 className="text-base sm:text-lg text-green text-center font-WorkSans group-hover:text-white/90 transition-colors duration-300 line-clamp-2">
+                <h3 className="text-base sm:text-lg text-green text-center font-WorkSans">
                   {book.title}
                 </h3>
               </article>
