@@ -73,10 +73,10 @@ const Footer: React.FC = () => {
               <div className="flex items-center justify-center sm:justify-start gap-2">
                 <MdEmail className="text-xl" />
                 <a
-                  href="mailto:contact@vanyastolarski.com"
+                  href="mailto:vanya.stolarski@gmail.com"
                   className="relative group transition-all duration-300 ease-in-out hover:text-green/80"
                 >
-                  contact@vanyastolarski.com
+                  vanya.stolarski@gmail.com
                   <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-green transition-all duration-300 ease-in-out group-hover:w-full" />
                 </a>
               </div>

@@ -11,11 +11,11 @@ export const Route = createRootRoute({
   component: () => (
     <>
       <ScrollRestoration />
-      <div className="bg-white md:px-32">
+      <div className="bg-white px-0 lg:px-32">
         <Header />
       </div>
       <Outlet />
-      <div className="bg-white md:px-32">
+      <div className="bg-white px-0 lg:px-32">
         <Footer />
       </div>
     </>

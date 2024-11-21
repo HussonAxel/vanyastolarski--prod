@@ -53,7 +53,7 @@ const LatestReading = () => {
     id: number;
   }) => (
     <motion.article
-      className="flex flex-col md:flex-row items-center gap-8 md:gap-24 pb-6 w-fit m-auto"
+      className="flex flex-col md:flex-row items-center gap-8 md:gap-24 pb-6 w-fit m-auto max-w-[80%]"
       initial="enter"
       animate="center"
       exit="exit"
