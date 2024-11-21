@@ -12,7 +12,7 @@ const LatestRelease = ({
     <section className="content-center">
       <div className="w-9/12 m-auto flex flex-col md:flex-row items-center gap-8 md:gap-12 lg:gap-16 h-full">
         <div className="w-full md:w-1/2 flex flex-col gap-6 md:gap-8 lg:gap-10">
-          <h1 className="text-3xl lg:text-5xl text-green leading-tight uppercase underline font-Large">
+          <h1 className="text-3xl lg:text-5xl text-green font-Large">
             {LatestReleaseName}
           </h1>
 
