@@ -38,9 +38,9 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12 mb-8">
           {/* Navigation Section */}
           <div className="text-center sm:text-left">
-            <h3 className="text-lg lg:text-xl mb-4 font-bold hover:text-green/80 transition-all duration-300 ease-in-out font-Large">
+            <p className="text-lg lg:text-xl mb-4 font-bold hover:text-green/80 transition-all duration-300 ease-in-out font-Large">
               Navigation
-            </h3>
+            </p>
             <ul className="space-y-2">
               {navigationLinks.map((link) => (
                 <li key={link.to}>
@@ -52,9 +52,9 @@ const Footer: React.FC = () => {
 
           {/* Books Section */}
           <div className="text-center sm:text-left">
-            <h3 className="text-lg lg:text-xl mb-4 font-bold hover:text-green/80 transition-all duration-300 ease-in-out font-Large">
+            <p className="text-lg lg:text-xl mb-4 font-bold hover:text-green/80 transition-all duration-300 ease-in-out font-Large">
               Mes Livres
-            </h3>
+            </p>
             <ul className="space-y-2">
               {books.map((book) => (
                 <li key={book.to}>
@@ -66,9 +66,9 @@ const Footer: React.FC = () => {
 
           {/* Contact Section */}
           <div className="text-center sm:text-left">
-            <h3 className="text-lg lg:text-xl mb-4 font-bold hover:text-green/80 transition-all duration-300 ease-in-out font-Large">
+            <p className="text-lg lg:text-xl mb-4 font-bold hover:text-green/80 transition-all duration-300 ease-in-out font-Large">
               Contact
-            </h3>
+            </p>
             <div className="space-y-4">
               <div className="flex items-center justify-center sm:justify-start gap-2">
                 <MdEmail className="text-xl" />
