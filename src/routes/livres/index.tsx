@@ -1,9 +1,9 @@
-import { createLazyFileRoute } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/react-router";
 import ColoredSection from "../../components/ColoredSection";
 import BooksData from "@data/data.json";
 import Book from "@components/Book/Book";
 
-export const Route = createLazyFileRoute("/livres/")({
+export const Route = createFileRoute("/livres/")({
   component: () => <LivresComponents />,
 });
 

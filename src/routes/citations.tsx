@@ -1,4 +1,4 @@
-import { createLazyFileRoute } from '@tanstack/react-router'
+import { createFileRoute } from '@tanstack/react-router'
 import CitationModel from '@components/CitationModel/CitationModel'
 import { Citations } from '@data/Citations'
 import ColoredSection from '@components/ColoredSection';
@@ -26,6 +26,6 @@ const CitationIndex = () => {
   );
 };
 
-export const Route = createLazyFileRoute('/citations')({
-  component: () => <CitationIndex/>
-})
+export const Route = createFileRoute("/citations")({
+  component: () => <CitationIndex />,
+});

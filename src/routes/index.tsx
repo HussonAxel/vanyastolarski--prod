@@ -1,4 +1,4 @@
-import {createLazyFileRoute} from '@tanstack/react-router'
+import {createFileRoute} from '@tanstack/react-router'
 import LatestRelease from "@components/LatestRelease/LatestRelease.tsx";
 import BookResume from "@components/BookResume/BookResume";
 import LatestReading from '@components/LatestReading/LatestReading';
@@ -8,7 +8,7 @@ import { Helmet } from 'react-helmet-async';
 import ColoredSection from "@components/ColoredSection.tsx";
 import data from "@data/data.json";
 
-export const Route = createLazyFileRoute('/')({
+export const Route = createFileRoute('/')({
     component: () => <IndexComponent/>,
 })
 

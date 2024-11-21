@@ -1,4 +1,4 @@
-import { createLazyFileRoute } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/react-router";
 import { useParams } from "@tanstack/react-router";
 import { useState } from "react";
 import BookInfos from "@components/BookInfos/BookInfos";
@@ -85,6 +85,6 @@ const LivreComponents = () => {
   );
 };
 
-export const Route = createLazyFileRoute("/livres/$id")({
+export const Route = createFileRoute("/livres/$id")({
   component: LivreComponents,
 });

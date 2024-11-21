@@ -1,4 +1,4 @@
-import { createLazyFileRoute } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/react-router";
 import GalleryPics from "@components/GalleryPics/GalleryPics";
 import ColoredSection from "@components/ColoredSection";
 
@@ -9,6 +9,6 @@ const GalerieComponents = () => {
     </ColoredSection>
   );
 };
-export const Route = createLazyFileRoute("/galerie")({
+export const Route = createFileRoute("/galerie")({
   component: () => <GalerieComponents />,
 });
