@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /Livres
+Allow: /Reviews
+Allow: /Citations
+Allow: /Galerie
