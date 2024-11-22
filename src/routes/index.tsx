@@ -21,7 +21,6 @@ const IndexComponent = () => {
           name="description"
           content="Découvrez l'univers littéraire de Vanya Stolarski, auteure de romans contemporains. Explorez ses œuvres, son dernier livre 'Fous Papillons' et ses actualités."
         />
-
         <meta property="og:title" content="Vanya Stolarski | Romancière" />
         <meta
           property="og:description"
