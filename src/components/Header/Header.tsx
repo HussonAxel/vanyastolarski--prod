@@ -14,7 +14,7 @@ const Header: React.FC = () => {
   ];
 
   return (
-    <header className=" bg-white text-black/90 font-Large pt-8 border-b-2 border-green/20">
+    <header className=" bg-white text-black/90 font-Large pt-4 lg:pt-8 lg:border-b-2 border-green/20">
       <div className="mx-auto 2xl:px-12 max-w-[1400px]">
         <div className="flex items-center justify-between h-20 mr-4">
           <motion.div
@@ -84,7 +84,7 @@ const Header: React.FC = () => {
               exit={{ opacity: 0, height: 0 }}
               className="lg:hidden overflow-hidden bg-white"
             >
-              <div className="py-4 space-y-4 text-center">
+              <div className="text-center border-b border-black/80">
                 {menuLinks.map((link) => (
                   <motion.div
                     key={link.to}
@@ -94,7 +94,7 @@ const Header: React.FC = () => {
                   >
                     <Link
                       to={link.to}
-                      className="text-lg tracking-wider font-medium block py-8 border-2 border-green/20 hover:text-white hover:bg-green "
+                      className="text-2xl tracking-wider font-medium block py-12 border-t border-black/80 hover:text-white hover:bg-green "
                       onClick={() => setIsOpen(false)}
                     >
                       {link.text}
