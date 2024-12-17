@@ -11,21 +11,21 @@ interface GalleryImage {
 
 const galleryData: GalleryImage[] = [
   {
-    url: "public/assets/gallery/aspen_sarah.jpg",
+    url: "/assets/gallery/aspen_sarah.jpg",
     title: "Aspen",
     artist: "Sarah",
     date: "Mars 2024",
     description: "Un dessin de Aspen",
   },
   {
-    url: "public/assets/gallery/aspendessin.png",
+    url: "/assets/gallery/aspendessin.png",
     title: "Aspen",
     artist: "Vanya",
     date: "Mars 2024",
     description: "Un dessin de Aspen",
   },
   {
-    url: "public/assets/gallery/aspendessinChloe.jpg",
+    url: "/assets/gallery/aspendessinChloe.jpg",
     title: "Aspen",
     artist: "Chloe",
     date: "Mars 2024",
