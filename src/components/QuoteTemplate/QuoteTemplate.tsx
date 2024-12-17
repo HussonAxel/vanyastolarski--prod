@@ -9,7 +9,7 @@ const QuoteTemplate: React.FC<QuoteTemplateProps> = ({
   isbn,
   BookCover,
   BookCoverAlt,
-  bookID,
+  bookSlug,
   BookDate,
 }) => {
   return (
@@ -56,7 +56,7 @@ const QuoteTemplate: React.FC<QuoteTemplateProps> = ({
               text="LIRE LA REVIEW"
               isPrimary={true}
               isBGGreen={false}
-              linkTo={`./${bookID}`}
+              linkTo={`./${bookSlug}`}
             />
           </div>
         </div>

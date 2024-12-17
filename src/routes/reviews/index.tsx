@@ -63,6 +63,7 @@ const LivresComponents = () => {
               BookCover={book.cover}
               BookCoverAlt={book.coverAlt}
               bookID={book.id}
+              bookSlug={book.slug}
               BookDate={book.date}
             />
           ))}

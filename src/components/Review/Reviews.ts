@@ -2,6 +2,7 @@
 
 export interface ReviewData {
   id: string;
+  slug: string;
   bookCover: string;
   bookTitle: string;
   bookSaga?: string;
@@ -25,6 +26,7 @@ export interface ReviewData {
 export const reviewsData: ReviewData[] = [
   {
     id: "1",
+    slug: "les-douze-divins",
     bookCover: "/assets/covers/12_divins_couverture.webp",
     bookSaga: "LES DOUZE DIVINS",
     bookTitle: "Les Anges Mortels",
@@ -49,5 +51,4 @@ export const reviewsData: ReviewData[] = [
     },
     globalRating: 4,
   },
-  // Add more reviews as needed
 ];

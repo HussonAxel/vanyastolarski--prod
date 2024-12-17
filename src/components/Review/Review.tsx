@@ -61,8 +61,8 @@ const ReviewSection = ({
 );
 
 const ReviewPage = () => {
-  const { id } = useParams({ from: "/reviews/$id" });
-  const review = reviewsData.find((r) => r.id === id);
+  const { slug } = useParams({ from: "/reviews/$slug" });
+  const review = reviewsData.find((r) => r.slug === slug);
 
   if (!review) {
     return (
@@ -99,7 +99,7 @@ const ReviewPage = () => {
         />
         <meta
           property="og:url"
-          content={`https://www.vanyastolarski.fr/reviews/${id}`}
+          content={`https://www.vanyastolarski.fr/reviews/${slug}`}
         />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={`Review: ${fullTitle}`} />
@@ -113,7 +113,7 @@ const ReviewPage = () => {
         />
         <link
           rel="canonical"
-          href={`https://www.vanyastolarski.fr/reviews/${id}`}
+          href={`https://www.vanyastolarski.fr/reviews/${slug}`}
         />
       </Helmet>
 

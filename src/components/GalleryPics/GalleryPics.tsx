@@ -11,23 +11,27 @@ interface GalleryImage {
 
 const galleryData: GalleryImage[] = [
   {
-    url: "https://images.pexels.com/photos/4001296/pexels-photo-4001296.jpeg",
-    title: "Autumn Contemplation",
-    artist: "Vanya Stolarski",
+    url: "public/assets/gallery/aspen_sarah.jpg",
+    title: "Aspen",
+    artist: "Sarah",
     date: "Mars 2024",
-    description:
-      "Une œuvre inspirée par les moments de calme dans la nature. Cette pièce explore les thèmes de la solitude et de la réflexion, représentant un moment de paix dans notre monde agité.",
+    description: "Un dessin de Aspen",
   },
   {
-    url: "https://images.pexels.com/photos/2285996/pexels-photo-2285996.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    title: "Silent Inspiration",
-    artist: "Vanya Stolarski",
-    date: "Février 2024",
-    description:
-      "Cette création capture l'essence de la créativité dans les moments de silence. Chaque détail raconte une histoire unique, invitant le spectateur à découvrir sa propre interprétation.",
+    url: "public/assets/gallery/aspendessin.png",
+    title: "Aspen",
+    artist: "Vanya",
+    date: "Mars 2024",
+    description: "Un dessin de Aspen",
   },
-  // Add similar data for other images...
-].concat(/* Add the rest of your images with similar data structure */);
+  {
+    url: "public/assets/gallery/aspendessinChloe.jpg",
+    title: "Aspen",
+    artist: "Chloe",
+    date: "Mars 2024",
+    description: "Un dessin de Aspen",
+  },
+].concat();
 
 export default function GalleryPics() {
   const [selectedImage, setSelectedImage] = useState<GalleryImage | null>(null);

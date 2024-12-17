@@ -10,8 +10,8 @@ import data from "../../data/data.json";
 import OtherBooks from "@components/OtherBooks/OtherBooks";
 
 const LivreComponents = () => {
-  const { id } = useParams({ from: "/livres/$id" });
-  const book = data.books.find((book) => book.id === id);
+  const { slug } = useParams({ from: "/livres/$slug" });
+  const book = data.books.find((book) => book.slug === slug);
   const [currentPage, setCurrentPage] = useState(1);
   const charactersPerPage = 3;
 
@@ -49,7 +49,7 @@ const LivreComponents = () => {
         />
         <meta
           property="og:url"
-          content={`https://www.vanyastolarski.fr/livres/${id}`}
+          content={`https://www.vanyastolarski.fr/livres/${slug}`}
         />
         <meta property="book:isbn" content={book.ISBN} />
         <meta property="book:author" content="Vanya Stolarski" />
@@ -62,7 +62,7 @@ const LivreComponents = () => {
         />
         <link
           rel="canonical"
-          href={`https://www.vanyastolarski.fr/livres/${id}`}
+          href={`https://www.vanyastolarski.fr/livres/${slug}`}
         />
       </Helmet>
 
@@ -110,6 +110,6 @@ const LivreComponents = () => {
   );
 };
 
-export const Route = createFileRoute("/livres/$id")({
+export const Route = createFileRoute("/livres/$slug")({
   component: LivreComponents,
 });

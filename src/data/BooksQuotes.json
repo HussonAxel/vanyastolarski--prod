@@ -1,68 +1,14 @@
 [
   {
     "saga": "LES DOUZE DIVINS",
+    "slug": "les-douze-divins",
     "title": "TOME 1 - LES ANGES MORTELS",
     "author": "Vanya Stolarski",
     "date": "24 Sept. 2024",
-    "resume": "Les portes de l'enfer se sont ouvertes et ont déversé sur le monde le Chaos, grouillant de garmes, harpies et démons. Aspen vit à Saint-Pétersbourg, l'une des ultimes villes habitables, et travaille pour le Violetta, la dernière mafia russe encore existante. Alors qu'il devait simplement livrer une valise dans un quartier ravagé par le Chaos, un démon va s'immiscer dans sa tête. Il s'appellerait Vassily et proclame être un humain datant du monde précédent l'apocalypse. Mensonge ou vérité ? Aspen a encore beaucoup à apprendre pour survivre au Violetta et à ce monde qui se referme sur lui.",
+    "resume": "Les portes de l'enfer se sont ouvertes et ont déversé sur le monde le Chaos, grouillant de garmes, harpies et démons. Aspen vit à Saint-Pétersbourg, l'une des ultimes villes habitables, et travaille pour le Violetta, la dernière mafia russe encore existante. Alors qu'il devait simplement livrer une valise dans un quartier ravagé par le Chaos, un démon va s'immiscer dans sa tête. Il s'appellerait Vassily et proclame être un humain datant du monde précédent l'apocalyp&e. Mensonge ou vérité ? Aspen a encore beaucoup à apprendre pour survivre au Violetta et à ce monde qui se referme sur lui.",
     "cover": "/assets/covers/LatestRead.jpg",
     "coverAlt": "ils devront parvenir à survivre sans que le monde n'apprenne leurs machinations sans quoi.",
     "isbn": "ISBN-12312312123",
     "id": 1
-  },
-  {
-    "saga": "TERRES DE GUERRE ",
-    "title": "TOME 1 - LES ANGES MORTELS",
-    "author": "Vanya Stolarski",
-    "date": "15 August 2024",
-    "resume": "Les portes de l'enfer se sont ouvertes et ont déversé sur le monde le Chaos, grouillant de garmes, harpies et démons. Aspen vit à Saint-Pétersbourg, l'une des ultimes villes habitables, et travaille pour le Violetta, la dernière mafia russe encore existante. Alors qu'il devait simplement livrer une valise dans un quartier ravagé par le Chaos, un démon va s'immiscer dans sa tête. Il s'appellerait Vassily et proclame être un humain datant du monde précédent l'apocalypse. Mensonge ou vérité ? Aspen a encore beaucoup à apprendre pour survivre au Violetta et à ce monde qui se referme sur lui.",
-    "cover": "/assets/covers/LatestRead.jpg",
-    "coverAlt": "Une histoire de passion et de résistance dans une France divisée par les conflits et les ambitions.",
-    "isbn": "ISBN-12312312123",
-    "id": 2
-  },
-  {
-    "saga": "TERRES DE GUERRE ",
-    "title": "TOME 1 - LES ANGES MORTELS",
-    "author": "Vanya Stolarski",
-    "date": "15 August 2024",
-    "resume": "Les portes de l'enfer se sont ouvertes et ont déversé sur le monde le Chaos, grouillant de garmes, harpies et démons. Aspen vit à Saint-Pétersbourg, l'une des ultimes villes habitables, et travaille pour le Violetta, la dernière mafia russe encore existante. Alors qu'il devait simplement livrer une valise dans un quartier ravagé par le Chaos, un démon va s'immiscer dans sa tête. Il s'appellerait Vassily et proclame être un humain datant du monde précédent l'apocalypse. Mensonge ou vérité ? Aspen a encore beaucoup à apprendre pour survivre au Violetta et à ce monde qui se referme sur lui.",
-    "cover": "/assets/covers/LatestRead.jpg",
-    "coverAlt": "Une histoire de passion et de résistance dans une France divisée par les conflits et les ambitions.",
-    "isbn": "ISBN-12312312123",
-    "id": 3
-  },
-  {
-    "saga": "TERRES DE GUERRE ",
-    "title": "TOME 1 - LES ANGES MORTELS",
-    "author": "Vanya Stolarski",
-    "date": "15 August 2024",
-    "resume": "Les portes de l'enfer se sont ouvertes et ont déversé sur le monde le Chaos, grouillant de garmes, harpies et démons. Aspen vit à Saint-Pétersbourg, l'une des ultimes villes habitables, et travaille pour le Violetta, la dernière mafia russe encore existante. Alors qu'il devait simplement livrer une valise dans un quartier ravagé par le Chaos, un démon va s'immiscer dans sa tête. Il s'appellerait Vassily et proclame être un humain datant du monde précédent l'apocalypse. Mensonge ou vérité ? Aspen a encore beaucoup à apprendre pour survivre au Violetta et à ce monde qui se referme sur lui.",
-    "cover": "/assets/covers/LatestRead.jpg",
-    "coverAlt": "Une histoire de passion et de résistance dans une France divisée par les conflits et les ambitions.",
-    "isbn": "ISBN-12312312123",
-    "id": 4
-  },
-  {
-    "saga": "TERRES DE GUERRE ",
-    "title": "TOME 1 - LES ANGES MORTELS",
-    "author": "Vanya Stolarski",
-    "date": "15 August 2024",
-    "resume": "Les portes de l'enfer se sont ouvertes et ont déversé sur le monde le Chaos, grouillant de garmes, harpies et démons. Aspen vit à Saint-Pétersbourg, l'une des ultimes villes habitables, et travaille pour le Violetta, la dernière mafia russe encore existante. Alors qu'il devait simplement livrer une valise dans un quartier ravagé par le Chaos, un démon va s'immiscer dans sa tête. Il s'appellerait Vassily et proclame être un humain datant du monde précédent l'apocalypse. Mensonge ou vérité ? Aspen a encore beaucoup à apprendre pour survivre au Violetta et à ce monde qui se referme sur lui.",
-    "cover": "/assets/covers/LatestRead.jpg",
-    "coverAlt": "Une histoire de passion et de résistance dans une France divisée par les conflits et les ambitions.",
-    "isbn": "ISBN-12312312123",
-    "id": 5
-  },
-  {
-    "saga": "TERRES DE GUERRE ",
-    "title": "TOME 1 - LES ANGES MORTELS",
-    "author": "Vanya Stolarski",
-    "date": "15 August 2024",
-    "resume": "Les portes de l'enfer se sont ouvertes et ont déversé sur le monde le Chaos, grouillant de garmes, harpies et démons. Aspen vit à Saint-Pétersbourg, l'une des ultimes villes habitables, et travaille pour le Violetta, la dernière mafia russe encore existante. Alors qu'il devait simplement livrer une valise dans un quartier ravagé par le Chaos, un démon va s'immiscer dans sa tête. Il s'appellerait Vassily et proclame être un humain datant du monde précédent l'apocalypse. Mensonge ou vérité ? Aspen a encore beaucoup à apprendre pour survivre au Violetta et à ce monde qui se referme sur lui.",
-    "cover": "/assets/covers/LatestRead.jpg",
-    "coverAlt": "Une histoire de passion et de résistance dans une France divisée par les conflits et les ambitions.",
-    "isbn": "ISBN-12312312123",
-    "id": 6
   }
 ]

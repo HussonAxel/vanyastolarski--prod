@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import {FaBars, FaTimes } from "react-icons/fa";
+import { FaBars, FaTimes } from "react-icons/fa";
 import { Link } from "@tanstack/react-router";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -13,8 +13,18 @@ const Header: React.FC = () => {
     { to: "/Galerie", text: "Galerie" },
   ];
 
+  const LinkWithUnderline = ({ to, text }: { to: string; text: string }) => (
+    <Link
+      to={to}
+      className="relative group inline-block transition-all duration-300 ease-in-out hover:text-green/80 text-md tracking-wider font-medium"
+    >
+      {text}
+      <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-green transition-all duration-300 ease-in-out group-hover:w-full" />
+    </Link>
+  );
+
   return (
-    <header className=" bg-white text-black/90 font-Large pt-4 lg:pt-8 lg:border-b-2 border-green/20">
+    <header className="bg-white text-black/90 font-Large pt-4 lg:pt-8 lg:border-b-2 border-green/20">
       <div className="mx-auto 2xl:px-12 max-w-[1400px]">
         <div className="flex items-center justify-between h-20 mr-4">
           <motion.div
@@ -29,12 +39,7 @@ const Header: React.FC = () => {
                   whileHover={{ scale: 1.05 }}
                   className="relative"
                 >
-                  <Link
-                    to={link.to}
-                    className="text-md tracking-wider font-medium relative group transition-all duration-300 ease-in-out hover:text-gray-600"
-                  >
-                    {link.text}
-                  </Link>
+                  <LinkWithUnderline to={link.to} text={link.text} />
                 </motion.div>
               ))}
             </nav>
@@ -55,12 +60,7 @@ const Header: React.FC = () => {
                   whileHover={{ scale: 1.05 }}
                   className="relative"
                 >
-                  <Link
-                    to={link.to}
-                    className="text-md tracking-wider font-medium relative group transition-all duration-300 ease-in-out hover:text-gray-600"
-                  >
-                    {link.text}
-                  </Link>
+                  <LinkWithUnderline to={link.to} text={link.text} />
                 </motion.div>
               ))}
             </nav>

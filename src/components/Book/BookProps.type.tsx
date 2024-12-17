@@ -6,6 +6,7 @@ export interface BookProps {
   BookCover: string;
   BookCoverAlt?: string;
   bookID: string;
+  bookSlug: string;
   BookPages: number;
   firstChapterLink: string;
 }

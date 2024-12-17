@@ -28,7 +28,7 @@ const BookResume = () => {
                 text={"EN SAVOIR PLUS"}
                 isPrimary={true}
                 isBGGreen={true}
-                linkTo={`/livres/${BookData.id}`}
+                linkTo={`/livres/${BookData.slug}`}
               />
             </div>
           </article>

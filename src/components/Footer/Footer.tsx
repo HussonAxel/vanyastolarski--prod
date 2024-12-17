@@ -4,7 +4,6 @@ import { MdEmail } from "react-icons/md";
 import { Link } from "@tanstack/react-router";
 import UluleIcon from "@components/ululeIcon/UluleIcon";
 
-
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
@@ -16,10 +15,10 @@ const Footer: React.FC = () => {
   ];
 
   const books = [
-    { to: "/livres/1", text: "Terres de Guerre" },
-    { to: "/livres/2", text: "Fous Papillons" },
-    { to: "/livres/3", text: "Les Douze Divins" },
-    { to: "/livres/4", text: "Le coeur d'Ankaa" },
+    { to: "/livres/terres-de-guerre", text: "Terres de Guerre" },
+    { to: "/livres/fous-papillons", text: "Fous Papillons" },
+    { to: "/livres/les-douze-divins", text: "Les Douze Divins" },
+    { to: "/livres/le-coeur-dankaa", text: "Le coeur d'Ankaa" },
   ];
 
   const LinkWithUnderline = ({ to, text }: { to: string; text: string }) => (

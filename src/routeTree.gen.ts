@@ -18,8 +18,8 @@ import { Route as CitationsImport } from './routes/citations'
 import { Route as IndexImport } from './routes/index'
 import { Route as ReviewsIndexImport } from './routes/reviews/index'
 import { Route as LivresIndexImport } from './routes/livres/index'
-import { Route as ReviewsIdImport } from './routes/reviews/$id'
-import { Route as LivresIdImport } from './routes/livres/$id'
+import { Route as ReviewsSlugImport } from './routes/reviews/$slug'
+import { Route as LivresSlugImport } from './routes/livres/$slug'
 
 // Create/Update Routes
 
@@ -58,13 +58,13 @@ const LivresIndexRoute = LivresIndexImport.update({
   getParentRoute: () => LivresRoute,
 } as any)
 
-const ReviewsIdRoute = ReviewsIdImport.update({
-  path: '/$id',
+const ReviewsSlugRoute = ReviewsSlugImport.update({
+  path: '/$slug',
   getParentRoute: () => ReviewsRoute,
 } as any)
 
-const LivresIdRoute = LivresIdImport.update({
-  path: '/$id',
+const LivresSlugRoute = LivresSlugImport.update({
+  path: '/$slug',
   getParentRoute: () => LivresRoute,
 } as any)
 
@@ -107,18 +107,18 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ReviewsImport
       parentRoute: typeof rootRoute
     }
-    '/livres/$id': {
-      id: '/livres/$id'
-      path: '/$id'
-      fullPath: '/livres/$id'
-      preLoaderRoute: typeof LivresIdImport
+    '/livres/$slug': {
+      id: '/livres/$slug'
+      path: '/$slug'
+      fullPath: '/livres/$slug'
+      preLoaderRoute: typeof LivresSlugImport
       parentRoute: typeof LivresImport
     }
-    '/reviews/$id': {
-      id: '/reviews/$id'
-      path: '/$id'
-      fullPath: '/reviews/$id'
-      preLoaderRoute: typeof ReviewsIdImport
+    '/reviews/$slug': {
+      id: '/reviews/$slug'
+      path: '/$slug'
+      fullPath: '/reviews/$slug'
+      preLoaderRoute: typeof ReviewsSlugImport
       parentRoute: typeof ReviewsImport
     }
     '/livres/': {
@@ -144,8 +144,11 @@ export const routeTree = rootRoute.addChildren({
   IndexRoute,
   CitationsRoute,
   GalerieRoute,
-  LivresRoute: LivresRoute.addChildren({ LivresIdRoute, LivresIndexRoute }),
-  ReviewsRoute: ReviewsRoute.addChildren({ ReviewsIdRoute, ReviewsIndexRoute }),
+  LivresRoute: LivresRoute.addChildren({ LivresSlugRoute, LivresIndexRoute }),
+  ReviewsRoute: ReviewsRoute.addChildren({
+    ReviewsSlugRoute,
+    ReviewsIndexRoute,
+  }),
 })
 
 /* prettier-ignore-end */

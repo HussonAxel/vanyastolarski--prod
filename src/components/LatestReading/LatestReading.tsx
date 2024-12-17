@@ -41,7 +41,7 @@ const LatestReading = () => {
     resume,
     cover,
     coverAlt,
-    id,
+    slug,
   }: {
     saga: string;
     title: string;
@@ -51,6 +51,7 @@ const LatestReading = () => {
     cover: string;
     coverAlt: string;
     id: number;
+    slug: string;
   }) => (
     <motion.article
       className="flex flex-col md:flex-row items-center gap-8 md:gap-24 pb-6 w-fit m-auto max-w"
@@ -76,13 +77,15 @@ const LatestReading = () => {
           </h1>
           <h2 className="text-md md:text-lg">{title}</h2>
         </div>
-        <p className="text-black font-WorkSans text-sm md:text-md w-fit">{resume}</p>
+        <p className="text-black font-WorkSans text-sm md:text-md w-fit">
+          {resume}
+        </p>
         <div className="flex flex-col gap-8 m-auto md:flex-row md:m-0">
           <Button
             isPrimary={true}
             text="LIRE LA REVIEW EN ENTIERE"
             isBGGreen={false}
-            linkTo={`/reviews/${id}`}
+            linkTo={`/reviews/${slug}`}
           />
           <Button
             isPrimary={false}
@@ -110,6 +113,7 @@ const LatestReading = () => {
             cover={book.cover}
             coverAlt={book.coverAlt}
             id={book.id}
+            slug={book.slug}
           />
         ))}
       </AnimatePresence>

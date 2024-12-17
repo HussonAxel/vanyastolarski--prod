@@ -7,5 +7,6 @@ export interface QuoteTemplateProps {
   BookCover: string;
   BookCoverAlt?: string;
   bookID: number;
+  bookSlug: string;
   BookDate: string;
 }

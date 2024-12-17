@@ -9,7 +9,7 @@ const Book: React.FC<BookProps> = ({
   isbn,
   BookCover,
   BookCoverAlt,
-  bookID,
+  bookSlug,
   BookPages,
   firstChapterLink,
 }) => {
@@ -35,9 +35,7 @@ const Book: React.FC<BookProps> = ({
                 <h1 className="text-3xl sm:text-4xl font-semibold text-green mb-2 ">
                   {BookSaga}
                 </h1>
-                <h2 className="text-lg sm:text-xl text-green">
-                  {BookTitle}
-                </h2>
+                <h2 className="text-lg sm:text-xl text-green">{BookTitle}</h2>
               </>
             ) : (
               <h1 className="text-3xl sm:text-4xl font-semibold text-green">
@@ -66,7 +64,7 @@ const Book: React.FC<BookProps> = ({
             text="VOIR LE LIVRE"
             isPrimary={true}
             isBGGreen={false}
-            linkTo={`./${bookID}`}
+            linkTo={`./${bookSlug}`}
           />
           <DownloadButton
             text="Lire le premier chapitre"

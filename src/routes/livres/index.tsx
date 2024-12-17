@@ -22,6 +22,7 @@ const LivresComponents = () => {
               BookCover={book.cover}
               BookCoverAlt={`${book.title} cover`}
               bookID={book.id}
+              bookSlug={book.slug}
               BookPages={book.pages}
               firstChapterLink={book.firstChapterLink}
             />

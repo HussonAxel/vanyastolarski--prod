@@ -49,7 +49,7 @@ const IndexComponent = () => {
           LatestReleaseName="Fous Papillons"
           LatestReleaseSynopsis={data.books[0].synopsis}
           youtubeEmbedUrl="https://www.youtube.com/embed/oMXpFLSyzow"
-          latestReleasePageUrl="livres/2"
+          latestReleasePageUrl="livres/fous-papillons"
           latestReleasePictureUrl={""}
         />
       </ColoredSection>

@@ -3,6 +3,7 @@
     {
       "id": "2",
       "title": "Fous-Papillons",
+      "slug": "fous-papillons",
       "volume": 1,
       "cover": "/assets/covers/FP_Cover.webp",
       "tags": ["Fantasy", "Science-fiction", "ennemy to lover"],
@@ -39,6 +40,7 @@
     {
       "id": "1",
       "saga": "Terres de Guerre",
+      "slug": "terres-de-guerre",
       "title": "Projet Annihilation",
       "volume": 1,
       "cover": "/assets/covers/terre_de_guerre_couverture.webp",
@@ -75,7 +77,9 @@
     },
     {
       "id": "3",
-      "saga": "LES DOUZE DIVINS",
+      "saga": "Les douze divins",
+      "slug": "les-douze-divins",
+
       "title": "Les Anges Mortels",
       "volume": 1,
       "cover": "/assets/covers/12_divins_couverture.webp",
@@ -113,6 +117,7 @@
     {
       "id": "4",
       "title": "Le coeur d'Ankaa",
+      "slug": "le-coeur-dankaa",
       "volume": 1,
       "cover": "/assets/covers/le_coeur_d_ankaa_couverture.webp",
       "tags": ["Fantasy", "Science-fiction", "ennemy to lover"],
