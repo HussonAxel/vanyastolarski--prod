@@ -8,11 +8,10 @@ const CharacterPanel = ({ name, resume, picture }: CharacterPanelProps) => {
         <img
           src={picture}
           alt={`Character ${name}`}
-          className="rounded-lg shadow-lg w-full sm:w-auto h-[200px] sm:h-[180px] md:h-[200px] object-cover hover:scale-[1.02] transition-transform duration-300"
+          className="rounded-lg shadow-lg w-full sm:w-auto h-full object-cover hover:scale-[1.02] transition-transform duration-300"
         />
       </div>
 
-      {/* Content Container */}
       <div className="flex flex-col justify-center space-y-3 sm:space-y-4">
         <h3 className="font-Large text-2xl sm:text-2xl md:text-3xl text-white font-semibold tracking-tight">
           {name}

@@ -1,16 +1,16 @@
-import {createFileRoute} from '@tanstack/react-router'
+import { createFileRoute } from "@tanstack/react-router";
 import LatestRelease from "@components/LatestRelease/LatestRelease.tsx";
 import BookResume from "@components/BookResume/BookResume";
-import LatestReading from '@components/LatestReading/LatestReading';
-import ServicesList from '@components/ServicesList/ServicesList';
-import { Helmet } from 'react-helmet-async';
+import LatestReading from "@components/LatestReading/LatestReading";
+import ServicesList from "@components/ServicesList/ServicesList";
+import { Helmet } from "react-helmet-async";
 
 import ColoredSection from "@components/ColoredSection.tsx";
 import data from "@data/data.json";
 
-export const Route = createFileRoute('/')({
-    component: () => <IndexComponent/>,
-})
+export const Route = createFileRoute("/")({
+  component: () => <IndexComponent />,
+});
 
 const IndexComponent = () => {
   return (
@@ -47,7 +47,7 @@ const IndexComponent = () => {
       <ColoredSection bgColor="bg-white">
         <LatestRelease
           LatestReleaseName="Fous Papillons"
-          LatestReleaseSynopsis={data.books[2].synopsis}
+          LatestReleaseSynopsis={data.books[0].synopsis}
           youtubeEmbedUrl="https://www.youtube.com/embed/oMXpFLSyzow"
           latestReleasePageUrl="livres/2"
           latestReleasePictureUrl={""}

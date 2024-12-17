@@ -1,89 +1,6 @@
 {
   "books": [
     {
-      "id": "1",
-      "saga": "Terres de Guerre",
-      "title": "Projet Annihilation",
-      "volume": 1,
-      "cover": "/assets/covers/terre_de_guerre_couverture.webp",
-      "tags": [
-        "Fantasy", "Science-fiction", "ennemy to lover"
-      ],
-      "characters": [
-        {
-          "nom": "5O72Y",
-          "prenom": "Onia",
-          "picture": "/assets/Characters/Fill_BG.webp",
-          "description": "Onia est une loïde B de type espion qui a connu la guerre sur les îles de Phaure. Lorsqu'elle revient au pays, leurs ennemis, les Sylfaens, ont envahi et détruit son chez elle, qu'elle tentera de libérer à tout prix. Portée par une détermination hésitante, Onia est confrontée au dilemme de savoir si les améliorations des loïdes font d'eux des sauveurs ou des abominations.",
-          "relatifs": {
-            "mother": "osef",
-            "father": "osef",
-            "siblings": ["/"]
-          }
-        },
-        {
-          "nom": "5O72Y",
-          "prenom": "Onia",
-          "picture": "/assets/Characters/Fill_BG.webp",
-          "description": "Onia est une loïde B de type espion qui a connu la guerre sur les îles de Phaure. Lorsqu'elle revient au pays, leurs ennemis, les Sylfaens, ont envahi et détruit son chez elle, qu'elle tentera de libérer à tout prix. Portée par une détermination hésitante, Onia est confrontée au dilemme de savoir si les améliorations des loïdes font d'eux des sauveurs ou des abominations.",
-          "relatifs": {
-            "mother": "osef",
-            "father": "osef",
-            "siblings": ["/"]
-          }
-        },
-        {
-          "nom": "5O72Y",
-          "prenom": "Onia",
-          "picture": "/assets/Characters/Fill_BG.webp",
-          "description": "Onia est une loïde B de type espion qui a connu la guerre sur les îles de Phaure. Lorsqu'elle revient au pays, leurs ennemis, les Sylfaens, ont envahi et détruit son chez elle, qu'elle tentera de libérer à tout prix. Portée par une détermination hésitante, Onia est confrontée au dilemme de savoir si les améliorations des loïdes font d'eux des sauveurs ou des abominations.",
-          "relatifs": {
-            "mother": "osef",
-            "father": "osef",
-            "siblings": ["/"]
-          }
-        },
-        {
-          "nom": "1T63Y",
-          "prenom": "Thadée",
-          "picture": "/assets/Characters/Fill_BG.webp",
-          "description": "Frère adoptif d'Onia, Thadée est sûr d'une chose : leur gouvernement les manipule et ils doivent s'en libérer s'ils veulent un jour espérer voir un monde meilleur renaître.",
-          "relatifs": {
-            "mother": "osef",
-            "father": "osef",
-            "siblings": []
-          }
-        },
-        {
-          "nom": "1T63Y",
-          "prenom": "Thadée",
-          "picture": "/assets/Characters/Fill_BG.webp",
-          "description": "Frère adoptif d'Onia, Thadée est sûr d'une chose : leur gouvernement les manipule et ils doivent s'en libérer s'ils veulent un jour espérer voir un monde meilleur renaître.",
-          "relatifs": {
-            "mother": "osef",
-            "father": "osef",
-            "siblings": []
-          }
-        },
-        {
-          "nom": "1T63Y",
-          "prenom": "Thadée",
-          "picture": "/assets/Characters/Fill_BG.webp",
-          "description": "Frère adoptif d'Onia, Thadée est sûr d'une chose : leur gouvernement les manipule et ils doivent s'en libérer s'ils veulent un jour espérer voir un monde meilleur renaître.",
-          "relatifs": {
-            "mother": "osef",
-            "father": "osef",
-            "siblings": []
-          }
-        }
-      ],
-      "synopsis": "Les portes de l'enfer se sont ouvertes et ont déversé sur le monde le Chaos, grouillant de garmes, harpies et démons. Aspen vit à Saint-Pétersbourg, l'une des ultimes villes habitables, et travaille pour le Violetta, la dernière mafia russe encore existante. Alors qu'il devait simplement livrer une valise dans un quartier ravagé par le Chaos, un démon va s'immiscer dans sa tête. Il s'appellerait Vassily et proclame être un humain datant du monde précédent l'apocalypse. Mensonge ou vérité ? Aspen a encore beaucoup à apprendre pour survivre au Violetta et à ce monde qui se referme sur lui.",
-      "contexte": "Terres de Guerres s'inspire de tous les conflits du 20ème siècle et imagine comment seront ceux du prochain siècle. Il pose les questionnements à venir sur la démocratisation du transhumanisme. Cette évolution sera-t-elle employée pour nous sauver ou nous détruire ?",
-      "ISBN": "978-2-1234-5678-1",
-      "pages": 384,
-      "firstChapterLink": "https://example.com/les-anges-mortels/chapter1"
-    },
-    {
       "id": "2",
       "title": "Fous-Papillons",
       "volume": 1,
@@ -96,8 +13,8 @@
           "picture": "/assets/Characters/Fill_BG.webp",
           "description": "Garçon a priori originaire du Moyen-Orient, Ethan est poursuivi par des rumeurs de sorcellerie qui font de lui le paria du village. S'il survit à cette enfance de famine et de pauvreté, c'est uniquement grâce à Esther qui lui apprendra à lire.",
           "relatifs": {
-            "mother": "osef",
-            "father": "osef",
+            "mother": "",
+            "father": "",
             "siblings": ["/"]
           }
         },
@@ -107,17 +24,54 @@
           "picture": "/assets/Characters/Fill_BG.webp",
           "description": "Fille du médecin et cadette d'une famille de trois enfants, Esther est promise à un mariage difficile pour son comportement et son caractère défiant les règles de l'époque. Elle est pourtant loin de se laisser faire et déclare la guerre à son fiancé dès leur rencontre. Son souhait est pourtant simple : vivre dans la forêt avec Ethan, libre de toute obligation.",
           "relatifs": {
-            "mother": "osef",
-            "father": "osef",
+            "mother": "",
+            "father": "",
             "siblings": []
           }
         }
       ],
       "synopsis": "Mariée de force au général de l'Etat major, Esther se retrouve embourbée dans les conflits politiques d'une France de 1890. Son cœur est pourtant ailleurs, loin de Paris, dans une forêt où l'attend un garçon ayant vendu son âme au diable pour elle. Entre Frantz, son mystérieux mari aussi froid que manipulateur et Ethan, cet amoureux d'enfance qu'elle veut à tout prix protéger, Esther ne sait plus qui aimer. Malheureusement, à cette époque où les tensions sont aussi vives que les conflits sont destructeurs, ils devront parvenir à survivre sans que le monde n'apprenne leurs machinations sans quoi... ils risquent tous l'exécution.",
-      "contexte": "Fous-Papillons est une romance aux airs de tragédie, où s'aimer frôle la haine, voire s'y confond lorsqu'il ne reste plus d'autre solution pour rester dans le cœur de l'autre.Fous-Papillons est une romance aux airs de tragédie, où s'aimer frôle la haine, voire s'y confond lorsqu'il ne reste plus d'autre solution pour rester dans le cœur de l'autre.Fous-Papillons est une romance aux airs de tragédie, où s'aimer frôle la haine, voire s'y confond lorsqu'il ne reste plus d'autre solution pour rester dans le cœur de l'autre.",
-      "ISBN": "978-2-1234-5678-2",
+      "contexte": "Fous-Papillons est une romance aux airs de tragédie, où s'aimer frôle la haine, voire s'y confond lorsqu'il ne reste plus d'autre solution pour rester dans le cœur de l'autre. Vous suivrez les aventures de Ethan et Esther de 1880 à 1920, dans de nombreux pays différents à l’époque où les conflits de la première guerre mondiale font des ravages. Paris, les Vosges, la Sicile, et Saint-Pétersbourg, vous voyagerez autant dans la neige que sous le soleil de la méditerranée",
+      "ISBN": "N/A",
       "pages": 412,
       "firstChapterLink": "https://example.com/fous-papillons/chapter1"
+    },
+    {
+      "id": "1",
+      "saga": "Terres de Guerre",
+      "title": "Projet Annihilation",
+      "volume": 1,
+      "cover": "/assets/covers/terre_de_guerre_couverture.webp",
+      "tags": ["Fantasy", "Science-fiction", "ennemy to lover"],
+      "characters": [
+        {
+          "nom": "5O72Y",
+          "prenom": "Onia",
+          "picture": "/assets/Characters/Fill_BG.webp",
+          "description": "Onia est une loïde B de type espion qui a connu la guerre sur les îles de Phaure. Lorsqu'elle revient au pays, leurs ennemis, les Sylfaens, ont envahi et détruit son chez elle, qu'elle tentera de libérer à tout prix. Portée par une détermination hésitante, Onia est confrontée au dilemme de savoir si les améliorations des loïdes font d'eux des sauveurs ou des abominations.",
+          "relatifs": {
+            "mother": "",
+            "father": "",
+            "siblings": ["/"]
+          }
+        },
+        {
+          "nom": "1T63Y",
+          "prenom": "Thadée",
+          "picture": "/assets/Characters/Fill_BG.webp",
+          "description": "Thadée, est le frère d'Onia. Ils sont tous les deux très proches parce qu'ils ont grandi ensemble. Ils sont comme les cinq doigts de la main, ils se connaissent par cœur et ne se quittent jamais longtemps.C'est un garçon assez étrange, qui ne parle jamais de lui. Avec un point de vue très différent des autres loïdes et, se sachant à contre courant avec leurs exigences, il ne s'appesante donc jamais longtemps sur lui. C'est donc un garçon réfléchi, doué, avec un certain humour mais... Qui cache beaucoup de choses dans son petit cœur de pierre ❤️. Il peut être sans pitié et, d'un autre côté, très idéaliste, générant à la fois lumière et obscurité dans un garçon attentionné mais distant",
+          "relatifs": {
+            "mother": "",
+            "father": "",
+            "siblings": []
+          }
+        }
+      ],
+      "synopsis": "L’histoire d’Onia commence là où elle se terminera : sur un champ de bataille. Après avoir survécu à l'Épuration et la guerre de Phaure, Onia voit son continent envahi par les forces ennemies dont les terres ont été détruites par les bombardements nucléaires. Forcée de cacher sa véritable nature et de se faire passer pour une réfugiée comme eux, elle va comprendre que ses ennemis ne sont pas aussi malveillants qu’elle le pensait. Et que, au contraire, la menace provient peut-être de sa propre espèce : les loïdes de combat",
+      "contexte": "Terres de Guerres s'inspire de tous les conflits du 20ème siècle et imagine comment seront ceux du prochain siècle. Il pose les questionnements à venir sur la démocratisation du transhumanisme. Cette évolution sera-t-elle employée pour nous sauver ou nous détruire ?",
+      "ISBN": "N/A",
+      "pages": 384,
+      "firstChapterLink": "https://example.com/les-anges-mortels/chapter1"
     },
     {
       "id": "3",
@@ -128,31 +82,31 @@
       "tags": ["Fantasy", "Science-fiction", "ennemy to lover"],
       "characters": [
         {
-          "nom": "osef",
+          "nom": "",
           "prenom": "Aspen",
           "picture": "/assets/Characters/Fill_BG.webp",
-          "description": "Garçon longiforme et pâle aux cheveux blancs et aux yeux violets, Aspen n'a rien d'un héro.",
+          "description": "Garçon longiforme et pâle aux cheveux blancs et aux yeux violets, Aspen n'a rien d'un héros. Il est lâche, effrayé par le monde et par le Violetta. Il se laisse marcher dessus parce que c’est plus simple d’obéir que de se rebeller",
           "relatifs": {
-            "mother": "osef",
-            "father": "osef",
+            "mother": "",
+            "father": "",
             "siblings": ["/"]
           }
         },
         {
-          "nom": "osef",
+          "nom": "",
           "prenom": "Vassily",
           "picture": "/assets/Characters/Fill_BG.webp",
           "description": "Sans corps et piégé dans le crâne d'Aspen, Vassily n'est qu'une voix étrange qui parle d'un autre monde.",
           "relatifs": {
-            "mother": "osef",
-            "father": "osef",
+            "mother": "",
+            "father": "",
             "siblings": []
           }
         }
       ],
       "synopsis": "Les portes de l'enfer se sont ouvertes et ont déversé sur le monde le Chaos, grouillant de garmes, harpies et démons. Aspen vit à Saint-Pétersbourg, l'une des ultimes villes habitables, et travaille pour le Violetta, la dernière mafia russe encore existante. Alors qu'il devait simplement livrer une valise dans un quartier ravagé par le Chaos, un démon va s'immiscer dans sa tête. Il s'appellerait Vassily et proclame être un humain datant du monde précédent l'apocalypse. Mensonge ou vérité ? Aspen a encore beaucoup à apprendre pour survivre au Violetta et à ce monde qui se referme sur lui.",
       "contexte": "Mêlant post-apocalypse et fantastique, les Douze Divins est un récit sur un peuple réprimé et manipulé pour une raison qui reste à découvrir.",
-      "ISBN": "978-2-1234-5678-3",
+      "ISBN": "N/A",
       "pages": 356,
       "firstChapterLink": "https://example.com/les-anges-mortels-2/chapter1"
     },
@@ -164,32 +118,32 @@
       "tags": ["Fantasy", "Science-fiction", "ennemy to lover"],
       "characters": [
         {
-          "nom": "osef",
-          "prenom": "Aspen",
+          "nom": "",
+          "prenom": "Alycie",
           "picture": "/assets/Characters/Fill_BG.webp",
-          "description": "Garçon longiforme et pâle aux cheveux blancs et aux yeux violets, Aspen n'a rien d'un héro.",
+          "description": "Nymphe aux origines floues qui n’a pas le droit de communier avec sa déesse, Alycie cherche des réponses et est prête à se battre. Alors quand un garçon sans chaussure s’échoue sur les rives de son île, elle n’hésite pas à entrer dans le tourbillon d’aventure qu’il apporte",
           "relatifs": {
-            "mother": "osef",
-            "father": "osef",
+            "mother": "",
+            "father": "",
             "siblings": ["/"]
           }
         },
         {
-          "nom": "osef",
-          "prenom": "Vassily",
+          "nom": "",
+          "prenom": "Johen",
           "picture": "/assets/Characters/Fill_BG.webp",
-          "description": "Sans corps et piégé dans le crâne d'Aspen, Vassily n'est qu'une voix étrange qui parle d'un autre monde.",
+          "description": "Johen est un héritier qui ne souhaite pas gouverner. Pourtant, la guerre arrive, et il devra abandonner sa plume pour manier l’épée. Johen devra tout abandonner derrière lui, ses amis, sa vie, ce qu’il aime faire et ce qu’il est, pour espérer survivre.",
           "relatifs": {
-            "mother": "osef",
-            "father": "osef",
+            "mother": "",
+            "father": "",
             "siblings": []
           }
         }
       ],
-      "synopsis": "Les portes de l'enfer se sont ouvertes et ont déversé sur le monde le Chaos, grouillant de garmes, harpies et démons. Aspen vit à Saint-Pétersbourg, l'une des ultimes villes habitables, et travaille pour le Violetta, la dernière mafia russe encore existante. Alors qu'il devait simplement livrer une valise dans un quartier ravagé par le Chaos, un démon va s'immiscer dans sa tête. Il s'appellerait Vassily et proclame être un humain datant du monde précédent l'apocalypse. Mensonge ou vérité ? Aspen a encore beaucoup à apprendre pour survivre au Violetta et à ce monde qui se referme sur lui.",
-      "contexte": "Mêlant post-apocalypse et fantastique, les Douze Divins est un récit sur un peuple réprimé et manipulé pour une raison qui reste à découvrir.",
-      "ISBN": "978-2-1234-5678-4",
-      "pages": 398,
+      "synopsis": "Chassé de chez lui, Johen se met en quête du cœur d’Ankaa qui, il en est persuadé, va permettre de rétablir l’ordre dans son royaume. Mais alors qu’il en est proche, la guerre s’échoue sur les rives de son continent. Plongé dans la bataille, il va devoir progresser sans regarder derrière lui, au risque de s’effondrer. Tous ne sortiront pas vivants de cette guerre mais Johen est déterminé à en sauver le plus possible. Alycie est une nymphe. Comme la totalité de son peuple, elle a été exilée vingt ans plus tôt pour des actes basés sur un mensonge. Alors qu'elle cherche encore sa place, une terrible révélation s'abat sur elle. Sa destinée n'est pas celle qu'elle avait imaginée. Entre complots, guerre et magie, elle va devoir faire confiance en son instinct pour survivre. Sa voie est toute tracée : il ne lui reste qu'à la suivre. Ils sont nés imposteurs. Ils seront inoubliables.",
+      "contexte": "Dans un monde de fantasy où les nymphes et la magie ont été bannis, Johen apprend qu’il n’est en réalité pas le fils légitime de son père. Il l’apprend évidemment lorsqu’il doit porter la couronne et qu’il se fait trahir par son oncle. Alycie, elle, ne connait rien du monde après son île. Tout ce qu’elle sait, c’est qu’elle n’est pas comme les autres nymphes et que sa déesse ne lui parle pas.",
+      "ISBN": "978-2957655106",
+      "pages": 479,
       "firstChapterLink": "https://example.com/le-coeur-ankaa/chapter1"
     }
   ]
