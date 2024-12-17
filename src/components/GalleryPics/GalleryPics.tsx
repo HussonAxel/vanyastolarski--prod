@@ -25,7 +25,7 @@ const galleryData: GalleryImage[] = [
     description: "Un dessin de Aspen",
   },
   {
-    url: "/assets/gallery/aspendessinChloe.jpg",
+    url: "/assets/gallery/AspendessinChloe.jpg",
     title: "Aspen",
     artist: "Chloe",
     date: "Mars 2024",
