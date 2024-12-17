@@ -17,12 +17,11 @@ const OtherBooks: React.FC = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 lg:gap-10">
           {otherBooks.map((book) => (
             <Link
-              key={book.id}
-              to={`/livres/${book.id}`}
+              key={book.slug}
+              to={`/livres/${book.slug}`}
               className="group block"
             >
               <article className="flex flex-col items-center p-4 rounded-lg transition-all duration-300 hover:bg-white/5">
-                {/* Image Container */}
                 <div className="relative w-full aspect-[2/3] mb-4">
                   <img
                     src={`../${book.cover}`}
@@ -31,7 +30,6 @@ const OtherBooks: React.FC = () => {
                   />
                 </div>
 
-                {/* Title */}
                 <h3 className="text-base sm:text-lg text-green text-center font-WorkSans">
                   {book.title}
                 </h3>
