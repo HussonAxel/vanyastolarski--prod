@@ -24,7 +24,7 @@ const Header: React.FC = () => {
   );
 
   return (
-    <header className="bg-white text-black/90 font-Large pt-4 lg:pt-8 lg:border-b-2 border-green/20">
+    <header className="bg-white text-black/90 font-Large pt-4 lg:pt-8 border-b-2 border-green/20">
       <div className="mx-auto 2xl:px-12 max-w-[1400px]">
         <div className="flex items-center justify-between h-20 mr-4">
           <motion.div
