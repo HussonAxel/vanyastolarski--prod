@@ -54,7 +54,7 @@ const LatestReading = () => {
     slug: string;
   }) => (
     <motion.article
-      className="flex flex-col md:flex-row items-center gap-8 md:gap-24 pb-6 m-auto max-w w-10/12"
+      className="flex flex-col md:flex-row items-center gap-8 md:gap-24 pb-6 w-fit m-auto"
       initial="enter"
       animate="center"
       exit="exit"
@@ -99,7 +99,7 @@ const LatestReading = () => {
   );
 
   return (
-    <section className="m-auto overflow-hidden">
+    <section className="m-auto overflow-hidden w-10/12">
       <SectionTitle title="dernières lectures" isGreen={false} />
       <AnimatePresence mode="wait" initial={false} custom={direction}>
         {currentBooks.map((book) => (
