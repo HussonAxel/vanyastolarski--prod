@@ -3,6 +3,8 @@ import LatestRelease from "@components/LatestRelease/LatestRelease.tsx";
 import BookResume from "@components/BookResume/BookResume";
 import LatestReading from "@components/LatestReading/LatestReading";
 import ServicesList from "@components/ServicesList/ServicesList";
+import Modal from "../components/Modal/Modal";
+
 import { Helmet } from "react-helmet-async";
 
 import ColoredSection from "@components/ColoredSection.tsx";
@@ -44,6 +46,10 @@ const IndexComponent = () => {
         <meta name="author" content="Vanya Stolarski" />
         <link rel="canonical" href="https://www.vanyastolarski.fr/" />
       </Helmet>
+      <div>
+        <Modal videoUrl="oMXpFLSyzow" />
+        {/* Rest of your home page content */}
+      </div>
       <ColoredSection bgColor="bg-white">
         <LatestRelease
           LatestReleaseName="Fous Papillons"
