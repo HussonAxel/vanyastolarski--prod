@@ -66,12 +66,14 @@ const Book: React.FC<BookProps> = ({
             isBGGreen={false}
             linkTo={`./${bookSlug}`}
           />
-          <DownloadButton
-            text="Lire le premier chapitre"
-            isPrimary={false}
-            isBGGreen={true}
-            linkTo={firstChapterLink}
-          />
+          {firstChapterLink && (
+            <DownloadButton
+              text="Lire le premier chapitre"
+              isPrimary={false}
+              isBGGreen={true}
+              linkTo={firstChapterLink}
+            />
+          )}
         </div>
       </div>
     </article>
