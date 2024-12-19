@@ -32,9 +32,9 @@ const Footer: React.FC = () => {
   );
 
   return (
-    <footer className="font-WorkSans text-green border-t-2 border-green/20">
+    <footer className="font-WorkSans text-green border-t-2 border-green/20 pt-20">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-12">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12 mb-8">
+        <div className="grid grid-cols-3 gap-8 lg:gap-12 mb-8">
           {/* Navigation Section */}
           <div className="text-center sm:text-left">
             <p className="text-lg lg:text-xl mb-4 font-bold hover:text-green/80 transition-all duration-300 ease-in-out font-Large">

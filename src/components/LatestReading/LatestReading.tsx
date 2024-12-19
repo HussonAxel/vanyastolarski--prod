@@ -54,7 +54,7 @@ const LatestReading = () => {
     slug: string;
   }) => (
     <motion.article
-      className="flex flex-col md:flex-row items-center gap-8 md:gap-24 pb-6 w-fit m-auto max-w"
+      className="flex flex-col md:flex-row items-center gap-8 md:gap-24 pb-6 m-auto max-w w-10/12"
       initial="enter"
       animate="center"
       exit="exit"
