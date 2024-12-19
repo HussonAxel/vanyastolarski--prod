@@ -1,9 +1,11 @@
 import { BookInfosProps } from "./BookInfos.type";
+import Button from "@components/Button/Button";
 
 const BookInfos = ({
   Synopsis,
   Contexte,
   picture,
+  amazonLink,
   SynopsisSectionContent,
   ContexteSectionContent,
   BookSaga,
@@ -33,14 +35,23 @@ const BookInfos = ({
       {/* Main Content */}
       <div className="flex flex-col lg:flex-row items-center lg:items-start gap-8 lg:gap-16 place-content-center">
         {/* Book Cover Image */}
-        <div className="w-full lg:w-auto flex justify-center">
-          <img
-            src={picture}
-            alt="Book cover"
-            className="rounded-md w-auto max-w-full lg:max-w-lg h-auto max-h-[500px] lg:max-h-[550px] shadow-2xl"
-          />
+        <div className="flex md:flex-col gap-8 items-center mb-16">
+          <div className="w-full lg:w-auto flex justify-center">
+            <img
+              src={picture}
+              alt="Book cover"
+              className="rounded-md w-auto max-w-full lg:max-w-lg h-auto max-h-[500px] lg:max-h-[550px] shadow-2xl"
+            />
+          </div>
+          {amazonLink && (
+            <Button
+              text={"Achetez sur amazon"}
+              isPrimary={false}
+              isBGGreen={false}
+              linkTo={amazonLink}
+            />
+          )}
         </div>
-
         {/* Book Information */}
         <div className="w-full lg:w-2/3 max-w-3xl space-y-8 lg:pl-8">
           <Section title={SynopsisSectionContent} content={Synopsis} />

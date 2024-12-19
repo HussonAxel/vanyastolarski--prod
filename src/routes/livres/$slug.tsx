@@ -73,6 +73,7 @@ const LivreComponents = () => {
           ContexteSectionContent="Contexte"
           Contexte={book.contexte}
           picture={getAssetPath(book.cover)}
+          amazonLink={book.amazonLink}
           BookSaga={displayedSagaTitle}
           BookTitle={displayedBookTitle || ""}
         />
