@@ -8,5 +8,5 @@ export interface BookProps {
   bookID: string;
   bookSlug: string;
   BookPages: number;
-  firstChapterLink: string;
+  firstChapterLink?: string;
 }
