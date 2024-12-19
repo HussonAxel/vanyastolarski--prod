@@ -8,7 +8,7 @@ const CharacterPanel = ({ name, resume, picture }: CharacterPanelProps) => {
         <img
           src={picture}
           alt={`Character ${name}`}
-          className="rounded-lg shadow-lg w-full sm:w-auto h-full object-cover hover:scale-[1.02] transition-transform duration-300"
+          className="rounded-lg shadow-lg w-full sm:w-auto h-full max-w-[327px] max-h-[278px] object-cover hover:scale-[1.02] transition-transform duration-300"
         />
       </div>
 

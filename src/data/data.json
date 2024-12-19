@@ -11,7 +11,7 @@
         {
           "nom": "Kassassin",
           "prenom": "Ethan",
-          "picture": "/assets/Characters/Fill_BG.webp",
+          "picture": "/assets/Characters/FP/Ethan.webp",
           "description": "Garçon a priori originaire du Moyen-Orient, Ethan est poursuivi par des rumeurs de sorcellerie qui font de lui le paria du village. S'il survit à cette enfance de famine et de pauvreté, c'est uniquement grâce à Esther qui lui apprendra à lire.",
           "relatifs": {
             "mother": "",
@@ -22,7 +22,7 @@
         {
           "nom": "Dêtres",
           "prenom": "Esther",
-          "picture": "/assets/Characters/Fill_BG.webp",
+          "picture": "/assets/Characters/FP/Esther.webp",
           "description": "Fille du médecin et cadette d'une famille de trois enfants, Esther est promise à un mariage difficile pour son comportement et son caractère défiant les règles de l'époque. Elle est pourtant loin de se laisser faire et déclare la guerre à son fiancé dès leur rencontre. Son souhait est pourtant simple : vivre dans la forêt avec Ethan, libre de toute obligation.",
           "relatifs": {
             "mother": "",
@@ -73,7 +73,7 @@
       "ISBN": "978-2957655106",
       "amazonLink": "https://www.amazon.fr/C%C5%93ur-dAnkaa-1-Imposteurs/dp/2957655101",
       "pages": 479,
-      "firstChapterLink": "https://example.com/le-coeur-ankaa/chapter1"
+      "firstChapterLink": "https://www.amazon.fr/C%C5%93ur-dAnkaa-1-Imposteurs/dp/2957655101?asin=2957655101&revisionId=&format=4&depth=1"
     },
     {
       "id": "4",
@@ -125,7 +125,7 @@
         {
           "nom": "",
           "prenom": "Aspen",
-          "picture": "/assets/Characters/Fill_BG.webp",
+          "picture": "/assets/Characters/12D/aspen_sarah.webp",
           "description": "Garçon longiforme et pâle aux cheveux blancs et aux yeux violets, Aspen n'a rien d'un héros. Il est lâche, effrayé par le monde et par le Violetta. Il se laisse marcher dessus parce que c’est plus simple d’obéir que de se rebeller",
           "relatifs": {
             "mother": "",

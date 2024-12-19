@@ -1,3 +1,4 @@
+import DownloadButton from "@components/DownloadButton/DownloadButton";
 import { BookInfosProps } from "./BookInfos.type";
 import Button from "@components/Button/Button";
 
@@ -10,6 +11,7 @@ const BookInfos = ({
   ContexteSectionContent,
   BookSaga,
   BookTitle,
+  firstChapterLink,
 }: BookInfosProps) => {
   const Section = ({ title, content }: { title: string; content: string }) => (
     <div className="mb-8">
@@ -43,12 +45,19 @@ const BookInfos = ({
               className="rounded-md w-auto max-w-full lg:max-w-lg h-auto max-h-[500px] lg:max-h-[550px] shadow-2xl"
             />
           </div>
-          {amazonLink && (
+          {amazonLink ? (
             <Button
               text={"Achetez sur amazon"}
               isPrimary={false}
               isBGGreen={false}
               linkTo={amazonLink}
+            />
+          ) : (
+            <DownloadButton
+              text="Lire le premier chapitre"
+              isPrimary={false}
+              isBGGreen={true}
+              linkTo={firstChapterLink}
             />
           )}
         </div>

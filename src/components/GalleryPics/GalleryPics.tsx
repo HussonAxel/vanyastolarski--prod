@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 interface GalleryImage {
@@ -7,15 +7,17 @@ interface GalleryImage {
   artist: string;
   date: string;
   description: string;
+  book: string;
 }
 
 const galleryData: GalleryImage[] = [
   {
     url: "/assets/gallery/aspen_sarah.jpg",
     title: "Aspen",
-    artist: "Sarah",
+    artist: "blackrose_drawings",
     date: "Mars 2024",
     description: "Un dessin de Aspen",
+    book: "Les douze divins",
   },
   {
     url: "/assets/gallery/aspendessin.png",
@@ -23,23 +25,139 @@ const galleryData: GalleryImage[] = [
     artist: "Vanya",
     date: "Mars 2024",
     description: "Un dessin de Aspen",
+    book: "Les douze divins",
   },
   {
     url: "/assets/gallery/AspendessinChloe.jpg",
     title: "Aspen",
-    artist: "Chloe",
+    artist: "8kloweey",
     date: "Mars 2024",
     description: "Un dessin de Aspen",
+    book: "Les douze divins",
+  },
+  {
+    url: "/assets/gallery/Esther.webp",
+    title: "Esther",
+    artist: "Artsymoon",
+    date: "Mars 2024",
+    description: "Un dessin de Esther",
+    book: "Fous Papillons",
+  },
+  {
+    url: "/assets/gallery/Ethan.webp",
+    title: "Ethan",
+    artist: "Artsymoon",
+    date: "Mars 2024",
+    description: "Un dessin de Ethan",
+    book: "Fous Papillons",
+  },
+  {
+    url: "/assets/gallery/Chiara.jpg",
+    title: "Chiara",
+    artist: "Artsymoon",
+    date: "Mars 2024",
+    description: "Un dessin de Chiara",
+    book: "Fous Papillons",
+  },
+  {
+    url: "/assets/gallery/Frantz.jpg",
+    title: "Frantz",
+    artist: "Artsymoon",
+    date: "Mars 2024",
+    description: "Un dessin de Frantz",
+    book: "Fous Papillons",
+  },
+  {
+    url: "/assets/gallery/agape.jpg",
+    title: "Agapé",
+    artist: "Artsymoon",
+    date: "Mars 2024",
+    description: "Un dessin de Agapé",
+    book: "Brille Papillons",
   },
 ].concat();
 
 export default function GalleryPics() {
   const [selectedImage, setSelectedImage] = useState<GalleryImage | null>(null);
+  const [activeFilters, setActiveFilters] = useState({
+    book: "",
+    artist: "",
+  });
+
+  const filters = useMemo(() => {
+    return {
+      books: [...new Set(galleryData.map((img) => img.book))],
+      artists: [...new Set(galleryData.map((img) => img.artist))],
+    };
+  }, []);
+
+  const filteredImages = useMemo(() => {
+    return galleryData.filter((image) => {
+      const matchesBook =
+        !activeFilters.book || image.book === activeFilters.book;
+      const matchesArtist =
+        !activeFilters.artist || image.artist === activeFilters.artist;
+      return matchesBook && matchesArtist;
+    });
+  }, [activeFilters]);
+
+  const resetFilters = () => {
+    setActiveFilters({
+      book: "",
+      artist: "",
+    });
+  };
 
   return (
     <>
+      <div className="w-9/12 mx-auto mb-6 space-y-4">
+        <div className="flex flex-wrap gap-4 items-center">
+          <select
+            value={activeFilters.book}
+            onChange={(e) =>
+              setActiveFilters((prev) => ({ ...prev, book: e.target.value }))
+            }
+            className="font-WorkSans font-bold text-sm uppercase p-4 border-[1.66px] border-green text-white bg-green hover:bg-green/80  transition duration-300 ease-in-out rounded-none"
+          >
+            <option value="">Tous les livres</option>
+            {filters.books.map((book) => (
+              <option key={book} value={book}>
+                {book}
+              </option>
+            ))}
+          </select>
+
+          <select
+            value={activeFilters.artist}
+            onChange={(e) =>
+              setActiveFilters((prev) => ({ ...prev, artist: e.target.value }))
+            }
+            className="font-WorkSans font-bold text-sm uppercase p-4 border-[1.66px] border-green text-white bg-green hover:bg-green/80  transition duration-300 ease-in-out rounded-none"
+          >
+            <option value="">Tous les artistes</option>
+            {filters.artists.map((artist) => (
+              <option key={artist} value={artist}>
+                {artist}
+              </option>
+            ))}
+          </select>
+
+          <button
+            onClick={resetFilters}
+            className="font-WorkSans font-bold text-sm uppercase p-4 border-[1.66px] border-green text-white bg-green hover:bg-green/80  transition duration-300 ease-in-out"
+          >
+            Réinitialiser les filtres
+          </button>
+        </div>
+
+        <p className="text-gray-600">
+          {filteredImages.length} image{filteredImages.length > 1 ? "s" : ""}{" "}
+          trouvée{filteredImages.length > 1 ? "s" : ""}
+        </p>
+      </div>
+
       <div className="columns-1 sm:columns-2 md:columns-3 lg:columns-4 w-9/12 mx-auto my-4 gap-4">
-        {galleryData.map((image, index) => (
+        {filteredImages.map((image, index) => (
           <motion.div
             key={index}
             className="relative mb-4 break-inside-avoid cursor-pointer"
@@ -75,7 +193,6 @@ export default function GalleryPics() {
               className="bg-white rounded-xl overflow-hidden flex flex-col md:flex-row relative max-w-[95vw] md:max-w-[85vw] max-h-[90vh]"
               onClick={(e) => e.stopPropagation()}
             >
-              {/* Image Container with Aspect Ratio Maintenance */}
               <div className="md:flex-1 bg-black flex items-center justify-center min-h-[300px] md:min-h-[400px]">
                 <img
                   src={selectedImage.url}
@@ -84,9 +201,7 @@ export default function GalleryPics() {
                 />
               </div>
 
-              {/* Content Section - Fixed width for readability */}
               <div className="md:w-[400px] flex flex-col max-h-[80vh] font-WorkSans bg-white">
-                {/* Title and Artist */}
                 <div className="p-6 border-b">
                   <h2 className="text-2xl font-bold mb-2">
                     {selectedImage.title}
@@ -103,7 +218,6 @@ export default function GalleryPics() {
                   </div>
                 </div>
 
-                {/* Description */}
                 <div className="flex-grow p-6 overflow-y-auto">
                   <h3 className="text-lg font-semibold mb-3">Description</h3>
                   <p className="text-gray-700 leading-relaxed">
@@ -112,7 +226,6 @@ export default function GalleryPics() {
                 </div>
               </div>
 
-              {/* Close Button */}
               <button
                 className="absolute top-4 right-4 text-white text-xl p-2 hover:bg-white/10 rounded-full transition-colors"
                 onClick={() => setSelectedImage(null)}

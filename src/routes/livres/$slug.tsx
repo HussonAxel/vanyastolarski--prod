@@ -76,6 +76,7 @@ const LivreComponents = () => {
           amazonLink={book.amazonLink}
           BookSaga={displayedSagaTitle}
           BookTitle={displayedBookTitle || ""}
+          firstChapterLink={book.firstChapterLink}
         />
       </ColoredSection>
 

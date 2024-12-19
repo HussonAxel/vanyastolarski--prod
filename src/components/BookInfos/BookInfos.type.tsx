@@ -7,4 +7,5 @@ export interface BookInfosProps {
   amazonLink?: string;
   BookSaga?: string;
   BookTitle: string;
+  firstChapterLink?: string;
 }
