@@ -1,10 +1,12 @@
 import { CitationModelProps } from "./CitationModel.type";
 
-const CitationModel: React.FC<CitationModelProps> = ({quoteNumber,
-CreatedAt,
-Quote,
-AuthorOfQuote,
-Thoughts}) => {
+const CitationModel: React.FC<CitationModelProps> = ({
+  quoteNumber,
+  CreatedAt,
+  Quote,
+  AuthorOfQuote,
+  Thoughts,
+}) => {
   return (
     <article className="font-WorkSans border-b-[0.5px] first-of-type:border-t-[0.5px] flex flex-col sm:flex-row w-3/4 m-auto justify-between py-12">
       <div className=" text-black/80 mb-8">
@@ -16,7 +18,7 @@ Thoughts}) => {
           <p className="text-lg italic"> — {AuthorOfQuote}</p>
         </div>
         <div>
-          <p className="text-black/80">{Thoughts}h</p>
+          <p className="text-black/80">{Thoughts}</p>
         </div>
       </div>
     </article>

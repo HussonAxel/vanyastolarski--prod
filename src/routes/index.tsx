@@ -55,7 +55,7 @@ const IndexComponent = () => {
           LatestReleaseName="Fous Papillons"
           LatestReleaseSynopsis={data.books[0].synopsis}
           youtubeEmbedUrl="https://www.youtube.com/embed/oMXpFLSyzow"
-          latestReleasePageUrl="livres/fous-papillons"
+          latestReleasePageUrl="https://fr.ulule.com/edition-reliee-et-brochee---fous-papillons/coming-soon/"
           latestReleasePictureUrl={""}
         />
       </ColoredSection>
