@@ -68,8 +68,8 @@ const ServicesList = () => {
                     <button
                       onClick={() =>
                         setCurrentImageIndex(
-                          (currentImageIndex - 1 + service.images.length) %
-                            service.images.length
+                          (currentImageIndex - 1 + service.images!.length) %
+                            service.images!.length
                         )
                       }
                       className="text-white"
@@ -79,7 +79,7 @@ const ServicesList = () => {
                     <button
                       onClick={() =>
                         setCurrentImageIndex(
-                          (currentImageIndex + 1) % service.images.length
+                          (currentImageIndex + 1) % service.images!.length
                         )
                       }
                       className="text-white"
