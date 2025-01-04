@@ -41,10 +41,10 @@ const LatestReading = () => {
     resume,
     cover,
     coverAlt,
-    slug,
+    linktoReview,
   }: {
     saga: string;
-    title: string;
+    title?: string;
     author: string;
     resume: string;
     date: string;
@@ -52,6 +52,7 @@ const LatestReading = () => {
     coverAlt: string;
     id: number;
     slug: string;
+    linktoReview?: string;
   }) => (
     <motion.article
       className="flex flex-col md:flex-row items-center gap-12 2xl:gap-24 pb-6 w-fit m-auto"
@@ -77,16 +78,18 @@ const LatestReading = () => {
           </h1>
           <h2 className="text-md md:text-lg">{title}</h2>
         </div>
-        <p className="text-black font-WorkSans text-sm md:text-md w-fit">
+        <p className="text-black font-WorkSans text-sm md:text-md w-fit line-clamp-6">
           {resume}
         </p>
         <div className="flex flex-col gap-8 m-auto md:flex-row md:m-0">
-          <Button
-            isPrimary={true}
-            text="LIRE LA REVIEW EN ENTIERE"
-            isBGGreen={false}
-            linkTo={`/reviews/${slug}`}
-          />
+          {linktoReview && (
+            <Button
+              isPrimary={true}
+              text="LIRE LA REVIEW EN ENTIERE"
+              isBGGreen={false}
+              linkTo={linktoReview}
+            />
+          )}
           <Button
             isPrimary={false}
             text="VOIR TOUTES LES REVIEWS"
@@ -100,13 +103,12 @@ const LatestReading = () => {
 
   return (
     <section className="m-auto overflow-hidden w-10/12">
-      <SectionTitle title="dernières lectures" isGreen={false} />
+      <SectionTitle title="dernières reviews" isGreen={false} />
       <AnimatePresence mode="wait" initial={false} custom={direction}>
         {currentBooks.map((book) => (
           <BookCard
             key={book.id}
             saga={book.saga}
-            title={book.title}
             author={book.author}
             resume={book.resume}
             date={book.date}
@@ -114,6 +116,7 @@ const LatestReading = () => {
             coverAlt={book.coverAlt}
             id={book.id}
             slug={book.slug}
+            linktoReview={book.linktoReview}
           />
         ))}
       </AnimatePresence>

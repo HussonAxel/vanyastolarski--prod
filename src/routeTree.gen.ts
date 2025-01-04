@@ -11,6 +11,7 @@
 // Import Routes
 
 import { Route as rootRoute } from './routes/__root'
+import { Route as ServicesImport } from './routes/services'
 import { Route as ReviewsImport } from './routes/reviews'
 import { Route as LivresImport } from './routes/livres'
 import { Route as GalerieImport } from './routes/galerie'
@@ -22,6 +23,11 @@ import { Route as ReviewsSlugImport } from './routes/reviews/$slug'
 import { Route as LivresSlugImport } from './routes/livres/$slug'
 
 // Create/Update Routes
+
+const ServicesRoute = ServicesImport.update({
+  path: '/services',
+  getParentRoute: () => rootRoute,
+} as any)
 
 const ReviewsRoute = ReviewsImport.update({
   path: '/reviews',
@@ -107,6 +113,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ReviewsImport
       parentRoute: typeof rootRoute
     }
+    '/services': {
+      id: '/services'
+      path: '/services'
+      fullPath: '/services'
+      preLoaderRoute: typeof ServicesImport
+      parentRoute: typeof rootRoute
+    }
     '/livres/$slug': {
       id: '/livres/$slug'
       path: '/$slug'
@@ -149,6 +162,7 @@ export const routeTree = rootRoute.addChildren({
     ReviewsSlugRoute,
     ReviewsIndexRoute,
   }),
+  ServicesRoute,
 })
 
 /* prettier-ignore-end */

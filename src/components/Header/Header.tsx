@@ -8,6 +8,7 @@ const Header: React.FC = () => {
 
   const menuLinks = [
     { to: "/Livres", text: "Livres" },
+    { to: "/Services", text: "Services" },
     { to: "/Reviews", text: "Reviews" },
     { to: "/Citations", text: "Citations" },
     { to: "/Galerie", text: "Galerie" },
@@ -33,7 +34,7 @@ const Header: React.FC = () => {
             className="flex items-center gap-8 2xl:gap-16"
           >
             <nav className="hidden lg:flex gap-8">
-              {menuLinks.slice(0, 2).map((link) => (
+              {menuLinks.slice(0, 3).map((link) => (
                 <motion.div
                   key={link.to}
                   whileHover={{ scale: 1.05 }}

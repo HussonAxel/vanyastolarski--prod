@@ -2,7 +2,6 @@ import { createFileRoute } from "@tanstack/react-router";
 import LatestRelease from "@components/LatestRelease/LatestRelease.tsx";
 import BookResume from "@components/BookResume/BookResume";
 import LatestReading from "@components/LatestReading/LatestReading";
-import ServicesList from "@components/ServicesList/ServicesList";
 import Modal from "../components/Modal/Modal";
 
 import { Helmet } from "react-helmet-async";
@@ -64,9 +63,6 @@ const IndexComponent = () => {
       </ColoredSection>
       <ColoredSection bgColor="bg-white">
         <LatestReading />
-      </ColoredSection>
-      <ColoredSection bgColor="bg-green">
-        <ServicesList />
       </ColoredSection>
     </>
   );

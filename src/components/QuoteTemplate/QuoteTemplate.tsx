@@ -9,8 +9,8 @@ const QuoteTemplate: React.FC<QuoteTemplateProps> = ({
   isbn,
   BookCover,
   BookCoverAlt,
-  bookSlug,
   BookDate,
+  linktoReview,
 }) => {
   return (
     <article className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12 md:mb-16 lg:mb-24 pb-12 md:pb-16 lg:pb-24 font-WorkSans border-b border-b-green">
@@ -47,7 +47,9 @@ const QuoteTemplate: React.FC<QuoteTemplateProps> = ({
 
           {/* Book Resume */}
           <div className="text-black">
-            <p className="text-sm md:text-base leading-relaxed">{BookResume}</p>
+            <p className="text-sm md:text-base leading-relaxed line-clamp-[8]">
+              {BookResume}
+            </p>
           </div>
 
           {/* Button Container */}
@@ -56,7 +58,9 @@ const QuoteTemplate: React.FC<QuoteTemplateProps> = ({
               text="LIRE LA REVIEW"
               isPrimary={true}
               isBGGreen={false}
-              linkTo={`./${bookSlug}`}
+              linkTo={linktoReview || "#"}
+              className={!linktoReview ? "cursor-not-allowed opacity-50" : ""}
+              disabled={!linktoReview}
             />
           </div>
         </div>

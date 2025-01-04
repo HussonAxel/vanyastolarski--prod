@@ -7,6 +7,8 @@ const Button: React.FC<ButtonProps> = ({
   isPrimary,
   isBGGreen,
   linkTo,
+  className,
+  disabled,
 }) => {
   const baseStyles =
     "font-WorkSans font-bold text-sm uppercase inline-block w-full md:w-fit p-4 transition duration-300 ease-in-out text-center m-auto md:m-0";
@@ -18,13 +20,19 @@ const Button: React.FC<ButtonProps> = ({
     : `border-[1.66px] ${
         isBGGreen
           ? "border-white text-white hover:bg-white/10"
-          : "border-green text-green hover:bg-green hover:text-white"
+          : "border-green text-green hover:bg-green/10"
       }`;
 
-  return (
-    <Link to={linkTo || "/"} className={`${baseStyles} ${variantStyles}`}>
+  const combinedStyles = `${baseStyles} ${variantStyles} ${className || ""}`;
+
+  return linkTo ? (
+    <Link to={linkTo} className={combinedStyles} disabled={disabled}>
       {text}
     </Link>
+  ) : (
+    <button className={combinedStyles} disabled={disabled}>
+      {text}
+    </button>
   );
 };
 

@@ -1,6 +1,6 @@
 export interface QuoteTemplateProps {
   BookSaga: string;
-  BookTitle: string;
+  BookTitle?: string;
   BookResume: string;
   DateQuote: string;
   isbn: string;
@@ -9,4 +9,5 @@ export interface QuoteTemplateProps {
   bookID: number;
   bookSlug: string;
   BookDate: string;
+  linktoReview?: string;
 }

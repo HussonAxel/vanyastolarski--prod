@@ -3,4 +3,6 @@ export interface ButtonProps {
   isPrimary: boolean;
   isBGGreen: boolean;
   linkTo?: string;
+  className?: string;
+  disabled?: boolean;
 }

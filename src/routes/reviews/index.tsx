@@ -56,7 +56,6 @@ const LivresComponents = () => {
             <QuoteTemplate
               key={index}
               BookSaga={book.saga}
-              BookTitle={book.title}
               BookResume={book.resume}
               DateQuote={book.date}
               isbn={book.isbn}
@@ -65,6 +64,7 @@ const LivresComponents = () => {
               bookID={book.id}
               bookSlug={book.slug}
               BookDate={book.date}
+              linktoReview={book.linktoReview}
             />
           ))}
         </section>

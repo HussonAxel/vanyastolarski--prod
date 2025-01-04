@@ -1,14 +1,36 @@
 [
   {
-    "saga": "LES DOUZE DIVINS",
-    "slug": "les-douze-divins",
-    "title": "TOME 1 - LES ANGES MORTELS",
+    "saga": "Fous Papillons",
+    "slug": "fous-papillons",
     "author": "Vanya Stolarski",
-    "date": "24 Sept. 2024",
-    "resume": "Les portes de l'enfer se sont ouvertes et ont déversé sur le monde le Chaos, grouillant de garmes, harpies et démons. Aspen vit à Saint-Pétersbourg, l'une des ultimes villes habitables, et travaille pour le Violetta, la dernière mafia russe encore existante. Alors qu'il devait simplement livrer une valise dans un quartier ravagé par le Chaos, un démon va s'immiscer dans sa tête. Il s'appellerait Vassily et proclame être un humain datant du monde précédent l'apocalyp&e. Mensonge ou vérité ? Aspen a encore beaucoup à apprendre pour survivre au Violetta et à ce monde qui se referme sur lui.",
-    "cover": "/assets/covers/LatestRead.jpg",
-    "coverAlt": "ils devront parvenir à survivre sans que le monde n'apprenne leurs machinations sans quoi.",
-    "isbn": "ISBN-12312312123",
+    "date": "18 aout 2024",
+    "resume": "« J’ai accroché de fou. T’as un style glauque et sarcastique que j’ai toujours adoré. Maintenant, Fous-Papillons vit dans ma tête sans payer de loyer. Ma mère l’a bouffé aussi. T’as écrit l’histoire d’une femme hyper forte qui agit dans on monde, à une époque, et qui a eu une vie de fou. L’histoire aurait pu se suffir à elle-même tellement le personnage est approfondi. »",
+    "cover": "/assets/covers/FP_Cover.webp",
+    "coverAlt": "ils devront parvenir à survivre sans que le monde n'apprenne leurs machinations sans quoi...",
+    "isbn": "N/A",
     "id": 1
+  },
+  {
+    "saga": "Fous Papillons",
+    "slug": "fous-papillons",
+    "author": "Vanya Stolarski",
+    "date": "23 Juillet 2024",
+    "resume": "« Fous Papillons est un excellent livre. Tu as réussi à éviter de nombreux écueils. Il aurait été facile de tomber dans le pathos et le drame à outrance. Je craignais que l'aspect historique ne soit trop présent, mais il sert le récit sans l'alourdir et en l'enrichissant. »",
+    "cover": "/assets/covers/FP_Cover.webp",
+    "coverAlt": "ils devront parvenir à survivre sans que le monde n'apprenne leurs machinations sans quoi...",
+    "isbn": "N/A",
+    "id": 2
+  },
+  {
+    "saga": "Le Coeur D'Ankaa",
+    "slug": "le-coeur-d-anka",
+    "author": "Vanya Stolarski",
+    "date": "20 septembre 2021",
+    "resume": "« J'ai lu le 1er quart tranquillement pour découvrir le livre. Puis c'est devenu impossible de le lâcher ! J'ai fini hier soir, et j'ai cru mourir... Je survivrais péniblement dans l'attente du tome 2. Il m'a retourné la tête et le cœur avec tellement de douceur et de finesse que je n'ai rien vu venir !Bref ! Vous suivez Johen, un héritier (ou presque) qui part à la recherche d'une nymphe, sans être certain de son existence. Rien que son voyage est un sacré périple. Mais ce que j'ai adoré, c'est son évolution. Il passe de Prince à... Johen ! Je me suis sentie proche de lui à certains moments, pour ne pas dire que je m'y suis identifiée. Je l'ai adoré !Johen va donc rencontrer Alycie. Sans vous en dire trop, personne n'est ce qu'il semble être dans le Cœur d'Ankaa. Même les relations pourraient vous surprendre ! Alycie est avide de liberté et de voyage. Ce qu'elle va devoir accomplir l'emmènera bien plus loin ! Là encore, j'ai adhéré ! En fait, je me suis sentie proche des deux, et cela m'a permis de vivre cette lecture à fond. Il y a un tel réalisme dans leur caractère, les péripéties, jusque dans le détail de ce monde, que ça m'a transporté !Si vous aimez lire des histoires de politique, de magie, de féérie, des complots, des rebondissements dingues, des batailles, une touche de romance et des espions : lisez-le ! Ensuite, on signera une pétition ensemble pour avoir une série ou un film, parce qu'il est foutrement adaptable à l'écran et que, vraiment, je n'en aurais pas assez de deux tomes ! » ",
+    "cover": "/assets/covers/le_coeur_d_ankaa_couverture.webp",
+    "coverAlt": "ils devront parvenir à survivre sans que le monde n'apprenne leurs machinations sans quoi...",
+    "linktoReview": "https://www.amazon.fr/gp/customer-reviews/RETNOBH9UGMJX/ref=cm_cr_dp_d_rvw_ttl?ie=UTF8&ASIN=2957655101",
+    "isbn": "978-2957655106",
+    "id": 3
   }
 ]
