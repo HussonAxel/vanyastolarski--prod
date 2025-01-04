@@ -24,12 +24,12 @@ export const Services: Service[] = [
     resume:
       "Je propose des entêtes de chapitres pour les romans de fantasy et de science-fiction. Ces entêtes sont conçus pour donner une impression de luxe et de qualité à votre livre. Ils sont disponibles en différentes tailles et formats, et peuvent être personnalisés selon vos besoins.",
     images: [
-      "/assets/services/header/header_one.webp",
-      "/assets/services/header/header_two.webp",
-      "/assets/services/header/header_three.webp",
-      "/assets/services/header/header_four.webp",
-      "/assets/services/header/header_five.webp",
-      "/assets/services/header/header_six.webp",
+      "/assets/services/headers/header_one.webp",
+      "/assets/services/headers/header_two.webp",
+      "/assets/services/headers/header_three.webp",
+      "/assets/services/headers/header_four.webp",
+      "/assets/services/headers/header_five.webp",
+      "/assets/services/headers/header_six.webp",
     ],
   },
   {
@@ -37,9 +37,9 @@ export const Services: Service[] = [
     resume:
       "J'ai créé des jaspages pour les romans de fantasy et de science-fiction. Ces jaspages sont conçus pour donner une impression de luxe et de qualité à votre livre. Ils sont disponibles en différentes tailles et formats, et peuvent être personnalisés selon vos besoins.",
     images: [
-      "/assets/services/jaspages/jaspages_one.webp",
-      "/assets/services/jaspages/jaspages_two.webp",
-      "/assets/services/jaspages/jaspages_three.webp",
+      "/assets/services/jaspages/jaspage_one.webp",
+      "/assets/services/jaspages/jaspage_two.webp",
+      "/assets/services/jaspages/jaspage_three.webp",
     ],
   },
 ];
