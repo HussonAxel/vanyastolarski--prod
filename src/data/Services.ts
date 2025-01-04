@@ -10,8 +10,8 @@ export const Services: Service[] = [
     resume:
       "La cartographie est un élément essentiel pour tout roman de fantasy ou de science-fiction. Je propose de donner vie à vos mondes imaginaires à travers des cartes détaillées et personnalisées. Que ce soit pour un royaume médiéval-fantastique, ou un archipel mystérieux, je m'adapte à votre univers et votre style.",
     images: [
-      "/assets/services/maps_one.webp",
-      "/assets/services/maps_two.webp",
+      "/assets/services/maps/maps_one.webp",
+      "/assets/services/maps/maps_two.webp",
     ],
   },
   {
@@ -24,12 +24,12 @@ export const Services: Service[] = [
     resume:
       "Je propose des entêtes de chapitres pour les romans de fantasy et de science-fiction. Ces entêtes sont conçus pour donner une impression de luxe et de qualité à votre livre. Ils sont disponibles en différentes tailles et formats, et peuvent être personnalisés selon vos besoins.",
     images: [
-      "/assets/services/header_one.webp",
-      "/assets/services/header_two.webp",
-      "/assets/services/header_three.webp",
-      "/assets/services/header_four.webp",
-      "/assets/services/header_five.webp",
-      "/assets/services/header_six.webp",
+      "/assets/services/header/header_one.webp",
+      "/assets/services/header/header_two.webp",
+      "/assets/services/header/header_three.webp",
+      "/assets/services/header/header_four.webp",
+      "/assets/services/header/header_five.webp",
+      "/assets/services/header/header_six.webp",
     ],
   },
   {
@@ -37,9 +37,9 @@ export const Services: Service[] = [
     resume:
       "J'ai créé des jaspages pour les romans de fantasy et de science-fiction. Ces jaspages sont conçus pour donner une impression de luxe et de qualité à votre livre. Ils sont disponibles en différentes tailles et formats, et peuvent être personnalisés selon vos besoins.",
     images: [
-      "/assets/services/jaspages_one.webp",
-      "/assets/services/jaspages_two.webp",
-      "/assets/services/jaspages_three.webp",
+      "/assets/services/jaspages/jaspages_one.webp",
+      "/assets/services/jaspages/jaspages_two.webp",
+      "/assets/services/jaspages/jaspages_three.webp",
     ],
   },
 ];
