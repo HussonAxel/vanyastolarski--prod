@@ -42,4 +42,15 @@ export const Services: Service[] = [
       "/assets/services/jaspages/jaspage_three.webp",
     ],
   },
+  {
+    title: "Illustration",
+    resume:
+      "Je propose des illustrations pour les romans de fantasy et de science-fiction. Ces illustrations sont conçues pour donner une impression de luxe et de qualité à votre livre. Ils sont disponibles en différentes tailles et formats, et peuvent être personnalisés selon vos besoins.",
+    images: [
+      "/assets/services/illustrations/illustration_one.webp",
+      "/assets/services/illustrations/illustration_two.webp",
+      "/assets/services/illustrations/illustration_three.webp",
+      "/assets/services/illustrations/illustration_four.webp",
+    ],
+  },
 ];
