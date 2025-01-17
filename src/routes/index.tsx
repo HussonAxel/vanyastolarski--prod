@@ -25,7 +25,7 @@ const IndexComponent = () => {
         <meta property="og:title" content="Vanya Stolarski | Romancière" />
         <meta
           property="og:description"
-          content="Plongez dans l'univers de Vanya Stolarski, auteure de romans qui explore [thèmes principaux]. Découvrez ses œuvres et son actualité littéraire."
+          content="Plongez dans l'univers de Vanya Stolarski, auteure de romans qui explore le post-apocalyptique, la romance ainsi que l'histoire. Découvrez ses œuvres et son actualité littéraire."
         />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="[URL-photo-auteur]" />

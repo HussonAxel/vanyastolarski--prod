@@ -34,7 +34,7 @@ const galleryData: GalleryImage[] = [
     description:
       "La nature est un étrange symbole en fantasy, tantôt effrayante et dangereuse, tantôt magique et mystique, parsemez votre manuscrit de créatures étranges et forestières pour plonger vos lecteurs dans un monde sylvestre empli de secrets. ",
     prix: "17€",
-    categorie: "Dinkus",
+    categorie: "Entête de chapitre",
   },
   {
     url: "/assets/boutique/oeuf.webp",
