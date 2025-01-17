@@ -16,6 +16,7 @@ import { Route as ReviewsImport } from './routes/reviews'
 import { Route as LivresImport } from './routes/livres'
 import { Route as GalerieImport } from './routes/galerie'
 import { Route as CitationsImport } from './routes/citations'
+import { Route as BoutiqueImport } from './routes/boutique'
 import { Route as IndexImport } from './routes/index'
 import { Route as ReviewsIndexImport } from './routes/reviews/index'
 import { Route as LivresIndexImport } from './routes/livres/index'
@@ -46,6 +47,11 @@ const GalerieRoute = GalerieImport.update({
 
 const CitationsRoute = CitationsImport.update({
   path: '/citations',
+  getParentRoute: () => rootRoute,
+} as any)
+
+const BoutiqueRoute = BoutiqueImport.update({
+  path: '/boutique',
   getParentRoute: () => rootRoute,
 } as any)
 
@@ -83,6 +89,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexImport
+      parentRoute: typeof rootRoute
+    }
+    '/boutique': {
+      id: '/boutique'
+      path: '/boutique'
+      fullPath: '/boutique'
+      preLoaderRoute: typeof BoutiqueImport
       parentRoute: typeof rootRoute
     }
     '/citations': {
@@ -155,6 +168,7 @@ declare module '@tanstack/react-router' {
 
 export const routeTree = rootRoute.addChildren({
   IndexRoute,
+  BoutiqueRoute,
   CitationsRoute,
   GalerieRoute,
   LivresRoute: LivresRoute.addChildren({ LivresSlugRoute, LivresIndexRoute }),

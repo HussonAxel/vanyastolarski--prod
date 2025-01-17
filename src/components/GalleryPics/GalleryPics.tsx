@@ -73,7 +73,7 @@ const galleryData: GalleryImage[] = [
     artist: "Artsymoon",
     date: "Mars 2024",
     description: "Un dessin de Agapé",
-    book: "Brille Papillons",
+    book: "Brille Papillon",
   },
 ].concat();
 
