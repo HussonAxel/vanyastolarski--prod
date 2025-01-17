@@ -4,11 +4,23 @@
     "slug": "fous-papillons",
     "author": "Vanya Stolarski",
     "date": "18 aout 2024",
+    "resume": "« Honnêtement, c'est un livre coup de coeur. Le livre est divisé en 4 parties distinctes. Chaque partie apporte une nouvelle vision de l'histoire et des personnages. Elles montrent leur évolution, tant dans leur relation que leur personnalité. De nombreux faits historiques sont évoqués, l'histoire se déroulant des années 1870 aux années 1920. J'ai beaucoup aimé cette dimension réaliste qui apporte de nombreux rebondissements tout au long du récit. »",
+    "cover": "/assets/covers/FP_Cover.webp",
+    "coverAlt": "ils devront parvenir à survivre sans que le monde n'apprenne leurs machinations sans quoi...",
+    "linktoReview": "https://www.instagram.com/p/DE2rXN5C3v4/",
+    "isbn": "N/A",
+    "id": 1
+  },
+  {
+    "saga": "Fous Papillons",
+    "slug": "fous-papillons",
+    "author": "Vanya Stolarski",
+    "date": "18 aout 2024",
     "resume": "« J’ai accroché de fou. T’as un style glauque et sarcastique que j’ai toujours adoré. Maintenant, Fous-Papillons vit dans ma tête sans payer de loyer. Ma mère l’a bouffé aussi. T’as écrit l’histoire d’une femme hyper forte qui agit dans on monde, à une époque, et qui a eu une vie de fou. L’histoire aurait pu se suffir à elle-même tellement le personnage est approfondi. »",
     "cover": "/assets/covers/FP_Cover.webp",
     "coverAlt": "ils devront parvenir à survivre sans que le monde n'apprenne leurs machinations sans quoi...",
     "isbn": "N/A",
-    "id": 1
+    "id": 2
   },
   {
     "saga": "Fous Papillons",
@@ -19,7 +31,7 @@
     "cover": "/assets/covers/FP_Cover.webp",
     "coverAlt": "ils devront parvenir à survivre sans que le monde n'apprenne leurs machinations sans quoi...",
     "isbn": "N/A",
-    "id": 2
+    "id": 3
   },
   {
     "saga": "Le Coeur D'Ankaa",
@@ -31,6 +43,6 @@
     "coverAlt": "ils devront parvenir à survivre sans que le monde n'apprenne leurs machinations sans quoi...",
     "linktoReview": "https://www.amazon.fr/gp/customer-reviews/RETNOBH9UGMJX/ref=cm_cr_dp_d_rvw_ttl?ie=UTF8&ASIN=2957655101",
     "isbn": "978-2957655106",
-    "id": 3
+    "id": 4
   }
 ]
