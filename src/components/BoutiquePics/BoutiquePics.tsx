@@ -37,16 +37,6 @@ const galleryData: GalleryImage[] = [
     categorie: "Dinkus",
   },
   {
-    url: "/assets/boutique/oeuf.webp",
-    title: "Oeuf",
-    description:
-      "Qu’il s’agisse de cavaliers dragons ou d’une légende d’un trésor protégé par ces créatures titanesques, les œufs sont souvent présentés comme signe de puissance et de pouvoir. Dévoilez à vos lecteurs au fil des chapitres ce que découvrent vos personnages ! ",
-    prix: "20€",
-    prix_evolutif: "30€ pour l'évolutif (lot de 4) ",
-    categorie: "Entête de chapitre",
-    evolutif: true,
-  },
-  {
     url: "/assets/boutique/oeuf_1.webp",
     title: "Oeuf",
     description:
@@ -135,7 +125,7 @@ export default function GalleryPics() {
 
   return (
     <>
-      <div className="w-9/12 mx-auto mb-6 space-y-4">
+      <div className="md:w-11/12 w-9/12 mx-auto mb-6 space-y-4">
         <div className="flex flex-wrap gap-4 items-center">
           <select
             value={activeFilters.categorie}
@@ -184,7 +174,7 @@ export default function GalleryPics() {
         </p>
       </div>
 
-      <div className="columns-1 sm:columns-2 md:columns-3 lg:columns-4 w-9/12 mx-auto my-4 gap-4">
+      <div className="columns-1 sm:columns-2 md:columns-3 lg:columns-4 md:w-11/12 w-9/12 mx-auto my-4 gap-4">
         {filteredImages.map((image, index) => (
           <motion.div
             key={index}
@@ -218,35 +208,18 @@ export default function GalleryPics() {
               initial={{ scale: 0.5, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.5, opacity: 0 }}
-              className="bg-white rounded-lg w-4/5 overflow-hidden flex flex-col relative max-w-[95vw] md:max-w-[85vw] max-h-[90vh]"
+              className="bg-white rounded-lg overflow-hidden flex flex-col md:flex-row relative max-w-[95vw] md:max-w-[85vw] max-h-[90vh]"
               onClick={(e) => e.stopPropagation()}
             >
               <div className="md:flex-1 bg-black flex items-center justify-center min-h-[300px] md:min-h-[400px]">
-                {selectedImage.evolutif ? (
-                  <div className="grid grid-cols-2 gap-4">
-                    {galleryData
-                      .filter(
-                        (img) => img.evolutif && img.url !== selectedImage.url
-                      )
-                      .map((img) => (
-                        <img
-                          key={img.url}
-                          src={img.url}
-                          alt={img.title}
-                          className="w-full h-auto object-contain"
-                        />
-                      ))}
-                  </div>
-                ) : (
-                  <img
-                    src={selectedImage.url}
-                    alt={selectedImage.title}
-                    className="max-w-full max-h-[80vh] w-auto h-auto object-contain"
-                  />
-                )}
+                <img
+                  src={selectedImage.url}
+                  alt={selectedImage.title}
+                  className="max-w-full max-h-[80vh] w-auto h-auto object-contain"
+                />
               </div>
 
-              <div className="flex flex-col max-h-[80vh] font-WorkSans bg-white">
+              <div className="md:w-[400px] flex flex-col max-h-[80vh] font-WorkSans bg-white">
                 <div className="p-6 border-b">
                   <h2 className="text-2xl font-bold mb-2">
                     {selectedImage.title}
@@ -255,10 +228,11 @@ export default function GalleryPics() {
                     <p className="text-lg">
                       <span className="font-semibold">Prix : </span>{" "}
                       {selectedImage.prix}
-                    </p>
-                    <p className="text-lg">
-                      <span className="font-semibold">Prix évolutif : </span>{" "}
-                      {selectedImage.prix_evolutif}
+                      {selectedImage.prix_evolutif && (
+                        <span className="text-sm text-gray-500">
+                          {selectedImage.prix_evolutif}
+                        </span>
+                      )}
                     </p>
                   </div>
                 </div>

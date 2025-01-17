@@ -15,7 +15,7 @@ const ServicesList = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState<number>(0);
 
   return (
-    <section className="m-auto w-10/12 lg:w-8/12 2xl:w-6/12">
+    <section className="m-auto w-11/12 md:w-10/12 lg:w-8/12 2xl:w-6/12">
       <SectionTitle title="Services" isGreen={false} />
       <h2 className="text-center text-xl mb-12 mt-4">
         Si vous êtes intéréssés par un de nos services, n'hésitez pas à me

@@ -102,7 +102,7 @@ const LatestReading = () => {
   );
 
   return (
-    <section className="m-auto overflow-hidden w-10/12">
+    <section className="m-auto overflow-hidden w-11/12 md:w-10/12">
       <SectionTitle title="dernières reviews" isGreen={false} />
       <AnimatePresence mode="wait" initial={false} custom={direction}>
         {currentBooks.map((book) => (

@@ -6,7 +6,7 @@ const BookResume = () => {
   return (
     <section>
       <SectionTitle title="mes livres" isGreen={true} />
-      <section className="w-10/12 xl:w-10/12 m-auto grid grid-cols-1 2xl:grid-cols-2 gap-y-16 gap-x-24 bg-green rounded-lg">
+      <section className="w-11/12 xl:w-10/12 m-auto grid grid-cols-1 2xl:grid-cols-2 gap-y-16 gap-x-24 bg-green rounded-lg">
         {BooksData.books.map((BookData) => (
           <article
             key={BookData.title}
