@@ -218,7 +218,7 @@ export default function GalleryPics() {
               initial={{ scale: 0.5, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.5, opacity: 0 }}
-              className="bg-white rounded-lg w-4/5 overflow-hidden flex flex-col md:flex-row relative max-w-[95vw] md:max-w-[85vw] max-h-[90vh]"
+              className="bg-white rounded-lg w-4/5 overflow-hidden flex flex-col relative max-w-[95vw] md:max-w-[85vw] max-h-[90vh]"
               onClick={(e) => e.stopPropagation()}
             >
               <div className="md:flex-1 bg-black flex items-center justify-center min-h-[300px] md:min-h-[400px]">
@@ -246,7 +246,7 @@ export default function GalleryPics() {
                 )}
               </div>
 
-              <div className="md:w-[400px] flex flex-col max-h-[80vh] font-WorkSans bg-white">
+              <div className="flex flex-col max-h-[80vh] font-WorkSans bg-white">
                 <div className="p-6 border-b">
                   <h2 className="text-2xl font-bold mb-2">
                     {selectedImage.title}
