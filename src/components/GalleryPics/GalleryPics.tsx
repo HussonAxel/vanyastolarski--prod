@@ -75,6 +75,30 @@ const galleryData: GalleryImage[] = [
     description: "Un dessin de Agapé",
     book: "Brille Papillon",
   },
+  {
+    url: "/assets/gallery/coeur-de-renard_fortune.png",
+    title: "Fortune",
+    artist: "pumpkinspace.latte",
+    date: "Fevrier 2025",
+    description: "Un dessin de Fortune",
+    book: "Coeur de Renard",
+  },
+  {
+    url: "/assets/gallery/coeur-de-renard_renard.png",
+    title: "Renard",
+    artist: "pumpkinspace.latte",
+    date: "Fevrier 2025",
+    description: "Un dessin de Renard",
+    book: "Coeur de Renard",
+  },
+  {
+    url: "/assets/gallery/coeur-de-renard-renardxfortune.png",
+    title: "Renard & Fortune",
+    artist: "pumpkinspace.latte",
+    date: "Fevrier 2025",
+    description: "Un dessin de Renard & Fortune",
+    book: "Coeur de Renard",
+  },
 ].concat();
 
 export default function GalleryPics() {
