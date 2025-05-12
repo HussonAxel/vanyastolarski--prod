@@ -60,7 +60,7 @@ const IndexComponent = () => {
       <ColoredSection bgColor="bg-white">
         <LatestReading />
       </ColoredSection>
-      <ColoredSection bgColor="bg-green">
+      {/* <ColoredSection bgColor="bg-green">
           <SectionTitle title="Ma newsletter" isGreen={true} />
         <div className="flex justify-center w-full max-w-4xl mx-auto py-8">
           <iframe
@@ -72,7 +72,7 @@ const IndexComponent = () => {
             loading="lazy"
           ></iframe>
         </div>
-      </ColoredSection>
+      </ColoredSection> */}
     </>
   );
 };
