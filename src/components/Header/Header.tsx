@@ -9,7 +9,10 @@ const Header: React.FC = () => {
   const menuLinks = [
     { to: "/Livres", text: "Livres" },
     { to: "/Services", text: "Services" },
-    { to: "/Boutique", text: "Boutique" },
+    {
+      to: "https://vanyastolarski.sumupstore.com/",
+      text: "Boutique",
+    },
     { to: "/Reviews", text: "Reviews" },
     { to: "/Citations", text: "Citations" },
     { to: "/Galerie", text: "Galerie" },
