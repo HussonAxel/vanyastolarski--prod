@@ -2,6 +2,21 @@ import SectionTitle from "@components/ui/SectionTitle/SectionTitle";
 import { Services } from "@data/Services";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
+import { Download, FileText } from "lucide-react";
+
+interface ServiceAsset {
+  url: string;
+  type: "image" | "file";
+  filename?: string;
+  fileType?: string;
+}
+
+interface Service {
+  title: string;
+  price?: string;
+  resume: string;
+  assets?: ServiceAsset[];
+}
 
 const ServicesList = () => {
   const [visibleIndex, setVisibleIndex] = useState<number | null>(null);
@@ -11,30 +26,61 @@ const ServicesList = () => {
     description: string;
     currentIndex: number;
   } | null>(null);
-  const [currentImageIndex, setCurrentImageIndex] = useState<number>(0);
+  // Changez l'état pour stocker l'index par service
+  const [currentAssetIndices, setCurrentAssetIndices] = useState<{
+    [key: number]: number;
+  }>({});
 
   const handleServiceClick = (index: number) => {
     setVisibleIndex(visibleIndex === index ? null : index);
     if (visibleIndex !== index) {
-      setCurrentImageIndex(0);
+      // Initialisez l'index pour ce service
+      setCurrentAssetIndices((prev) => ({ ...prev, [index]: 0 }));
     }
   };
 
-  const handleImageClick = (service: any, imageIndex: number) => {
-    setSelectedImage({
-      url: service.images[imageIndex],
-      title: service.title,
-      description: service.resume,
-      currentIndex: imageIndex,
-    });
+  const handleImageClick = (service: Service, assetIndex: number) => {
+    const asset = service.assets?.[assetIndex];
+    if (asset && asset.type === "image") {
+      setSelectedImage({
+        url: asset.url,
+        title: service.title,
+        description: service.resume,
+        currentIndex: assetIndex,
+      });
+    }
   };
 
-  const handlePrevImage = (totalImages: number) => {
-    setCurrentImageIndex((currentImageIndex - 1 + totalImages) % totalImages);
+  const handleFileDownload = (asset: ServiceAsset) => {
+    if (asset.type === "file") {
+      const link = document.createElement("a");
+      link.href = asset.url;
+      link.download = asset.filename || "download";
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
   };
 
-  const handleNextImage = (totalImages: number) => {
-    setCurrentImageIndex((currentImageIndex + 1) % totalImages);
+  const handlePrevAsset = (serviceIndex: number, totalAssets: number) => {
+    setCurrentAssetIndices((prev) => ({
+      ...prev,
+      [serviceIndex]: (prev[serviceIndex] - 1 + totalAssets) % totalAssets,
+    }));
+  };
+
+  const handleNextAsset = (serviceIndex: number, totalAssets: number) => {
+    setCurrentAssetIndices((prev) => ({
+      ...prev,
+      [serviceIndex]: (prev[serviceIndex] + 1) % totalAssets,
+    }));
+  };
+
+  const getFileIcon = (fileType?: string) => {
+    if (fileType?.includes("word") || fileType?.includes("document")) {
+      return <FileText className="w-6 h-6" />;
+    }
+    return <FileText className="w-6 h-6" />;
   };
 
   return (
@@ -65,134 +111,171 @@ const ServicesList = () => {
         !
       </h2>
 
-      {Services.map((service, index) => (
-        <div
-          key={index}
-          className={`border-b p-8 transition-colors duration-300 ${
-            visibleIndex === index
-              ? "bg-green text-white"
-              : "text-green hover:bg-green hover:text-white hover:cursor-pointer"
-          }`}
-          onClick={() => handleServiceClick(index)}
-          role="button"
-          aria-expanded={visibleIndex === index}
-          tabIndex={0}
-          onKeyDown={(e) => {
-            if (e.key === "Enter" || e.key === " ") {
-              e.preventDefault();
-              handleServiceClick(index);
-            }
-          }}
-        >
-          <div className="flex justify-between items-center mb-4 mt-4">
-            <h2 className="font-Large text-3xl font-semibold">
-              {service.title}
-            </h2>
-            <button
-              className="text-2xl w-8 h-8 flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green rounded-full"
-              onClick={(e) => {
-                e.stopPropagation();
+      {Services.map((service, index) => {
+        const currentAssetIndex = currentAssetIndices[index] || 0;
+        const currentAsset = service.assets?.[currentAssetIndex];
+
+        return (
+          <div
+            key={index}
+            className={`border-b p-8 transition-colors duration-300 ${
+              visibleIndex === index
+                ? "bg-green text-white"
+                : "text-green hover:bg-green hover:text-white hover:cursor-pointer"
+            }`}
+            onClick={() => handleServiceClick(index)}
+            role="button"
+            aria-expanded={visibleIndex === index}
+            tabIndex={0}
+            onKeyDown={(e) => {
+              if (e.key === "Enter" || e.key === " ") {
+                e.preventDefault();
                 handleServiceClick(index);
-              }}
-              aria-label={
-                visibleIndex === index
-                  ? "Masquer les détails"
-                  : "Afficher les détails"
               }
-            >
-              {visibleIndex === index ? "−" : "+"}
-            </button>
-          </div>
-
-          <motion.div
-            initial={{ height: 0, opacity: 0 }}
-            animate={{
-              height: visibleIndex === index ? "auto" : 0,
-              opacity: visibleIndex === index ? 1 : 0,
             }}
-            transition={{ duration: 0.3 }}
-            className="overflow-hidden"
-            onClick={(e) => e.stopPropagation()}
           >
-            <div className="flex flex-col md:flex-row gap-8">
-              <div
-                className={`flex flex-col gap-6 w-full ${
-                  service.images && service.images.length > 0
-                    ? "md:w-1/2"
-                    : "md:w-full"
-                }`}
+            <div className="flex justify-between items-center mb-4 mt-4">
+              <h2 className="font-Large text-3xl font-semibold">
+                {service.title}
+              </h2>
+              <button
+                className="text-2xl w-8 h-8 flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green rounded-full"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  handleServiceClick(index);
+                }}
+                aria-label={
+                  visibleIndex === index
+                    ? "Masquer les détails"
+                    : "Afficher les détails"
+                }
               >
-                <p className="font-WorkSans text-xl font-semibold">
-                  {service.price}
-                </p>
-                <p className="font-WorkSans text-md leading-relaxed">
-                  {service.resume}
-                </p>
-              </div>
+                {visibleIndex === index ? "−" : "+"}
+              </button>
+            </div>
 
-              {service.images && service.images.length > 0 && (
-                <div className="w-full md:w-1/2">
-                  <div className="relative">
-                    <img
-                      key={service.images[currentImageIndex]}
-                      src={service.images[currentImageIndex]}
-                      alt={`${service.title} - ${currentImageIndex + 1}`}
-                      className="h-auto object-contain max-h-[350px] rounded-md cursor-pointer transition-all duration-300 m-auto"
-                      onClick={() =>
-                        handleImageClick(service, currentImageIndex)
-                      }
-                    />
+            <motion.div
+              initial={{ height: 0, opacity: 0 }}
+              animate={{
+                height: visibleIndex === index ? "auto" : 0,
+                opacity: visibleIndex === index ? 1 : 0,
+              }}
+              transition={{ duration: 0.3 }}
+              className="overflow-hidden"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <div className="flex flex-col md:flex-row gap-8">
+                <div
+                  className={`flex flex-col gap-6 w-full ${
+                    service.assets && service.assets.length > 0
+                      ? "md:w-1/2"
+                      : "md:w-full"
+                  }`}
+                >
+                  <p className="font-WorkSans text-xl font-semibold">
+                    {service.price}
+                  </p>
+                  <p className="font-WorkSans text-md leading-relaxed">
+                    {service.resume}
+                  </p>
+                </div>
 
-                    {service.images.length > 1 && (
-                      <div className="flex justify-between items-center mt-4">
-                        <button
-                          onClick={(e) => {
-                            e.stopPropagation();
-                            handlePrevImage(service.images?.length || 0);
-                          }}
-                          className="px-3 py-1 bg-green text-white rounded-md hover:bg-opacity-90 transition-all focus:outline-none focus:ring-2 focus:ring-green"
-                          aria-label="Image précédente"
-                        >
-                          Précédente
-                        </button>
+                {service.assets &&
+                  service.assets.length > 0 &&
+                  currentAsset && (
+                    <div className="w-full md:w-1/2">
+                      <div className="relative">
+                        {currentAsset.type === "image" ? (
+                          <img
+                            key={currentAsset.url}
+                            src={currentAsset.url}
+                            alt={`${service.title} - ${currentAssetIndex + 1}`}
+                            className="h-auto object-contain max-h-[350px] rounded-md cursor-pointer transition-all duration-300 m-auto"
+                            onClick={() =>
+                              handleImageClick(service, currentAssetIndex)
+                            }
+                          />
+                        ) : (
+                          <div
+                            className="flex flex-col items-center justify-center h-[350px] border-2 border-dashed border-current rounded-md cursor-pointer transition-all duration-300 hover:bg-opacity-10"
+                            onClick={() => handleFileDownload(currentAsset)}
+                          >
+                            <div className="flex flex-col items-center gap-4">
+                              {getFileIcon(currentAsset.fileType)}
+                              <div className="text-center">
+                                <p className="font-semibold text-lg">
+                                  {currentAsset.filename ||
+                                    "Fichier à télécharger"}
+                                </p>
+                                <p className="text-sm opacity-75">
+                                  Cliquez pour télécharger
+                                </p>
+                              </div>
+                              <Download className="w-8 h-8" />
+                            </div>
+                          </div>
+                        )}
 
-                        <div className="flex items-center space-x-2">
-                          {service.images.map((_, imgIndex) => (
+                        {service.assets.length > 1 && (
+                          <div className="flex justify-between items-center mt-4">
                             <button
-                              key={imgIndex}
                               onClick={(e) => {
                                 e.stopPropagation();
-                                setCurrentImageIndex(imgIndex);
+                                handlePrevAsset(
+                                  index,
+                                  service.assets?.length || 0
+                                );
                               }}
-                              className={`w-2 h-2 rounded-full transition-all ${
-                                currentImageIndex === imgIndex
-                                  ? "bg-white scale-125"
-                                  : "bg-white bg-opacity-50"
-                              }`}
-                              aria-label={`Voir l'image ${imgIndex + 1}`}
-                            />
-                          ))}
-                        </div>
+                              className="px-3 py-1 bg-green text-white rounded-md hover:bg-opacity-90 transition-all focus:outline-none focus:ring-2 focus:ring-green"
+                              aria-label="Élément précédent"
+                            >
+                              Précédent
+                            </button>
 
-                        <button
-                          onClick={(e) => {
-                            e.stopPropagation();
-                            handleNextImage(service.images?.length || 0);
-                          }}
-                          className="px-3 py-1 bg-green text-white rounded-md hover:bg-opacity-90 transition-all focus:outline-none focus:ring-2 focus:ring-green"
-                          aria-label="Image suivante"
-                        >
-                          Suivante
-                        </button>
+                            <div className="flex items-center space-x-2">
+                              {service.assets.map((asset, assetIndex) => (
+                                <button
+                                  key={assetIndex}
+                                  onClick={(e) => {
+                                    e.stopPropagation();
+                                    setCurrentAssetIndices((prev) => ({
+                                      ...prev,
+                                      [index]: assetIndex,
+                                    }));
+                                  }}
+                                  className={`w-2 h-2 rounded-full transition-all ${
+                                    currentAssetIndex === assetIndex
+                                      ? "bg-white scale-125"
+                                      : "bg-white bg-opacity-50"
+                                  }`}
+                                  aria-label={`Voir l'élément ${assetIndex + 1}`}
+                                />
+                              ))}
+                            </div>
+
+                            <button
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                handleNextAsset(
+                                  index,
+                                  service.assets?.length || 0
+                                );
+                              }}
+                              className="px-3 py-1 bg-green text-white rounded-md hover:bg-opacity-90 transition-all focus:outline-none focus:ring-2 focus:ring-green"
+                              aria-label="Élément suivant"
+                            >
+                              Suivant
+                            </button>
+                          </div>
+                        )}
                       </div>
-                    )}
-                  </div>
-                </div>
-              )}
-            </div>
-          </motion.div>
-        </div>
-      ))}
+                    </div>
+                  )}
+              </div>
+            </motion.div>
+          </div>
+        );
+      })}
 
       <AnimatePresence>
         {selectedImage && (
