@@ -38,7 +38,9 @@ const LatestReading = () => {
   const BookCard = ({
     saga,
     title,
+    author,
     resume,
+    date,
     cover,
     coverAlt,
     linktoReview,
@@ -55,7 +57,7 @@ const LatestReading = () => {
     linktoReview?: string;
   }) => (
     <motion.article
-      className="flex flex-col md:flex-row items-center gap-12 2xl:gap-24 pb-6 w-fit m-auto"
+      className="w-full max-w-6xl m-auto"
       initial="enter"
       animate="center"
       exit="exit"
@@ -66,36 +68,56 @@ const LatestReading = () => {
         ease: "easeInOut",
       }}
     >
-      <img
-        src={cover}
-        alt={coverAlt}
-        className="w-full md:max-w-[750px] h-auto max-h-[350px] object-contain mb-5 md:mb-0 rounded-md"
-      />
-      <div className="flex flex-col gap-8 text-black max-w-[80%] md:max-w-3xl">
-        <div className="font-WorkSans text-black">
-          <h1 className="text-2xl md:text-4xl semibold mb-2 underline text-green font-Large">
-            {saga}
-          </h1>
-          <h2 className="text-md md:text-lg">{title}</h2>
-        </div>
-        <p className="text-black font-WorkSans text-sm md:text-md w-fit line-clamp-6">
-          {resume}
-        </p>
-        <div className="flex flex-col gap-8 m-auto md:flex-row md:m-0">
-          {linktoReview && (
+      <div className="flex flex-col md:flex-row items-center gap-10 2xl:gap-16 p-6 md:p-10 rounded-2xl bg-white/80 ring-1 ring-green/10 shadow-md hover:shadow-lg transition">
+        <img
+          src={cover}
+          alt={coverAlt}
+          className="w-full h-auto max-w-[300px] object-contain rounded-lg transition-transform duration-300 ease-in-out"
+        />
+
+        <div className="flex flex-col gap-6 text-black w-full md:max-w-2xl">
+          <div className="flex items-center justify-between gap-4">
+            <span className="inline-flex items-center rounded-full border border-green/20 bg-green/5 text-green px-3 py-1 text-xs md:text-sm uppercase tracking-wide font-WorkSans font-bold">
+              {saga}
+            </span>
+            <div className="text-xs md:text-sm text-black/60 font-WorkSans flex items-center gap-2">
+              <span>{date}</span>
+              <span className="hidden md:inline">•</span>
+              <span className="hidden md:inline">par {author}</span>
+            </div>
+          </div>
+
+          <div className="font-WorkSans">
+            <h2 className="text-2xl md:text-3xl text-green font-Large">
+              {title || saga}
+            </h2>
+          </div>
+
+          <div className="relative">
+            <span className="absolute -left-3 -top-3 text-4xl text-green/20 select-none leading-none">
+              “
+            </span>
+            <p className="text-black font-WorkSans text-sm md:text-base leading-relaxed italic pl-2 md:pl-0 line-clamp-6">
+              {resume}
+            </p>
+          </div>
+
+          <div className="flex flex-col gap-4 md:flex-row">
+            {linktoReview && (
+              <Button
+                isPrimary={true}
+                text="LIRE LA REVIEW ENTIÈRE"
+                isBGGreen={false}
+                linkTo={linktoReview}
+              />
+            )}
             <Button
-              isPrimary={true}
-              text="LIRE LA REVIEW EN ENTIERE"
+              isPrimary={false}
+              text="VOIR TOUTES LES REVIEWS"
               isBGGreen={false}
-              linkTo={linktoReview}
+              linkTo="/reviews"
             />
-          )}
-          <Button
-            isPrimary={false}
-            text="VOIR TOUTES LES REVIEWS"
-            isBGGreen={false}
-            linkTo="/reviews"
-          />
+          </div>
         </div>
       </div>
     </motion.article>
@@ -103,7 +125,7 @@ const LatestReading = () => {
 
   return (
     <section className="m-auto overflow-hidden w-11/12 md:w-10/12">
-      <SectionTitle title="dernières reviews" isGreen={false} />
+      <SectionTitle title="Dernières reviews" isGreen={false} />
       <AnimatePresence mode="wait" initial={false} custom={direction}>
         {currentBooks.map((book) => (
           <BookCard
@@ -120,11 +142,33 @@ const LatestReading = () => {
           />
         ))}
       </AnimatePresence>
+
+      <div className="mt-6 flex justify-center gap-3">
+        <button
+          type="button"
+          aria-label="Précédent"
+          onClick={() => handlePageChange(Math.max(1, currentPage - 1))}
+          className="h-10 w-10 rounded-full border border-green/30 text-green hover:bg-green/10 transition"
+        >
+          ‹
+        </button>
+        <button
+          type="button"
+          aria-label="Suivant"
+          onClick={() =>
+            handlePageChange(Math.min(totalPages, currentPage + 1))
+          }
+          className="h-10 w-10 rounded-full border border-green/30 text-green hover:bg-green/10 transition"
+        >
+          ›
+        </button>
+      </div>
+
       <Pagination
         currentPage={currentPage}
         totalPages={totalPages}
         onPageChange={handlePageChange}
-        className="mt-8"
+        className="mt-6"
       />
     </section>
   );
