@@ -233,7 +233,7 @@ const ServicesList = () => {
                             </button>
 
                             <div className="flex items-center space-x-2">
-                              {service.assets.map((asset, assetIndex) => (
+                              {service.assets.map((_, assetIndex) => (
                                 <button
                                   key={assetIndex}
                                   onClick={(e) => {

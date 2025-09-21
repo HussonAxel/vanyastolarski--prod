@@ -17,7 +17,7 @@ const QuoteTemplate: React.FC<QuoteTemplateProps> = ({
       <div className="flex flex-col sm:flex-row gap-6 md:gap-8 lg:gap-12">
         {/* Book Cover Container */}
         <div className="w-full max-w-[280px] mx-auto sm:mx-0 sm:w-1/3 lg:w-1/4 flex-shrink-0">
-          <div className="aspect-[2/3] relative shadow-lg hover:shadow-xl transition-shadow duration-300">
+          <div className="aspect-[2/3] relative">
             <img
               className="w-full h-full object-contain rounded-lg absolute inset-0"
               src={BookCover}

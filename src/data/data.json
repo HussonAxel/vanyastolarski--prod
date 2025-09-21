@@ -1,6 +1,55 @@
 {
   "books": [
     {
+      "id": "0",
+      "title": "Coeur de Renard",
+      "slug": "coeur-de-renard",
+      "volume": 1,
+      "cover": "/assets/covers/coeur_de_renard_couverture.webp",
+      "tags": ["Fantasy", "Science-fiction", "ennemy to lover"],
+      "characters": [
+        {
+          "nom": "Renard",
+          "prenom": "Renard",
+          "picture": "/assets/Characters/Fill_BG.webp",
+          "description": "Résumé de renard",
+          "relatifs": {
+            "mother": "",
+            "father": "",
+            "siblings": []
+          }
+        },
+
+        {
+          "nom": "Fortune",
+          "prenom": "Fortune",
+          "picture": "/assets/Characters/Fill_BG.webp",
+          "description": "Résumé de Fortune",
+          "relatifs": {
+            "mother": "",
+            "father": "",
+            "siblings": []
+          }
+        },
+        {
+          "nom": "X",
+          "prenom": "X",
+          "picture": "/assets/Characters/Fill_BG.webp",
+          "description": "Résumé de X",
+          "relatifs": {
+            "mother": "",
+            "father": "",
+            "siblings": []
+          }
+        }
+      ],
+      "synopsis": "Il est arnaqueur d'art. Elle va en être victime. Elle va le traquer sans merci. Il va l'aider sous une fausse identité. En pleine seconde guerre mondiale, la règle est de ne jamais croire un coeur de renard.",
+      "contexte": "Il est arnaqueur d'art. Elle va en être victime. Elle va le traquer sans merci. Il va l'aider sous une fausse identité. En pleine seconde guerre mondiale, la règle est de ne jamais croire un coeur de renard.",
+      "ISBN": "N/A",
+      "pages": 100,
+      "firstChapterLink": "/assets/ChapterOneBooks/ChapterOneBooks_Coeur_de_Renard.pdf"
+    },
+    {
       "id": "1",
       "title": "Fous-Papillons",
       "slug": "fous-papillons",

@@ -47,9 +47,8 @@ const IndexComponent = () => {
       <div></div>
       <ColoredSection bgColor="bg-white">
         <LatestRelease
-          LatestReleaseName="Fous Papillons"
+          LatestReleaseName="Coeur De Renard"
           LatestReleaseSynopsis={data.books[0].synopsis}
-          youtubeEmbedUrl="https://www.youtube.com/embed/oMXpFLSyzow"
           latestReleasePageUrl="https://fr.ulule.com/edition-reliee-et-brochee---fous-papillons/coming-soon/"
           latestReleasePictureUrl={""}
         />

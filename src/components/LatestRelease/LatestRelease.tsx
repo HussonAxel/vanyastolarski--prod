@@ -6,7 +6,6 @@ const LatestRelease = ({
   LatestReleaseName,
   LatestReleaseSynopsis,
   latestReleasePageUrl,
-  youtubeEmbedUrl,
 }: LatestReleaseProps) => {
   return (
     <section className="content-center">
@@ -22,30 +21,25 @@ const LatestRelease = ({
 
           <div className="flex w-fit m-auto md:m-0 flex-col sm:flex-row gap-4 sm:gap-6 md:gap-8 mt-4">
             <Button
-              text="En savoir plus"
+              text="Participer à la campagne"
               isPrimary={true}
               isBGGreen={false}
               linkTo={latestReleasePageUrl}
             />
             <DownloadButton
-              text="Lire le premier chapitre"
+              text="Lire le prologue"
               isPrimary={false}
               isBGGreen={true}
-              linkTo="/assets/ChapterOneBooks/ChapterOneBooks_Fous_Papillons.pdf"
+              linkTo="/assets/ChapterOneBooks/ChapterOneBooks_Coeur_De_Renard.pdf"
             />
           </div>
         </div>
         <div className="w-full lg:w-1/2 flex justify-end">
-          <div className="w-full aspect-video">
-            <iframe
-              className="w-full h-full rounded-lg"
-              src={youtubeEmbedUrl}
-              title="Fous-Papillons TRAILER ULULE"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerPolicy="strict-origin-when-cross-origin"
-              allowFullScreen
-            />
-          </div>
+          <img
+            src="/assets/CdR_overlay.png"
+            alt="Coeur De Renard"
+            className="w-full h-auto max-h-[500px] object-contain"
+          />
         </div>
       </div>
     </section>

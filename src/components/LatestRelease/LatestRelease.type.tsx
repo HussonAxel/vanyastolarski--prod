@@ -3,5 +3,4 @@ export interface LatestReleaseProps {
   LatestReleaseSynopsis: string;
   latestReleasePictureUrl: string;
   latestReleasePageUrl: string;
-  youtubeEmbedUrl: string;
 }
