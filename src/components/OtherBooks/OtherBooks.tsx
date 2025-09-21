@@ -18,7 +18,8 @@ const OtherBooks: React.FC = () => {
           {otherBooks.map((book) => (
             <Link
               key={book.slug}
-              to={`/livres/${book.slug}`}
+              to="/livres/$slug"
+              params={{ slug: book.slug }}
               className="group block"
             >
               <article className="flex flex-col items-center p-4 rounded-lg transition-all duration-300 hover:bg-white/5">

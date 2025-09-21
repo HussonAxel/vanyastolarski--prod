@@ -1,5 +1,5 @@
 import { useParams } from "@tanstack/react-router";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { Helmet } from "react-helmet-async";
 import { reviewsData } from "./Reviews";
 import ColoredSection from "@components/ColoredSection";

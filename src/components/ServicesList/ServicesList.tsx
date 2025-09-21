@@ -1,6 +1,6 @@
 import SectionTitle from "@components/ui/SectionTitle/SectionTitle";
 import { Services } from "@data/Services";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "motion/react";
 import { useState } from "react";
 import { Download, FileText } from "lucide-react";
 

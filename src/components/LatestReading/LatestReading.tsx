@@ -3,7 +3,7 @@ import Button from "@components/Button/Button";
 import SectionTitle from "@components/ui/SectionTitle/SectionTitle";
 import Pagination from "@components/ui/Pagination/Pagination";
 import BooksQuotes from "../../data/BooksQuotes.json";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "motion/react";
 
 const LatestReading = () => {
   const BooksInfos = BooksQuotes;
