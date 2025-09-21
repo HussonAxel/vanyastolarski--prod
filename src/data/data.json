@@ -9,10 +9,10 @@
       "tags": ["Fantasy", "Science-fiction", "Ennemy to lover"],
       "characters": [
         {
-          "nom": "Renard",
+          "nom": "",
           "prenom": "Renard",
-          "picture": "/assets/Characters/Fill_BG.webp",
-          "description": "Résumé de renard",
+          "picture": "/assets/Characters/CdR/Renard.webp",
+          "description": "Renard est un escroc avec un don hors norme pour copier les plus grands tableaux de l'Histoire. Mais qu'advient-il d'un génie, quand on le pousse à survivre grâce à ses talents, sans lui offrir aucune voix légale ? Malheureusement, en 1943, toute la bonne volonté du monde n'est pas suffisante pour sauver sa vie sans condamner les autres. Du moins, c'est ainsi qu'il le perçoit.",
           "relatifs": {
             "mother": "",
             "father": "",
@@ -21,21 +21,10 @@
         },
 
         {
-          "nom": "Fortune",
+          "nom": "Cellier",
           "prenom": "Fortune",
-          "picture": "/assets/Characters/Fill_BG.webp",
-          "description": "Résumé de Fortune",
-          "relatifs": {
-            "mother": "",
-            "father": "",
-            "siblings": []
-          }
-        },
-        {
-          "nom": "X",
-          "prenom": "X",
-          "picture": "/assets/Characters/Fill_BG.webp",
-          "description": "Résumé de X",
+          "picture": "/assets/Characters/CdR/Fortune.webp",
+          "description": "Fortune est une juriste-comptable dans la banque de ses parents, Gaillard&Co. Elle est d'une morale grise, mais cherche à redresser sa boussole, notamment en aidant ce pauvre Renard. Elle a grandi au milieu de parents attirés par l'extrême droite et en subit, tous les jours, les conséquences. Faire ce qui est juste, et, pas de pacte avec le diable sauf si je suis le diable, sont des mantras qui l'habitent tous les jours et qui l'ont menée dans de facheuses situations. A moins... que tout était prévu ?",
           "relatifs": {
             "mother": "",
             "father": "",
@@ -44,7 +33,7 @@
         }
       ],
       "synopsis": "Il est arnaqueur d'art. Elle va en être victime. Elle va le traquer sans merci. Il va l'aider sous une fausse identité. En pleine seconde guerre mondiale, la règle est de ne jamais croire un coeur de renard.",
-      "contexte": "Il est arnaqueur d'art. Elle va en être victime. Elle va le traquer sans merci. Il va l'aider sous une fausse identité. En pleine seconde guerre mondiale, la règle est de ne jamais croire un coeur de renard.",
+      "contexte": "En pleine occupation, Renard tente de survivre en remboursant une dette qui le pousse aux pires vices, notamment en vendant des faux tableaux. Fortune, quant à elle, voit, impuissante, ses parents sombrer dans les idéologies nazies et d'extrême droite. Alors qu'elle tente de leur faire ouvrir les yeux sur les conséquences de leurs décisions, les occupants gagnent en influence sur la banque dont elle doit hériter. Son honneur sera sali, si elle échoue à retrouver l'escroc qui souhaite la chute de la banque, mais quel honneur lui restera-t-il, si ses parents se vendent aux nazis ?",
       "ISBN": "N/A",
       "pages": 371,
       "firstChapterLink": "/assets/ChapterOneBooks/ChapterOneBooks_Coeur_de_Renard.pdf"
