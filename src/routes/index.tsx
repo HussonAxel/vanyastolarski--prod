@@ -49,7 +49,7 @@ const IndexComponent = () => {
         <LatestRelease
           LatestReleaseName="Coeur De Renard"
           LatestReleaseSynopsis={data.books[0].synopsis}
-          latestReleasePageUrl="https://fr.ulule.com/edition-reliee-et-brochee---fous-papillons/coming-soon/"
+          latestReleasePageUrl="https://fr.ulule.com/coeur-de-renard---thriller-psychologique/"
           latestReleasePictureUrl={""}
         />
       </ColoredSection>

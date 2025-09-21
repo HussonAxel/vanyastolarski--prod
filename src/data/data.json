@@ -6,7 +6,13 @@
       "slug": "coeur-de-renard",
       "volume": 1,
       "cover": "/assets/covers/coeur_de_renard_couverture.webp",
-      "tags": ["Fantasy", "Science-fiction", "Ennemy to lover"],
+      "tags": [
+        "Thriller",
+        "Psychologique",
+        "Romance sombre",
+        "Historique",
+        "Art"
+      ],
       "characters": [
         {
           "nom": "",
@@ -32,9 +38,9 @@
           }
         }
       ],
-      "synopsis": "Il est arnaqueur d'art. Elle va en être victime. Elle va le traquer sans merci. Il va l'aider sous une fausse identité. En pleine seconde guerre mondiale, la règle est de ne jamais croire un coeur de renard.",
+      "synopsis": "Il est arnaqueur d'art.\n Elle va en être victime.\n Elle va le traquer sans merci.\n Il va l'aider sous une fausse identité.\n En pleine seconde guerre mondiale,\n la règle est de ne jamais croire,\n un coeur de renard.",
       "contexte": "En pleine occupation, Renard tente de survivre en remboursant une dette qui le pousse aux pires vices, notamment en vendant des faux tableaux. Fortune, quant à elle, voit, impuissante, ses parents sombrer dans les idéologies nazies et d'extrême droite. Alors qu'elle tente de leur faire ouvrir les yeux sur les conséquences de leurs décisions, les occupants gagnent en influence sur la banque dont elle doit hériter. Son honneur sera sali, si elle échoue à retrouver l'escroc qui souhaite la chute de la banque, mais quel honneur lui restera-t-il, si ses parents se vendent aux nazis ?",
-      "ISBN": "N/A",
+      "ISBN": "979-10-978469-1-6",
       "pages": 371,
       "firstChapterLink": "/assets/ChapterOneBooks/ChapterOneBooks_Coeur_de_Renard.pdf"
     },
@@ -44,7 +50,13 @@
       "slug": "fous-papillons",
       "volume": 1,
       "cover": "/assets/covers/FP_Cover.webp",
-      "tags": ["Fantasy", "Science-fiction", "Ennemy to lover"],
+      "tags": [
+        "Fantastique",
+        "Historique",
+        "Romance tragique",
+        "Mariage arrangé",
+        "Soulmates"
+      ],
       "characters": [
         {
           "nom": "Kassassin",
@@ -71,9 +83,10 @@
       ],
       "synopsis": "Mariée de force au général de l'Etat major, Esther se retrouve embourbée dans les conflits politiques d'une France de 1890. Son cœur est pourtant ailleurs, loin de Paris, dans une forêt où l'attend un garçon ayant vendu son âme au diable pour elle. Entre Frantz, son mystérieux mari aussi froid que manipulateur et Ethan, cet amoureux d'enfance qu'elle veut à tout prix protéger, Esther ne sait plus qui aimer. Malheureusement, à cette époque où les tensions sont aussi vives que les conflits sont destructeurs, ils devront parvenir à survivre sans que le monde n'apprenne leurs machinations sans quoi... ils risquent tous l'exécution.",
       "contexte": "Fous-Papillons est une romance aux airs de tragédie, où s'aimer frôle la haine, voire s'y confond lorsqu'il ne reste plus d'autre solution pour rester dans le cœur de l'autre. Vous suivrez les aventures de Ethan et Esther de 1880 à 1920, dans de nombreux pays différents à l’époque où les conflits de la première guerre mondiale font des ravages. Paris, les Vosges, la Sicile, et Saint-Pétersbourg, vous voyagerez autant dans la neige que sous le soleil de la méditerranée",
-      "ISBN": "N/A",
+      "ISBN": "979-8287581428",
       "pages": 412,
-      "firstChapterLink": "/assets/ChapterOneBooks/ChapterOneBooks_Fous_Papillons.pdf"
+      "firstChapterLink": "/assets/ChapterOneBooks/ChapterOneBooks_Fous_Papillons.pdf",
+      "amazonLink": "https://www.amazon.fr/Fous-Papillons-Vanya-Stolarski/dp/B0FGCKQLX6"
     },
     {
       "id": "2",
@@ -81,7 +94,7 @@
       "slug": "le-coeur-dankaa",
       "volume": 1,
       "cover": "/assets/covers/le_coeur_d_ankaa_couverture.webp",
-      "tags": ["Fantasy", "Science-fiction", "Ennemy to lover"],
+      "tags": ["Fantasy", "Guerre", "Magie"],
       "characters": [
         {
           "nom": "",
@@ -120,7 +133,7 @@
       "title": "Projet Annihilation",
       "volume": 1,
       "cover": "/assets/covers/terre_de_guerre_couverture.webp",
-      "tags": ["Fantasy", "Science-fiction", "Ennemy to lover"],
+      "tags": ["Fantasy", "Guerre", "Transhumanisme"],
       "characters": [
         {
           "nom": "5O72Y",
@@ -158,7 +171,7 @@
       "title": "Les Anges Mortels",
       "volume": 1,
       "cover": "/assets/covers/12_divins_couverture.webp",
-      "tags": ["Fantasy", "Science-fiction", "Ennemy to lover"],
+      "tags": ["Fantasy", "Post-apocalypse", "Mafia"],
       "characters": [
         {
           "nom": "",

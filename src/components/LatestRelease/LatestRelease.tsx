@@ -36,7 +36,7 @@ const LatestRelease = ({
         </div>
         <div className="w-full lg:w-1/2 flex justify-end">
           <img
-            src="/assets/CdR_overlay.png"
+            src="/assets/CdR_overlay.webp"
             alt="Coeur De Renard"
             className="w-full h-auto max-h-[500px] object-contain"
           />

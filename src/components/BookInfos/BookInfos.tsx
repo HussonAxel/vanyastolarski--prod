@@ -45,14 +45,15 @@ const BookInfos = ({
               className="rounded-md w-auto max-w-full lg:max-w-lg h-auto max-h-[500px] lg:max-h-[550px] shadow-2xl"
             />
           </div>
-          {amazonLink ? (
+          {amazonLink && (
             <Button
               text={"Achetez sur amazon"}
               isPrimary={false}
               isBGGreen={false}
               linkTo={amazonLink}
             />
-          ) : (
+          )}
+          {firstChapterLink && (
             <DownloadButton
               text="Lire le premier chapitre"
               isPrimary={false}

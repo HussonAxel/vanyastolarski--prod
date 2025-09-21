@@ -16,33 +16,42 @@ const Book: React.FC<BookProps> = ({
   BookVolume,
 }) => {
   return (
-    <article className="w-[80%] md:w-[75%] lg:w-[70%] mx-auto mb-12 sm:mb-16 lg:mb-24 pb-0 font-WorkSans">
-      <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 p-6 sm:p-8 rounded-2xl bg-green/5 ring-1 ring-green/10 shadow-lg">
-        <img
-          className="h-[280px] sm:h-[340px] lg:h-[380px] xl:h-[420px] w-auto max-h-full rounded-lg object-contain my-4"
-          src={BookCover}
-          alt={BookCoverAlt || "Book cover"}
-          loading="lazy"
-        />
+    <article className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 mb-10 sm:mb-16 lg:mb-24 font-WorkSans">
+      <div className="flex flex-col lg:flex-row gap-6 sm:gap-8 lg:gap-12 p-5 sm:p-8 rounded-2xl bg-green/5 ring-1 ring-green/10 shadow-lg">
+        {/* Cover */}
+        <div className="flex justify-center lg:justify-start shrink-0">
+          <img
+            className="
+              w-full max-w-[280px] sm:max-w-[320px] lg:max-w-[360px] xl:max-w-[400px]
+              h-auto rounded-lg object-contain
+            "
+            src={BookCover}
+            alt={BookCoverAlt || "Book cover"}
+            loading="lazy"
+          />
+        </div>
 
-        <div className="flex flex-col w-full lg:w-2/3 space-y-6 sm:space-y-8">
-          <div className="flex flex-col sm:justify-between sm:items-start gap-4">
+        {/* Right column */}
+        <div className="flex flex-col min-w-0 w-full lg:w-auto space-y-5 sm:space-y-6">
+          <div className="flex flex-col gap-3 sm:gap-4">
             <div className="font-Large text-left">
               {BookSaga ? (
                 <>
-                  <h1 className="text-3xl sm:text-4xl font-semibold text-green mb-2">
+                  <h1 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-green mb-1">
                     {BookSaga}
                   </h1>
-                  <h2 className="text-lg sm:text-xl text-green">{BookTitle}</h2>
+                  <h2 className="text-base sm:text-lg md:text-xl text-green">
+                    {BookTitle}
+                  </h2>
                 </>
               ) : (
-                <h1 className="text-3xl sm:text-4xl font-semibold text-green">
+                <h1 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-green">
                   {BookTitle}
                 </h1>
               )}
             </div>
 
-            <div className="text-left text-black text-sm sm:text-base space-y-1">
+            <div className="text-left text-black text-sm sm:text-base space-x-1 space-y-1">
               {typeof BookVolume === "number" ? (
                 <span>Tome {BookVolume}</span>
               ) : null}
@@ -75,12 +84,13 @@ const Book: React.FC<BookProps> = ({
           ) : null}
 
           <div className="text-black">
-            <p className="text-left text-sm sm:text-base leading-relaxed max-w-[900px]">
+            <p className="text-left text-sm sm:text-base leading-relaxed">
               {BookResume}
             </p>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-start mt-2 w-fit m-auto md:m-0">
+          {/* CTAs: keep left-aligned on all sizes */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-start mt-2">
             <Button
               text="VOIR LE LIVRE"
               isPrimary={true}

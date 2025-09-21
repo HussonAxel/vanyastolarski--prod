@@ -6,27 +6,29 @@ const BookResume = () => {
   return (
     <section>
       <SectionTitle title="mes livres" isGreen={true} />
-      <section className="w-11/12 xl:w-10/12 m-auto grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 bg-green rounded-lg">
+      <section className="mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 gap-6 sm:gap-8 lg:gap-12">
         {BooksData.books.map((BookData) => (
-          <article key={BookData.title} className="pb-6">
-            <div className="flex flex-col lg:flex-row items-start lg:items-stretch gap-6 p-6 lg:p-8 rounded-2xl bg-white/5 ring-1 ring-white/10 shadow-lg overflow-hidden">
+          <article key={BookData.title} className="pb-2">
+            <div className="flex flex-col lg:flex-row items-start lg:items-stretch gap-6 p-5 sm:p-6 lg:p-8 rounded-2xl bg-green ring-1 ring-white/30">
+              {/* Cover */}
               <div className="w-full lg:w-[280px] xl:w-[320px] shrink-0 flex justify-center">
-                <div className="rounded-xl p-3 w-full">
+                <div className="rounded-xl p-2 w-full">
                   <img
                     src={BookData.cover}
                     alt={`Couverture de ${BookData.title}`}
                     loading="lazy"
-                    className="h-auto max-h-[400px] w-auto mx-auto object-contain rounded-lg drop-shadow-lg transition-transform duration-300 ease-in-out"
+                    className="w-full h-auto max-h-[400px] object-contain rounded-lg drop-shadow-lg"
                   />
                 </div>
               </div>
 
-              <div className="flex flex-col gap-6 pl-0 lg:pl-2 text-white">
-                <div className="flex flex-col text-left gap-4">
-                  <h2 className="text-3xl font-semibold mb-0 font-Large">
+              {/* Text */}
+              <div className="flex flex-col gap-5 min-w-0 text-white">
+                <div className="flex flex-col text-left gap-3">
+                  <h2 className="text-2xl sm:text-3xl font-semibold mb-0 font-Large">
                     {BookData.title}
                   </h2>
-                  <div className="hidden md:flex items-center gap-3 text-white/80 text-sm font-WorkSans text-left">
+                  <div className="hidden md:flex items-center gap-3 text-white/80 text-sm font-WorkSans">
                     {BookData.volume ? (
                       <span>Tome {BookData.volume}</span>
                     ) : null}
@@ -59,14 +61,14 @@ const BookResume = () => {
                 ) : null}
 
                 <p
-                  className="font-WorkSans text-md leading-relaxed overflow-hidden"
+                  className="font-WorkSans text-sm sm:text-base leading-relaxed overflow-hidden whitespace-pre-line"
                   style={{
                     display: "-webkit-box",
-                    WebkitLineClamp: 6,
+                    WebkitLineClamp: 8,
                     WebkitBoxOrient: "vertical",
                   }}
                 >
-                  {BookData.synopsis}
+                  {BookData.synopsis.replace(/\\n/g, "\n")}
                 </p>
 
                 <div className="flex flex-col gap-4 sm:flex-row">
