@@ -25,6 +25,8 @@ const LivresComponents = () => {
               bookSlug={book.slug}
               BookPages={book.pages}
               firstChapterLink={book.firstChapterLink}
+              BookTags={book.tags}
+              BookVolume={book.volume}
             />
           ))}
         </section>

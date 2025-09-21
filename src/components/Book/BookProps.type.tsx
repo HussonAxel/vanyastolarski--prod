@@ -9,4 +9,6 @@ export interface BookProps {
   bookSlug: string;
   BookPages: number;
   firstChapterLink?: string;
+  BookTags?: string[];
+  BookVolume?: number;
 }

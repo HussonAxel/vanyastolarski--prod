@@ -72,7 +72,7 @@ const LatestReading = () => {
         <img
           src={cover}
           alt={coverAlt}
-          className="w-full h-auto max-w-[300px] object-contain rounded-lg transition-transform duration-300 ease-in-out"
+          className="w-full h-auto max-w-[300px] max-h-[350px] object-contain rounded-lg transition-transform duration-300 ease-in-out"
         />
 
         <div className="flex flex-col gap-6 text-black w-full md:max-w-2xl">
