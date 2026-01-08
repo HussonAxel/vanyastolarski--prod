@@ -92,7 +92,7 @@ const ServicesList = () => {
         <span className="text-green">
           <a
             href="mailto:vanya.stolarski@gmail.com"
-            className="hover:underline focus:outline-none focus:underline"
+            className="font-semibold hover:underline focus:outline-none focus:underline"
           >
             vanya.stolarski@gmail.com
           </a>{" "}
@@ -102,7 +102,7 @@ const ServicesList = () => {
           {" "}
           <a
             href="https://www.instagram.com/vanyastolar.auteure/"
-            className="hover:underline focus:outline-none focus:underline"
+            className="font-semibold hover:underline focus:outline-none focus:underline"
           >
             vanyastolar.auteure
           </a>
