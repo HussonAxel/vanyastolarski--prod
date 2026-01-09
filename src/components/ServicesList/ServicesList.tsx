@@ -54,7 +54,7 @@ const ServicesList = () => {
   };
 
   return (
-    <section className={cn("m-auto w-11/12 md:w-10/12 lg:w-8/12 2xl:w-9/12")}>
+    <section className={cn("m-auto w-11/12")}>
       <SectionTitle title="Services" isGreen={false} />
       <h2 className={cn("text-center text-xl mb-12 mt-4")}>
         Si vous êtes intéréssés par un de nos services, n'hésitez pas à me

@@ -19,7 +19,7 @@ export const Services: Service[] = [
     price: "X",
     resume:
       "Je propose une couverture pour les romans de fantasy et de science-fiction. Ces couvertures sont conçues pour donner une impression de luxe et de qualité à votre livre. Ils sont disponibles en différentes tailles et formats, et peuvent être personnalisés selon vos besoins. N'hésitez pas à me contacter pour obtenir un devis.",
-    cardsPerView: 3,
+    cardsPerView: 2,
     assets: [
       {
         url: "/assets/services/couvertures/cover_1.webp",
@@ -77,7 +77,7 @@ export const Services: Service[] = [
     price: "A partir de 20€",
     resume:
       "Je propose des entêtes de chapitres pour les romans de fantasy et de science-fiction. Ces entêtes sont conçus pour donner une impression de luxe et de qualité à votre livre. Ils sont disponibles en différentes tailles et formats, et peuvent être personnalisés selon vos besoins. N'hésitez pas à me contacter pour obtenir un devis.",
-    cardsPerView: 6,
+    cardsPerView: 5,
     assets: [
       {
         url: "/assets/services/headers/header_seven.webp",
@@ -122,7 +122,7 @@ export const Services: Service[] = [
     price: "1 page 200€ / 2 pages 400€",
     resume:
       "La cartographie est un élément essentiel pour tout roman de fantasy ou de science-fiction. Je propose de donner vie à vos mondes imaginaires à travers des cartes détaillées et personnalisées, à partir de 200€ pour une page, et 400€ pour deux. Que ce soit pour un royaume médiéval-fantastique, ou un archipel mystérieux, je m'adapte à votre univers et votre style. N'hésitez pas à me contacter pour obtenir un devis. ",
-    cardsPerView: 4,
+    cardsPerView: 3,
     assets: [
       {
         url: "/assets/services/maps/maps_one.webp",
@@ -152,7 +152,7 @@ export const Services: Service[] = [
     price: "Sous devis",
     resume:
       "Je propose des illustrations pour les romans de fantasy et de science-fiction. Ces illustrations sont conçues pour donner une impression de luxe et de qualité à votre livre. Ils sont disponibles en différentes tailles et formats, et peuvent être personnalisés selon vos besoins.",
-    cardsPerView: 6,
+    cardsPerView: 5,
     assets: [
       {
         url: "/assets/services/illustrations/illustration_five.webp",
