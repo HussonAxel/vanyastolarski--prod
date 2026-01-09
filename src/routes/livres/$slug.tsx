@@ -31,9 +31,9 @@ const LivreComponents = () => {
     indexOfLastCharacter
   );
   const totalPages = Math.ceil(book.characters.length / charactersPerPage);
-  const displayedSagaTitle = book.saga || book.title;
-  const displayedBookTitle = book.saga ? book.title : undefined;
-  const fullTitle = book.saga ? `${book.saga} : ${book.title}` : book.title;
+  const displayedSagaTitle = (book as any).saga || book.title;
+  const displayedBookTitle = (book as any).saga ? book.title : undefined;
+  const fullTitle = (book as any).saga ? `${(book as any).saga} : ${book.title}` : book.title;
 
   return (
     <main className="w-full">
@@ -58,7 +58,7 @@ const LivreComponents = () => {
         <meta name="twitter:description" content={book.synopsis} />
         <meta
           name="keywords"
-          content={`Vanya Stolarski, ${book.title}, ${book.saga || ""}, roman contemporain, littérature française`}
+          content={`Vanya Stolarski, ${book.title}, ${(book as any).saga || ""}, roman contemporain, littérature française`}
         />
         <link
           rel="canonical"
