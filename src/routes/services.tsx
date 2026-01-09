@@ -1,15 +1,9 @@
-import { createFileRoute } from "@tanstack/react-router";
-import ServicesList from "@components/ServicesList/ServicesList";
-import ColoredSection from "@components/ColoredSection";
+import { createFileRoute, redirect } from "@tanstack/react-router";
 
 export const Route = createFileRoute("/services")({
-  component: servicesLayout,
+  beforeLoad: () => {
+    throw redirect({
+      to: "/portfolio",
+    });
+  },
 });
-
-function servicesLayout() {
-  return (
-    <ColoredSection bgColor="bg-white">
-      <ServicesList />
-    </ColoredSection>
-  );
-}

@@ -14,7 +14,7 @@ const OtherBooks: React.FC = () => {
           </span>
         </h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 lg:gap-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-10">
           {otherBooks.map((book) => (
             <Link
               key={book.slug}
@@ -27,7 +27,7 @@ const OtherBooks: React.FC = () => {
                   <img
                     src={`../${book.cover}`}
                     alt={book.title}
-                    className="w-full h-full object-cover rounded-lg shadow-lg group-hover:shadow-xl group-hover:scale-[1.02] transition-all duration-300"
+                    className="w-full h-full object-cover rounded-lg transition-all duration-300"
                   />
                 </div>
 

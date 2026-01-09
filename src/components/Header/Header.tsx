@@ -1,14 +1,17 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "@tanstack/react-router";
 import { motion, AnimatePresence, useScroll, useTransform } from "motion/react";
+import { ChevronDown } from "lucide-react";
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isServicesDropdownOpen, setIsServicesDropdownOpen] = useState(false);
   const location = useLocation();
   const { scrollY } = useScroll();
   const headerOpacity = useTransform(scrollY, [0, 100], [1, 0.98]);
   const headerBlur = useTransform(scrollY, [0, 100], [0, 8]);
+  const dropdownRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -29,23 +32,57 @@ const Header: React.FC = () => {
     };
   }, [isMenuOpen]);
 
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target as Node)
+      ) {
+        setIsServicesDropdownOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
   const navigation = [
     { path: "/Livres", label: "Livres" },
-    { path: "/Services", label: "Services" },
-    { path: "https://vanyastolarski.sumupstore.com/", label: "Boutique", external: true },
     { path: "/Reviews", label: "Reviews" },
     { path: "/Citations", label: "Citations" },
     { path: "/Galerie", label: "Galerie" },
+    {
+      path: "https://vanyastolarski.sumupstore.com/",
+      label: "Boutique",
+      external: true,
+    },
+  ];
+
+  const servicesSubmenu = [
+    { path: "/portfolio", label: "Portfolio" },
+    { path: "/tarifs", label: "Tarifs" },
   ];
 
   const isActive = (path: string) => {
     if (path === "/Livres") {
-      return location.pathname.startsWith("/livres") || location.pathname.startsWith("/Livres");
+      return (
+        location.pathname.startsWith("/livres") ||
+        location.pathname.startsWith("/Livres")
+      );
     }
     return location.pathname === path;
   };
 
-  const NavLink = ({ item }: { item: typeof navigation[0] }) => {
+  const isServicesActive = () => {
+    return (
+      location.pathname === "/portfolio" || location.pathname === "/tarifs"
+    );
+  };
+
+  const NavLink = ({ item }: { item: (typeof navigation)[0] }) => {
     const active = isActive(item.path);
     const LinkComponent = item.external ? "a" : Link;
     const linkProps = item.external
@@ -64,15 +101,12 @@ const Header: React.FC = () => {
           className={`
             relative px-4 py-2 text-sm font-medium tracking-[0.1em] uppercase
             transition-all duration-300 ease-out
-            ${active
-              ? "text-green"
-              : "text-black/60 hover:text-black"
-            }
+            ${active ? "text-green" : "text-black/60 hover:text-black"}
           `}
           onClick={() => !item.external && setIsMenuOpen(false)}
         >
           <span className="relative z-10">{item.label}</span>
-          
+
           {/* Active indicator */}
           {active && (
             <motion.div
@@ -81,7 +115,7 @@ const Header: React.FC = () => {
               transition={{ type: "spring", stiffness: 300, damping: 30 }}
             />
           )}
-          
+
           {/* Hover background */}
           <motion.div
             className="absolute inset-0 bg-green/5 rounded-sm opacity-0"
@@ -101,105 +135,129 @@ const Header: React.FC = () => {
           backdropFilter: `blur(${headerBlur}px)`,
         }}
         className={`
-          fixed top-0 left-0 right-0 z-50
           transition-all duration-500 ease-out
-          ${isScrolled
-            ? "bg-white/80 border-b border-green/20"
-            : "bg-white/95 border-b border-green/30"
+          ${
+            isScrolled
+              ? "bg-white/80 border-b border-green/20"
+              : "bg-white/95 border-b border-green/30"
           }
         `}
       >
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <div className="flex items-center justify-between h-20 lg:h-24">
             {/* Logo */}
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, ease: "easeOut" }}
-            >
+            {/* Logo */}
+            <div className="group relative inline-block py-2">
               <Link
                 to="/"
                 className="group relative inline-block py-2"
                 onClick={() => setIsMenuOpen(false)}
               >
-                <div className="relative">
-                  {/* Main title with elegant typography */}
-                  <motion.h1
-                    className="font-Large text-xl sm:text-2xl lg:text-3xl xl:text-4xl text-black font-normal leading-[1.1]"
-                    whileHover={{ scale: 1.02 }}
-                    transition={{ duration: 0.3 }}
-                  >
-                    <span className="inline-block relative">
-                      <span className="relative z-10 tracking-[0.12em] transition-colors duration-300 group-hover:text-green/90">
-                        Vanya
-                      </span>
-                      <motion.span
-                        className="absolute inset-0 bg-green/8 blur-lg opacity-0 group-hover:opacity-100"
-                        transition={{ duration: 0.4 }}
-                      />
-                    </span>
-                    <motion.span
-                      className="mx-2 sm:mx-3 text-green/40 group-hover:text-green/70 transition-all duration-300 font-light inline-block"
-                      whileHover={{ scale: 1.2, rotate: 90 }}
-                      transition={{ duration: 0.3 }}
-                    >
-                      ·
-                    </motion.span>
-                    <span className="inline-block relative">
-                      <span className="relative z-10 tracking-[0.12em] transition-colors duration-300 group-hover:text-green/90">
-                        Stolarski
-                      </span>
-                      <motion.span
-                        className="absolute inset-0 bg-green/8 blur-lg opacity-0 group-hover:opacity-100"
-                        transition={{ duration: 0.4 }}
-                      />
-                    </span>
-                  </motion.h1>
-                  
-                  {/* Elegant underline with gradient */}
-                  <motion.div
-                    className="absolute -bottom-1 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-green/80 to-transparent"
-                    initial={{ scaleX: 0, opacity: 0 }}
-                    whileHover={{ scaleX: 1, opacity: 1 }}
-                    transition={{ duration: 0.5, ease: "easeInOut" }}
-                    style={{ originX: 0.5 }}
-                  />
-                  
-                  {/* Subtle accent dots */}
-                  <motion.div
-                    className="absolute -bottom-3 left-1/2 -translate-x-1/2 flex gap-1 opacity-0 group-hover:opacity-100"
-                    initial={{ y: -5 }}
-                    whileHover={{ y: 0 }}
-                    transition={{ duration: 0.4, delay: 0.1 }}
-                  >
-                    <motion.div
-                      className="w-1 h-1 rounded-full bg-green/60"
-                      initial={{ scale: 0 }}
-                      whileHover={{ scale: 1 }}
-                      transition={{ duration: 0.2, delay: 0.2 }}
-                    />
-                    <motion.div
-                      className="w-1 h-1 rounded-full bg-green/60"
-                      initial={{ scale: 0 }}
-                      whileHover={{ scale: 1 }}
-                      transition={{ duration: 0.2, delay: 0.25 }}
-                    />
-                  </motion.div>
-                </div>
-                
-                {/* Hover glow effect */}
-                <motion.div
-                  className="absolute -inset-3 bg-green/3 rounded-lg opacity-0 group-hover:opacity-100 blur-md -z-10"
-                  transition={{ duration: 0.4 }}
-                />
+                <h1 className="font-serif text-xl sm:text-2xl lg:text-3xl text-black font-light tracking-[0.2em] uppercase">
+                  <span className="relative inline-block">
+                    Vanya
+                    <span className="absolute -bottom-1 left-0 w-full h-px bg-green origin-left" />
+                  </span>
+                  <span className="mx-3 text-green/50 font-extralight">|</span>
+                  <span className="relative inline-block">
+                    Stolarski
+                    <span className="absolute -bottom-1 left-0 w-full h-px bg-green origin-right" />
+                  </span>
+                </h1>
               </Link>
-            </motion.div>
+            </div>
 
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center gap-1">
               {navigation.map((item) => (
                 <NavLink key={item.path} item={item} />
               ))}
+
+              {/* Services Dropdown */}
+              <motion.div
+                ref={dropdownRef}
+                className="relative"
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4 }}
+              >
+                <motion.button
+                  onClick={() =>
+                    setIsServicesDropdownOpen(!isServicesDropdownOpen)
+                  }
+                  className={`
+                    relative px-4 py-2 text-sm font-medium tracking-[0.1em] uppercase
+                    transition-all duration-300 ease-out flex items-center gap-1
+                    ${
+                      isServicesActive()
+                        ? "text-green"
+                        : "text-black/60 hover:text-black"
+                    }
+                  `}
+                >
+                  <span className="relative z-10">Services</span>
+                  <ChevronDown
+                    className={`w-4 h-4 transition-transform duration-300 ${
+                      isServicesDropdownOpen ? "rotate-180" : ""
+                    }`}
+                  />
+
+                  {/* Active indicator */}
+                  {isServicesActive() && (
+                    <motion.div
+                      className="absolute bottom-0 left-0 right-0 h-[1px] bg-green"
+                      layoutId="activeIndicator"
+                      transition={{
+                        type: "spring",
+                        stiffness: 300,
+                        damping: 30,
+                      }}
+                    />
+                  )}
+
+                  {/* Hover background */}
+                  <motion.div
+                    className="absolute inset-0 bg-green/5 rounded-sm opacity-0"
+                    whileHover={{ opacity: 1 }}
+                    transition={{ duration: 0.2 }}
+                  />
+                </motion.button>
+
+                {/* Dropdown Menu */}
+                <AnimatePresence>
+                  {isServicesDropdownOpen && (
+                    <motion.div
+                      initial={{ opacity: 0, y: -10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -10 }}
+                      transition={{ duration: 0.2 }}
+                      className="absolute top-full left-0 mt-2 bg-white rounded-lg shadow-lg border border-green/20 overflow-hidden z-50 min-w-[180px]"
+                    >
+                      {servicesSubmenu.map((item) => {
+                        const active = isActive(item.path);
+                        return (
+                          <Link
+                            key={item.path}
+                            to={item.path}
+                            onClick={() => setIsServicesDropdownOpen(false)}
+                            className={`
+                              block px-4 py-3 text-sm font-medium tracking-[0.1em] uppercase
+                              transition-all duration-200
+                              ${
+                                active
+                                  ? "text-green bg-green/5"
+                                  : "text-black/60 hover:text-green hover:bg-green/5"
+                              }
+                            `}
+                          >
+                            {item.label}
+                          </Link>
+                        );
+                      })}
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </motion.div>
             </nav>
 
             {/* Mobile Menu Button */}
@@ -263,7 +321,11 @@ const Header: React.FC = () => {
                   const active = isActive(item.path);
                   const LinkComponent = item.external ? "a" : Link;
                   const linkProps = item.external
-                    ? { href: item.path, target: "_blank", rel: "noopener noreferrer" }
+                    ? {
+                        href: item.path,
+                        target: "_blank",
+                        rel: "noopener noreferrer",
+                      }
                     : { to: item.path };
 
                   return (
@@ -278,9 +340,10 @@ const Header: React.FC = () => {
                         className={`
                           block px-8 py-5 text-lg font-medium tracking-[0.1em] uppercase
                           transition-all duration-200 relative
-                          ${active
-                            ? "text-green bg-green/5 border-l-4 border-green"
-                            : "text-black/70 hover:text-green hover:bg-green/5"
+                          ${
+                            active
+                              ? "text-green bg-green/5 border-l-4 border-green"
+                              : "text-black/70 hover:text-green hover:bg-green/5"
                           }
                         `}
                         onClick={() => setIsMenuOpen(false)}
@@ -290,6 +353,75 @@ const Header: React.FC = () => {
                     </motion.div>
                   );
                 })}
+
+                {/* Services Dropdown in Mobile Menu */}
+                <motion.div
+                  initial={{ opacity: 0, x: 20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{
+                    delay: navigation.length * 0.05,
+                    duration: 0.3,
+                  }}
+                >
+                  <button
+                    onClick={() =>
+                      setIsServicesDropdownOpen(!isServicesDropdownOpen)
+                    }
+                    className={`
+                      w-full flex items-center justify-between px-8 py-5 text-lg font-medium tracking-[0.1em] uppercase
+                      transition-all duration-200 relative
+                      ${
+                        isServicesActive()
+                          ? "text-green bg-green/5 border-l-4 border-green"
+                          : "text-black/70 hover:text-green hover:bg-green/5"
+                      }
+                    `}
+                  >
+                    <span>Services</span>
+                    <ChevronDown
+                      className={`w-5 h-5 transition-transform duration-300 ${
+                        isServicesDropdownOpen ? "rotate-180" : ""
+                      }`}
+                    />
+                  </button>
+
+                  <AnimatePresence>
+                    {isServicesDropdownOpen && (
+                      <motion.div
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: "auto", opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        transition={{ duration: 0.2 }}
+                        className="overflow-hidden"
+                      >
+                        {servicesSubmenu.map((item) => {
+                          const active = isActive(item.path);
+                          return (
+                            <Link
+                              key={item.path}
+                              to={item.path}
+                              onClick={() => {
+                                setIsMenuOpen(false);
+                                setIsServicesDropdownOpen(false);
+                              }}
+                              className={`
+                                block px-12 py-4 text-base font-medium tracking-[0.1em] uppercase
+                                transition-all duration-200
+                                ${
+                                  active
+                                    ? "text-green bg-green/10 border-l-4 border-green"
+                                    : "text-black/60 hover:text-green hover:bg-green/5"
+                                }
+                              `}
+                            >
+                              {item.label}
+                            </Link>
+                          );
+                        })}
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </motion.div>
               </div>
             </motion.nav>
           </>

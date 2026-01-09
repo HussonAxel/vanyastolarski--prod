@@ -42,7 +42,7 @@ const BookInfos = ({
             <img
               src={picture}
               alt="Book cover"
-              className="rounded-md w-auto max-w-full lg:max-w-lg h-auto max-h-[500px] lg:max-h-[550px] shadow-2xl"
+              className="rounded-md w-auto max-w-full lg:max-w-lg h-auto max-h-[500px] lg:max-h-[550px]"
             />
           </div>
           {amazonLink && (

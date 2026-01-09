@@ -37,6 +37,7 @@ const Modal: React.FC<ModalProps> = ({ videoUrl }) => {
                 animate={{ scale: 1, opacity: 1 }}
                 exit={{ scale: 0.5, opacity: 0 }}
                 className="bg-white rounded-lg p-4 md:p-6 w-[95%] md:w-[90%] max-w-5xl relative"
+                onClick={(e) => e.stopPropagation()}
               >
                 <button
                   onClick={() => setIsOpen(false)}

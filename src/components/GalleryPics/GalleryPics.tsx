@@ -1,5 +1,6 @@
 import { useMemo, useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
+import Masonry from "react-masonry-css";
 
 interface GalleryImage {
   url: string;
@@ -8,9 +9,80 @@ interface GalleryImage {
   date: string;
   description: string;
   book: string;
+  originalIndex?: number;
 }
 
 const galleryData: GalleryImage[] = [
+  {
+    url: "/assets/gallery/coeur-de-renard_fortune.png",
+    title: "Fortune",
+    artist: "pumpkinspace.latte",
+    date: "Fevrier 2025",
+    description: "Un dessin de Fortune",
+    book: "Coeur De Renard",
+  },
+  {
+    url: "/assets/gallery/coeur-de-renard_renard.png",
+    title: "Renard",
+    artist: "pumpkinspace.latte",
+    date: "Fevrier 2025",
+    description: "Un dessin de Renard",
+    book: "Coeur De Renard",
+  },
+  {
+    url: "/assets/gallery/coeur-de-renard-renardxfortune.png",
+    title: "Renard & Fortune",
+    artist: "pumpkinspace.latte",
+    date: "Fevrier 2025",
+    description: "Un dessin de Renard & Fortune",
+    book: "Coeur De Renard",
+  },
+  {
+    url: "/assets/gallery/coeur-de-renard_fortunexrenard2.jpg",
+    title: "Renard & Fortune",
+    artist: "purplishartz",
+    date: "Novembre 2025",
+    description:
+      "Illustration de Renard & Fortune, extrait du livre 'Coeur de Renard'",
+    book: "Coeur De Renard",
+  },
+
+  {
+    url: "/assets/gallery/coeur-de-renard_marque-page.png",
+    title: "Marque page Coeur De Renard",
+    artist: "pumpkinspace.latte",
+    date: "Decembre 2025",
+    description:
+      "Illustration de marque page pour le livre 'Coeur De Renard' exclusif à la campagne Ulule",
+    book: "Coeur De Renard",
+  },
+
+  {
+    url: "/assets/gallery/Ethan.webp",
+    title: "Ethan",
+    artist: "Artsymoon",
+    date: "Mars 2024",
+    description: "Un dessin de Ethan",
+    book: "Fous Papillons",
+  },
+  {
+    url: "/assets/gallery/coeur-de-renard_plancheBD.jpg",
+    title: "Planche BD Coeur De Renard",
+    artist: "purplishartz",
+    date: "Decembre 2025",
+    description:
+      "Illustration de planche BD pour le livre 'Coeur De Renard' exclusif à la campagne Ulule",
+    book: "Coeur De Renard",
+  },
+  {
+    url: "/assets/gallery/Chiara.jpg",
+    title: "Chiara",
+    artist: "Artsymoon",
+    date: "Mars 2024",
+    description: "Un dessin de Chiara",
+    book: "Fous Papillons",
+  },
+
   {
     url: "/assets/gallery/aspen_sarah.jpg",
     title: "Aspen",
@@ -19,21 +91,14 @@ const galleryData: GalleryImage[] = [
     description: "Un dessin de Aspen",
     book: "Les douze divins",
   },
+
   {
-    url: "/assets/gallery/aspendessin.png",
-    title: "Aspen",
-    artist: "Vanya",
+    url: "/assets/gallery/Frantz.jpg",
+    title: "Frantz",
+    artist: "Artsymoon",
     date: "Mars 2024",
-    description: "Un dessin de Aspen",
-    book: "Les douze divins",
-  },
-  {
-    url: "/assets/gallery/AspendessinChloe.jpg",
-    title: "Aspen",
-    artist: "8kloweey",
-    date: "Mars 2024",
-    description: "Un dessin de Aspen",
-    book: "Les douze divins",
+    description: "Un dessin de Frantz",
+    book: "Fous Papillons",
   },
   {
     url: "/assets/gallery/Esther.webp",
@@ -44,60 +109,37 @@ const galleryData: GalleryImage[] = [
     book: "Fous Papillons",
   },
   {
-    url: "/assets/gallery/Ethan.webp",
-    title: "Ethan",
-    artist: "Artsymoon",
-    date: "Mars 2024",
-    description: "Un dessin de Ethan",
-    book: "Fous Papillons",
-  },
-  {
-    url: "/assets/gallery/Chiara.jpg",
-    title: "Chiara",
-    artist: "Artsymoon",
-    date: "Mars 2024",
-    description: "Un dessin de Chiara",
-    book: "Fous Papillons",
-  },
-  {
-    url: "/assets/gallery/Frantz.jpg",
-    title: "Frantz",
-    artist: "Artsymoon",
-    date: "Mars 2024",
-    description: "Un dessin de Frantz",
-    book: "Fous Papillons",
-  },
-  {
     url: "/assets/gallery/agape.jpg",
     title: "Agapé",
     artist: "Artsymoon",
     date: "Mars 2024",
     description: "Un dessin de Agapé",
-    book: "Brille Papillon",
+    book: "Brille Papillons",
   },
   {
-    url: "/assets/gallery/coeur-de-renard_fortune.png",
-    title: "Fortune",
-    artist: "pumpkinspace.latte",
-    date: "Fevrier 2025",
-    description: "Un dessin de Fortune",
-    book: "Coeur de Renard",
+    url: "/assets/gallery/brille-papillons.png",
+    title: "Brille Papillons",
+    artist: "Bianca Lahr",
+    date: "Decembre 2025",
+    description: "Un dessin de Brille Papillons",
+    book: "Brille Papillons",
   },
   {
-    url: "/assets/gallery/coeur-de-renard_renard.png",
-    title: "Renard",
-    artist: "pumpkinspace.latte",
-    date: "Fevrier 2025",
-    description: "Un dessin de Renard",
-    book: "Coeur de Renard",
+    url: "/assets/gallery/aspendessin.png",
+    title: "Aspen",
+    artist: "Vanya",
+    date: "Mars 2024",
+    description: "Un dessin de Aspen",
+    book: "Les douze divins",
   },
+
   {
-    url: "/assets/gallery/coeur-de-renard-renardxfortune.png",
-    title: "Renard & Fortune",
-    artist: "pumpkinspace.latte",
-    date: "Fevrier 2025",
-    description: "Un dessin de Renard & Fortune",
-    book: "Coeur de Renard",
+    url: "/assets/gallery/AspendessinChloe.jpg",
+    title: "Aspen",
+    artist: "8kloweey",
+    date: "Mars 2024",
+    description: "Un dessin de Aspen",
+    book: "Les douze divins",
   },
 ].concat();
 
@@ -116,13 +158,16 @@ export default function GalleryPics() {
   }, []);
 
   const filteredImages = useMemo(() => {
-    return galleryData.filter((image) => {
-      const matchesBook =
-        !activeFilters.book || image.book === activeFilters.book;
-      const matchesArtist =
-        !activeFilters.artist || image.artist === activeFilters.artist;
-      return matchesBook && matchesArtist;
-    });
+    return galleryData
+      .map((image, originalIndex) => ({ ...image, originalIndex }))
+      .filter((image) => {
+        const matchesBook =
+          !activeFilters.book || image.book === activeFilters.book;
+        const matchesArtist =
+          !activeFilters.artist || image.artist === activeFilters.artist;
+        return matchesBook && matchesArtist;
+      })
+      .sort((a, b) => a.originalIndex - b.originalIndex);
   }, [activeFilters]);
 
   const resetFilters = () => {
@@ -130,6 +175,13 @@ export default function GalleryPics() {
       book: "",
       artist: "",
     });
+  };
+
+  const breakpointColumnsObj = {
+    default: 4,
+    1024: 3,
+    768: 2,
+    640: 1,
   };
 
   return (
@@ -180,25 +232,31 @@ export default function GalleryPics() {
         </p>
       </div>
 
-      <div className="columns-1 sm:columns-2 md:columns-3 lg:columns-4 w-9/12 mx-auto my-4 gap-4">
-        {filteredImages.map((image, index) => (
-          <motion.div
-            key={index}
-            className="relative mb-4 break-inside-avoid cursor-pointer"
-            whileHover={{ scale: 1.02 }}
-            transition={{ duration: 0.2 }}
-            onClick={() => setSelectedImage(image)}
-          >
-            <motion.img
-              className="w-full rounded-lg shadow-lg"
-              src={image.url}
-              alt={image.title}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.5 }}
-            />
-          </motion.div>
-        ))}
+      <div className="w-9/12 mx-auto my-4">
+        <Masonry
+          breakpointCols={breakpointColumnsObj}
+          className="flex w-auto -ml-4"
+          columnClassName="pl-4 bg-clip-padding"
+        >
+          {filteredImages.map((image) => (
+            <motion.div
+              key={image.originalIndex ?? image.url}
+              className="relative mb-4 cursor-pointer"
+              whileHover={{ scale: 1.02 }}
+              transition={{ duration: 0.2 }}
+              onClick={() => setSelectedImage(image)}
+            >
+              <motion.img
+                className="w-full max-w-1/2 rounded-lg shadow-lg"
+                src={image.url}
+                alt={image.title}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.5 }}
+              />
+            </motion.div>
+          ))}
+        </Masonry>
       </div>
 
       <AnimatePresence>

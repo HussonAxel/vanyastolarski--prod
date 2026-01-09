@@ -39,7 +39,7 @@ const GalerieComponents = () => {
         <link rel="canonical" href="https://www.vanyastolarski.fr/galerie" />
       </Helmet>
 
-      <ColoredSection bgColor="bg-white">
+      <ColoredSection bgColor="bg-white" className="py-8">
         <GalleryPics />
       </ColoredSection>
     </>

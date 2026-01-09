@@ -9,8 +9,10 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as TarifsRouteImport } from './routes/tarifs'
 import { Route as ServicesRouteImport } from './routes/services'
 import { Route as ReviewsRouteImport } from './routes/reviews'
+import { Route as PortfolioRouteImport } from './routes/portfolio'
 import { Route as LivresRouteImport } from './routes/livres'
 import { Route as GalerieRouteImport } from './routes/galerie'
 import { Route as CitationsRouteImport } from './routes/citations'
@@ -21,6 +23,11 @@ import { Route as LivresIndexRouteImport } from './routes/livres/index'
 import { Route as ReviewsSlugRouteImport } from './routes/reviews/$slug'
 import { Route as LivresSlugRouteImport } from './routes/livres/$slug'
 
+const TarifsRoute = TarifsRouteImport.update({
+  id: '/tarifs',
+  path: '/tarifs',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ServicesRoute = ServicesRouteImport.update({
   id: '/services',
   path: '/services',
@@ -29,6 +36,11 @@ const ServicesRoute = ServicesRouteImport.update({
 const ReviewsRoute = ReviewsRouteImport.update({
   id: '/reviews',
   path: '/reviews',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PortfolioRoute = PortfolioRouteImport.update({
+  id: '/portfolio',
+  path: '/portfolio',
   getParentRoute: () => rootRouteImport,
 } as any)
 const LivresRoute = LivresRouteImport.update({
@@ -83,8 +95,10 @@ export interface FileRoutesByFullPath {
   '/citations': typeof CitationsRoute
   '/galerie': typeof GalerieRoute
   '/livres': typeof LivresRouteWithChildren
+  '/portfolio': typeof PortfolioRoute
   '/reviews': typeof ReviewsRouteWithChildren
   '/services': typeof ServicesRoute
+  '/tarifs': typeof TarifsRoute
   '/livres/$slug': typeof LivresSlugRoute
   '/reviews/$slug': typeof ReviewsSlugRoute
   '/livres/': typeof LivresIndexRoute
@@ -95,7 +109,9 @@ export interface FileRoutesByTo {
   '/boutique': typeof BoutiqueRoute
   '/citations': typeof CitationsRoute
   '/galerie': typeof GalerieRoute
+  '/portfolio': typeof PortfolioRoute
   '/services': typeof ServicesRoute
+  '/tarifs': typeof TarifsRoute
   '/livres/$slug': typeof LivresSlugRoute
   '/reviews/$slug': typeof ReviewsSlugRoute
   '/livres': typeof LivresIndexRoute
@@ -108,8 +124,10 @@ export interface FileRoutesById {
   '/citations': typeof CitationsRoute
   '/galerie': typeof GalerieRoute
   '/livres': typeof LivresRouteWithChildren
+  '/portfolio': typeof PortfolioRoute
   '/reviews': typeof ReviewsRouteWithChildren
   '/services': typeof ServicesRoute
+  '/tarifs': typeof TarifsRoute
   '/livres/$slug': typeof LivresSlugRoute
   '/reviews/$slug': typeof ReviewsSlugRoute
   '/livres/': typeof LivresIndexRoute
@@ -123,8 +141,10 @@ export interface FileRouteTypes {
     | '/citations'
     | '/galerie'
     | '/livres'
+    | '/portfolio'
     | '/reviews'
     | '/services'
+    | '/tarifs'
     | '/livres/$slug'
     | '/reviews/$slug'
     | '/livres/'
@@ -135,7 +155,9 @@ export interface FileRouteTypes {
     | '/boutique'
     | '/citations'
     | '/galerie'
+    | '/portfolio'
     | '/services'
+    | '/tarifs'
     | '/livres/$slug'
     | '/reviews/$slug'
     | '/livres'
@@ -147,8 +169,10 @@ export interface FileRouteTypes {
     | '/citations'
     | '/galerie'
     | '/livres'
+    | '/portfolio'
     | '/reviews'
     | '/services'
+    | '/tarifs'
     | '/livres/$slug'
     | '/reviews/$slug'
     | '/livres/'
@@ -161,12 +185,21 @@ export interface RootRouteChildren {
   CitationsRoute: typeof CitationsRoute
   GalerieRoute: typeof GalerieRoute
   LivresRoute: typeof LivresRouteWithChildren
+  PortfolioRoute: typeof PortfolioRoute
   ReviewsRoute: typeof ReviewsRouteWithChildren
   ServicesRoute: typeof ServicesRoute
+  TarifsRoute: typeof TarifsRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/tarifs': {
+      id: '/tarifs'
+      path: '/tarifs'
+      fullPath: '/tarifs'
+      preLoaderRoute: typeof TarifsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/services': {
       id: '/services'
       path: '/services'
@@ -179,6 +212,13 @@ declare module '@tanstack/react-router' {
       path: '/reviews'
       fullPath: '/reviews'
       preLoaderRoute: typeof ReviewsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/portfolio': {
+      id: '/portfolio'
+      path: '/portfolio'
+      fullPath: '/portfolio'
+      preLoaderRoute: typeof PortfolioRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/livres': {
@@ -279,8 +319,10 @@ const rootRouteChildren: RootRouteChildren = {
   CitationsRoute: CitationsRoute,
   GalerieRoute: GalerieRoute,
   LivresRoute: LivresRouteWithChildren,
+  PortfolioRoute: PortfolioRoute,
   ReviewsRoute: ReviewsRouteWithChildren,
   ServicesRoute: ServicesRoute,
+  TarifsRoute: TarifsRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
