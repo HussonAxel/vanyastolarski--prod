@@ -153,7 +153,7 @@ const Header: React.FC = () => {
                 className="group relative inline-block py-2"
                 onClick={() => setIsMenuOpen(false)}
               >
-                <h1 className="font-serif text-xl sm:text-2xl lg:text-3xl text-black font-light tracking-[0.2em] uppercase">
+                <h1 className="font-serif text-xl sm:text-2xl lg:text-2xl text-black font-light tracking-[0.2em] uppercase">
                   <span className="relative inline-block">
                     Vanya
                     <span className="absolute -bottom-1 left-0 w-full h-px bg-green origin-left" />
