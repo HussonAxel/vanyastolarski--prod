@@ -11,7 +11,7 @@ const ColoredSection: React.FC<ColoredSectionProps> = ({
   bgColor,
   className,
 }) => (
-  <div className={`w-full py-12 ${bgColor} ${className}`}>
+  <div className={`w-full py-20 ${bgColor} ${className}`}>
     <div>{children}</div>
   </div>
 );

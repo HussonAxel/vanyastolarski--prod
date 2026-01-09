@@ -5,21 +5,20 @@ const CitationModel: React.FC<CitationModelProps> = ({
   CreatedAt,
   Quote,
   AuthorOfQuote,
-  Thoughts,
 }) => {
   return (
-    <article className="font-WorkSans border-b-[0.5px] first-of-type:border-t-[0.5px] flex flex-col sm:flex-row w-full md:w-10/12 m-auto justify-between py-12 gap-8">
-      <div className=" text-black/80 mb-8">
+    <article className="font-WorkSans border-b-[1px] border-b-black/40 first-of-type:border-t-[1px] last-of-type:border-b-0 border-t-black/40 flex flex-col sm:flex-row w-full md:w-10/12 mx-auto justify-between py-12 gap-8">
+      <span className="text-black/80 shrink-0">
         {quoteNumber} — {CreatedAt}
-      </div>
-      <div className="w-full md:max-w-3/4 md:max-w-[800px]">
-        <div className="mb-12 gap-4 flex flex-col">
-          <h2 className="font-semibold text-2xl">"{Quote}"</h2>
-          <p className="text-lg italic"> — {AuthorOfQuote}</p>
-        </div>
-        <div>
-          <p className="text-black/80">{Thoughts}</p>
-        </div>
+      </span>
+
+      <div className="flex flex-col gap-12 md:max-w-[800px]">
+        <blockquote className="flex flex-col gap-4">
+          <h2 className="text-xl font-semibold text-black/90">{Quote}</h2>
+          <cite className="text-lg italic not-italic:font-normal">
+            — {AuthorOfQuote}
+          </cite>
+        </blockquote>
       </div>
     </article>
   );

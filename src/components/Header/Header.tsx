@@ -144,9 +144,7 @@ const Header: React.FC = () => {
         `}
       >
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
-          <div className="flex items-center justify-between h-20 lg:h-24">
-            {/* Logo */}
-            {/* Logo */}
+          <div className="flex items-center justify-between">
             <div className="group relative inline-block py-2">
               <Link
                 to="/"
@@ -427,9 +425,6 @@ const Header: React.FC = () => {
           </>
         )}
       </AnimatePresence>
-
-      {/* Spacer to prevent content from going under fixed header */}
-      <div className="h-20 lg:h-24" />
     </>
   );
 };
