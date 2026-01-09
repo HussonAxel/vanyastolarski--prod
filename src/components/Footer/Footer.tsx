@@ -15,9 +15,8 @@ const Footer: React.FC = () => {
   ];
 
   const books = [
-    { to: "/livres/terres-de-guerre", text: "Terres de Guerre" },
+    { to: "/livres/coeur-de-renard", text: "Coeur de Renard" },
     { to: "/livres/fous-papillons", text: "Fous Papillons" },
-    { to: "/livres/les-douze-divins", text: "Les Douze Divins" },
     { to: "/livres/le-coeur-dankaa", text: "Le coeur d'Ankaa" },
   ];
 
