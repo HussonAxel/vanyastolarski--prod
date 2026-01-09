@@ -55,7 +55,7 @@ const LivresComponents = () => {
           {BooksQuotes.map((book, index) => (
             <QuoteTemplate
               key={index}
-              BookSaga={book.saga}
+              BookSaga={(book as any).saga}
               BookResume={book.resume}
               DateQuote={book.date}
               isbn={book.isbn}

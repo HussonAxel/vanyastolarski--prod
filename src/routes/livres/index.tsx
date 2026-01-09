@@ -15,7 +15,7 @@ const LivresComponents = () => {
           {BooksData.books.map((book) => (
             <Book
               key={book.id}
-              BookSaga={book.saga}
+              BookSaga={(book as any).saga}
               BookTitle={book.title}
               BookResume={book.synopsis}
               isbn={book.ISBN}

@@ -130,7 +130,7 @@ const LatestReading = () => {
         {currentBooks.map((book) => (
           <BookCard
             key={book.id}
-            saga={book.saga}
+            saga={(book as any).saga}
             author={book.author}
             resume={book.resume}
             date={book.date}
