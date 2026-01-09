@@ -22,19 +22,19 @@ export const Services: Service[] = [
     cardsPerView: 3,
     assets: [
       {
-        url: "/assets/services/couvertures/cover_1.png",
+        url: "/assets/services/couvertures/cover_1.webp",
         type: "image",
       },
       {
-        url: "/assets/services/couvertures/cover_2.png",
+        url: "/assets/services/couvertures/cover_2.webp",
         type: "image",
       },
       {
-        url: "/assets/services/couvertures/cover_3.png",
+        url: "/assets/services/couvertures/cover_3.webp",
         type: "image",
       },
       {
-        url: "/assets/services/couvertures/cover_4.png",
+        url: "/assets/services/couvertures/cover_4.webp",
         type: "image",
       },
     ],
@@ -47,27 +47,27 @@ export const Services: Service[] = [
     cardsPerView: 6,
     assets: [
       {
-        url: "/assets/services/jaspages/jaspage_four.png",
+        url: "/assets/services/jaspages/jaspage_four.webp",
         type: "image",
       },
       {
-        url: "/assets/services/jaspages/jaspage_five.png",
+        url: "/assets/services/jaspages/jaspage_five.webp",
         type: "image",
       },
       {
-        url: "/assets/services/jaspages/jaspage_six.png",
+        url: "/assets/services/jaspages/jaspage_six.webp",
         type: "image",
       },
       {
-        url: "/assets/services/jaspages/jaspage_seven.png",
+        url: "/assets/services/jaspages/jaspage_seven.webp",
         type: "image",
       },
       {
-        url: "/assets/services/jaspages/jaspage_eight.png",
+        url: "/assets/services/jaspages/jaspage_eight.webp",
         type: "image",
       },
       {
-        url: "/assets/services/jaspages/jaspage_nine.png",
+        url: "/assets/services/jaspages/jaspage_nine.webp",
         type: "image",
       },
     ],
@@ -80,39 +80,39 @@ export const Services: Service[] = [
     cardsPerView: 6,
     assets: [
       {
-        url: "/assets/services/headers/header_seven.png",
+        url: "/assets/services/headers/header_seven.webp",
         type: "image",
       },
       {
-        url: "/assets/services/headers/header_eight.png",
+        url: "/assets/services/headers/header_eight.webp",
         type: "image",
       },
       {
-        url: "/assets/services/headers/header_nine.png",
+        url: "/assets/services/headers/header_nine.webp",
         type: "image",
       },
       {
-        url: "/assets/services/headers/header_ten.png",
+        url: "/assets/services/headers/header_ten.webp",
         type: "image",
       },
       {
-        url: "/assets/services/headers/header_eleven.png",
+        url: "/assets/services/headers/header_eleven.webp",
         type: "image",
       },
       {
-        url: "/assets/services/headers/header_twelve.png",
+        url: "/assets/services/headers/header_twelve.webp",
         type: "image",
       },
       {
-        url: "/assets/services/headers/header_thirteen.png",
+        url: "/assets/services/headers/header_thirteen.webp",
         type: "image",
       },
       {
-        url: "/assets/services/headers/header_fourteen.png",
+        url: "/assets/services/headers/header_fourteen.webp",
         type: "image",
       },
       {
-        url: "/assets/services/headers/header_fifteen.png",
+        url: "/assets/services/headers/header_fifteen.webp",
         type: "image",
       },
     ],
@@ -133,15 +133,15 @@ export const Services: Service[] = [
         type: "image",
       },
       {
-        url: "/assets/services/maps/maps_three.png",
+        url: "/assets/services/maps/maps_three.webp",
         type: "image",
       },
       {
-        url: "/assets/services/maps/maps_six.png",
+        url: "/assets/services/maps/maps_six.webp",
         type: "image",
       },
       {
-        url: "/assets/services/maps/maps_seven.png",
+        url: "/assets/services/maps/maps_seven.webp",
         type: "image",
       },
     ],
@@ -155,51 +155,51 @@ export const Services: Service[] = [
     cardsPerView: 6,
     assets: [
       {
-        url: "/assets/services/illustrations/illustration_five.jpg",
+        url: "/assets/services/illustrations/illustration_five.webp",
         type: "image",
       },
       {
-        url: "/assets/services/illustrations/illustration_six.png",
+        url: "/assets/services/illustrations/illustration_six.webp",
         type: "image",
       },
       {
-        url: "/assets/services/illustrations/illustration_seven.png",
+        url: "/assets/services/illustrations/illustration_seven.webp",
         type: "image",
       },
       {
-        url: "/assets/services/illustrations/illustration_eight.png",
+        url: "/assets/services/illustrations/illustration_eight.webp",
         type: "image",
       },
       {
-        url: "/assets/services/illustrations/illustration_nine.png",
+        url: "/assets/services/illustrations/illustration_nine.webp",
         type: "image",
       },
       {
-        url: "/assets/services/illustrations/illustration_ten.png",
+        url: "/assets/services/illustrations/illustration_ten.webp",
         type: "image",
       },
       {
-        url: "/assets/services/illustrations/illustration_eleven.jpg",
+        url: "/assets/services/illustrations/illustration_eleven.webp",
         type: "image",
       },
       {
-        url: "/assets/services/illustrations/illustration_twelve.jpg",
+        url: "/assets/services/illustrations/illustration_twelve.webp",
         type: "image",
       },
       {
-        url: "/assets/services/illustrations/illustration_thirteen.jpg",
+        url: "/assets/services/illustrations/illustration_thirteen.webp",
         type: "image",
       },
       {
-        url: "/assets/services/illustrations/illustration_fourteen.jpg",
+        url: "/assets/services/illustrations/illustration_fourteen.webp",
         type: "image",
       },
       {
-        url: "/assets/services/illustrations/illustration_fifteen.png",
+        url: "/assets/services/illustrations/illustration_fifteen.webp",
         type: "image",
       },
       {
-        url: "/assets/services/illustrations/illustration_sixteen.jpg",
+        url: "/assets/services/illustrations/illustration_sixteen.webp",
         type: "image",
       },
     ],

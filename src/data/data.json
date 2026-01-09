@@ -5,9 +5,9 @@
       "title": "Coeur de Renard",
       "slug": "coeur-de-renard",
       "volume": 1,
-      "cover": "/assets/covers/CdR_Cover.png",
+      "cover": "/assets/covers/CdR_Cover.webp",
       "covers": [
-        "/assets/covers/CdR_Cover.png",
+        "/assets/covers/CdR_Cover.webp",
         "/assets/covers/coeur_de_renard_couverture.webp"
       ],
       "coverDescriptions": [
@@ -58,11 +58,11 @@
       "title": "Fous-Papillons",
       "slug": "fous-papillons",
       "volume": 1,
-      "cover": "/assets/covers/FP_Cover.png",
+      "cover": "/assets/covers/FP_Cover.webp",
       "covers": [
-        "/assets/covers/FP_Cover.png",
         "/assets/covers/FP_Cover.webp",
-        "/assets/covers/Latest Release - Fous Papillons.png"
+        "/assets/covers/FP_Cover.webp",
+        "/assets/covers/Latest Release - Fous Papillons.webp"
       ],
       "coverDescriptions": [
         "Couverture principale",
@@ -113,9 +113,9 @@
       "title": "Le coeur d'Ankaa",
       "slug": "le-coeur-dankaa",
       "volume": 1,
-      "cover": "/assets/covers/le_coeur_d_ankaa_couverture.png",
+      "cover": "/assets/covers/le_coeur_d_ankaa_couverture.webp",
       "covers": [
-        "/assets/covers/le_coeur_d_ankaa_couverture.png"
+        "/assets/covers/le_coeur_d_ankaa_couverture.webp"
       ],
       "coverDescriptions": [
         "Couverture principale"

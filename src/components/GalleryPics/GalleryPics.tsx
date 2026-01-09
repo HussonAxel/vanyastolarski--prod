@@ -14,7 +14,7 @@ interface GalleryImage {
 
 const galleryData: GalleryImage[] = [
   {
-    url: "/assets/gallery/coeur-de-renard_fortune.png",
+    url: "/assets/gallery/coeur-de-renard_fortune.webp",
     title: "Fortune",
     artist: "pumpkinspace.latte",
     date: "Fevrier 2025",
@@ -22,7 +22,7 @@ const galleryData: GalleryImage[] = [
     book: "Coeur De Renard",
   },
   {
-    url: "/assets/gallery/coeur-de-renard_renard.png",
+    url: "/assets/gallery/coeur-de-renard_renard.webp",
     title: "Renard",
     artist: "pumpkinspace.latte",
     date: "Fevrier 2025",
@@ -30,7 +30,7 @@ const galleryData: GalleryImage[] = [
     book: "Coeur De Renard",
   },
   {
-    url: "/assets/gallery/coeur-de-renard-renardxfortune.png",
+    url: "/assets/gallery/coeur-de-renard-renardxfortune.webp",
     title: "Renard & Fortune",
     artist: "pumpkinspace.latte",
     date: "Fevrier 2025",
@@ -38,7 +38,7 @@ const galleryData: GalleryImage[] = [
     book: "Coeur De Renard",
   },
   {
-    url: "/assets/gallery/coeur-de-renard_fortunexrenard2.jpg",
+    url: "/assets/gallery/coeur-de-renard_fortunexrenard2.webp",
     title: "Renard & Fortune",
     artist: "purplishartz",
     date: "Novembre 2025",
@@ -48,7 +48,7 @@ const galleryData: GalleryImage[] = [
   },
 
   {
-    url: "/assets/gallery/coeur-de-renard_marque-page.png",
+    url: "/assets/gallery/coeur-de-renard_marque-page.webp",
     title: "Marque page Coeur De Renard",
     artist: "pumpkinspace.latte",
     date: "Decembre 2025",
@@ -66,7 +66,7 @@ const galleryData: GalleryImage[] = [
     book: "Fous Papillons",
   },
   {
-    url: "/assets/gallery/coeur-de-renard_plancheBD.jpg",
+    url: "/assets/gallery/coeur-de-renard_plancheBD.webp",
     title: "Planche BD Coeur De Renard",
     artist: "purplishartz",
     date: "Decembre 2025",
@@ -75,7 +75,7 @@ const galleryData: GalleryImage[] = [
     book: "Coeur De Renard",
   },
   {
-    url: "/assets/gallery/Chiara.jpg",
+    url: "/assets/gallery/Chiara.webp",
     title: "Chiara",
     artist: "Artsymoon",
     date: "Mars 2024",
@@ -84,7 +84,7 @@ const galleryData: GalleryImage[] = [
   },
 
   {
-    url: "/assets/gallery/aspen_sarah.jpg",
+    url: "/assets/gallery/aspen_sarah.webp",
     title: "Aspen",
     artist: "blackrose_drawings",
     date: "Mars 2024",
@@ -93,7 +93,7 @@ const galleryData: GalleryImage[] = [
   },
 
   {
-    url: "/assets/gallery/Frantz.jpg",
+    url: "/assets/gallery/Frantz.webp",
     title: "Frantz",
     artist: "Artsymoon",
     date: "Mars 2024",
@@ -109,7 +109,7 @@ const galleryData: GalleryImage[] = [
     book: "Fous Papillons",
   },
   {
-    url: "/assets/gallery/agape.jpg",
+    url: "/assets/gallery/agape.webp",
     title: "Agapé",
     artist: "Artsymoon",
     date: "Mars 2024",
@@ -117,7 +117,7 @@ const galleryData: GalleryImage[] = [
     book: "Brille Papillons",
   },
   {
-    url: "/assets/gallery/brille-papillons.png",
+    url: "/assets/gallery/brille-papillons.webp",
     title: "Brille Papillons",
     artist: "Bianca Lahr",
     date: "Decembre 2025",
@@ -125,7 +125,7 @@ const galleryData: GalleryImage[] = [
     book: "Brille Papillons",
   },
   {
-    url: "/assets/gallery/aspendessin.png",
+    url: "/assets/gallery/aspendessin.webp",
     title: "Aspen",
     artist: "Vanya",
     date: "Mars 2024",
@@ -134,7 +134,7 @@ const galleryData: GalleryImage[] = [
   },
 
   {
-    url: "/assets/gallery/AspendessinChloe.jpg",
+    url: "/assets/gallery/AspendessinChloe.webp",
     title: "Aspen",
     artist: "8kloweey",
     date: "Mars 2024",
