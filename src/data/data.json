@@ -8,11 +8,11 @@
       "cover": "/assets/covers/CdR_Cover.webp",
       "covers": [
         "/assets/covers/CdR_Cover.webp",
-        "/assets/covers/coeur_de_renard_couverture.webp"
+        "/assets/covers/CdR_Cover_Broche.png"
       ],
       "coverDescriptions": [
-        "Couverture principale",
-        "Vue alternative de la couverture"
+        "Format relié de Coeur De Renard",
+        "Format broché de Coeur de Renard"
       ],
       "tags": [
         "Thriller",
@@ -39,7 +39,7 @@
           "nom": "Cellier",
           "prenom": "Fortune",
           "picture": "/assets/Characters/CdR/Fortune.webp",
-          "description": "Fortune est une juriste-comptable dans la banque de ses parents, Gaillard&Co. Elle est d'une morale grise, mais cherche à redresser sa boussole, notamment en aidant ce pauvre Renard. Elle a grandi au milieu de parents attirés par l'extrême droite et en subit, tous les jours, les conséquences. Faire ce qui est juste, et, pas de pacte avec le diable sauf si je suis le diable, sont des mantras qui l'habitent tous les jours et qui l'ont menée dans de facheuses situations. A moins... que tout était prévu ?",
+          "description": "Fortune est une juriste-comptable dans la banque de ses parents, Gaillard&Co. Elle est d'une morale grise, mais cherche à redresser sa boussole, notamment en aidant ce pauvre Renard. Elle a grandi au milieu de parents attirés par l'extrême droite et en subit, tous les jours, les conséquences. Faire ce qui est juste, et, pas de pacte avec le diable sauf si je suis le diable, sont des mantras qui l'habitent et qui l'ont menée dans de facheuses situations. A moins... que tout était prévu ?",
           "relatifs": {
             "mother": "",
             "father": "",
@@ -47,11 +47,12 @@
           }
         }
       ],
-      "synopsis": "Il est arnaqueur d'art.\n Elle va en être victime.\n Elle va le traquer sans merci.\n Il va l'aider sous une fausse identité.\n En pleine seconde guerre mondiale,\n la règle est de ne jamais croire,\n un coeur de renard.",
+      "synopsis": "Il est arnaqueur d'art.\n Elle va en être victime.\n Elle va le traquer sans merci.\n Il va l'aider sous une fausse identité.\n En pleine seconde guerre mondiale,\n la règle est de ne jamais croire un coeur de renard.",
       "contexte": "En pleine occupation, Renard tente de survivre en remboursant une dette qui le pousse aux pires vices, notamment en vendant des faux tableaux. Fortune, quant à elle, voit, impuissante, ses parents sombrer dans les idéologies nazies et d'extrême droite. Alors qu'elle tente de leur faire ouvrir les yeux sur les conséquences de leurs décisions, les occupants gagnent en influence sur la banque dont elle doit hériter. Son honneur sera sali, si elle échoue à retrouver l'escroc qui souhaite la chute de la banque, mais quel honneur lui restera-t-il, si ses parents se vendent aux nazis ?",
       "ISBN": "979-10-978469-1-6",
       "pages": 371,
-      "firstChapterLink": "/assets/ChapterOneBooks/ChapterOneBooks_Coeur_de_Renard.pdf"
+      "firstChapterLink": "/assets/ChapterOneBooks/ChapterOneBooks_Coeur_de_Renard.pdf",
+      "sumpUpLink": "https://vanyastolarski.sumupstore.com/product/coeur-de-renard-relie"
     },
     {
       "id": "1",
@@ -61,13 +62,11 @@
       "cover": "/assets/covers/FP_Cover.webp",
       "covers": [
         "/assets/covers/FP_Cover.webp",
-        "/assets/covers/FP_Cover.webp",
         "/assets/covers/Latest Release - Fous Papillons.webp"
       ],
       "coverDescriptions": [
-        "Couverture principale",
-        "Version optimisée",
-        "Dernière sortie"
+        "Format relié de Fous Papillons",
+        "Format broché de Fous Papillons"
       ],
       "tags": [
         "Fantastique",
@@ -106,7 +105,8 @@
       "ISBN": "979-8287581428",
       "pages": 412,
       "firstChapterLink": "/assets/ChapterOneBooks/ChapterOneBooks_Fous_Papillons.pdf",
-      "amazonLink": "https://www.amazon.fr/Fous-Papillons-Vanya-Stolarski/dp/B0FGCKQLX6"
+      "amazonLink": "https://www.amazon.fr/Fous-Papillons-Vanya-Stolarski/dp/B0FGCKQLX6",
+      "sumpUpLink": "https://vanyastolarski.sumupstore.com/product/fous-papillons-relie-avec-jaquette"
     },
     {
       "id": "2",
@@ -114,12 +114,8 @@
       "slug": "le-coeur-dankaa",
       "volume": 1,
       "cover": "/assets/covers/le_coeur_d_ankaa_couverture.webp",
-      "covers": [
-        "/assets/covers/le_coeur_d_ankaa_couverture.webp"
-      ],
-      "coverDescriptions": [
-        "Couverture principale"
-      ],
+      "covers": ["/assets/covers/le_coeur_d_ankaa_couverture.webp"],
+      "coverDescriptions": ["Couverture principale"],
       "tags": ["Fantasy", "Guerre", "Magie"],
       "characters": [
         {

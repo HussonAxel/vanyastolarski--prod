@@ -9,6 +9,7 @@ const Button: React.FC<ButtonProps> = ({
   linkTo,
   className,
   disabled,
+  onClick,
 }) => {
   const baseStyles =
     "font-WorkSans font-bold text-sm tracking-wide uppercase inline-flex items-center justify-center w-full md:w-auto px-6 py-3 transition duration-200 ease-out text-center m-auto md:m-0 rounded-lg shadow-sm hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green/60 focus-visible:ring-offset-2 transform-gpu will-change-transform hover:-translate-y-0.5 active:translate-y-0 disabled:opacity-50 disabled:cursor-not-allowed disabled:shadow-none";
@@ -38,6 +39,7 @@ const Button: React.FC<ButtonProps> = ({
       className={combinedStyles}
       disabled={disabled}
       aria-disabled={disabled}
+      onClick={onClick}
     >
       {text}
     </button>

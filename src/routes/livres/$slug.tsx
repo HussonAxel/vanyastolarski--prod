@@ -33,7 +33,9 @@ const LivreComponents = () => {
   const totalPages = Math.ceil(book.characters.length / charactersPerPage);
   const displayedSagaTitle = (book as any).saga || book.title;
   const displayedBookTitle = (book as any).saga ? book.title : undefined;
-  const fullTitle = (book as any).saga ? `${(book as any).saga} : ${book.title}` : book.title;
+  const fullTitle = (book as any).saga
+    ? `${(book as any).saga} : ${book.title}`
+    : book.title;
 
   return (
     <main className="w-full">
@@ -74,6 +76,7 @@ const LivreComponents = () => {
           Contexte={book.contexte}
           picture={getAssetPath(book.cover)}
           amazonLink={book.amazonLink}
+          sumpUpLink={book.sumpUpLink}
           BookSaga={displayedSagaTitle}
           BookTitle={displayedBookTitle || ""}
           firstChapterLink={book.firstChapterLink}

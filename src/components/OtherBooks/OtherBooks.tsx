@@ -21,6 +21,9 @@ const OtherBooks: React.FC = () => {
               to="/livres/$slug"
               params={{ slug: book.slug }}
               className="group block"
+              onClick={() => {
+                window.scrollTo({ top: 0, behavior: "smooth" });
+              }}
             >
               <article className="flex flex-col items-center p-4 rounded-lg transition-all duration-300 hover:bg-white/5">
                 <div className="relative w-full aspect-[2/3] mb-4">

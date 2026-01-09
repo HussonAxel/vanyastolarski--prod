@@ -7,6 +7,7 @@ const BookInfos = ({
   Contexte,
   picture,
   amazonLink,
+  sumpUpLink,
   SynopsisSectionContent,
   ContexteSectionContent,
   BookSaga,
@@ -51,6 +52,14 @@ const BookInfos = ({
               isPrimary={false}
               isBGGreen={false}
               linkTo={amazonLink}
+            />
+          )}
+          {sumpUpLink && (
+            <Button
+              text={"Achetez sur sumup"}
+              isPrimary={false}
+              isBGGreen={false}
+              linkTo={sumpUpLink}
             />
           )}
           {firstChapterLink && (
