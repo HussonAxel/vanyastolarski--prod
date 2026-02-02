@@ -38,7 +38,11 @@ export const Services: Service[] = [
         type: "image",
       },
       {
-        url: "/assets/services/pageDeGarde/pdg2.png",
+        url: "/assets/services/couvertures/cover_5.png",
+        type: "image",
+      },
+      {
+        url: "/assets/services/pageDeGarde/pdg1.png",
         type: "image",
       },
     ],
@@ -84,7 +88,7 @@ export const Services: Service[] = [
     cardsPerView: 2,
     assets: [
       {
-        url: "/assets/services/pageDeGarde/pdg1.png",
+        url: "/assets/services/pageDeGarde/pdg2.png",
         type: "image",
       },
     ],
