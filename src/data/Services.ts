@@ -37,6 +37,10 @@ export const Services: Service[] = [
         url: "/assets/services/couvertures/cover_4.webp",
         type: "image",
       },
+      {
+        url: "/assets/services/pageDeGarde/pdg2.png",
+        type: "image",
+      },
     ],
   },
   {
@@ -44,7 +48,7 @@ export const Services: Service[] = [
     price: "80€/120€",
     resume:
       "J'ai créé des jaspages pour les romans de fantasy et de science-fiction. Ces jaspages sont conçus pour donner une impression de luxe et de qualité à votre livre. Ils sont disponibles en différentes tailles et formats, et peuvent être personnalisés selon vos besoins. N'hésitez pas à me contacter pour obtenir un devis.",
-    cardsPerView: 6,
+    cardsPerView: 4,
     assets: [
       {
         url: "/assets/services/jaspages/jaspage_four.webp",
@@ -81,10 +85,6 @@ export const Services: Service[] = [
     assets: [
       {
         url: "/assets/services/pageDeGarde/pdg1.png",
-        type: "image",
-      },
-      {
-        url: "/assets/services/pageDeGarde/pdg2.png",
         type: "image",
       },
     ],
@@ -217,6 +217,10 @@ export const Services: Service[] = [
       },
       {
         url: "/assets/services/illustrations/illustration_sixteen.webp",
+        type: "image",
+      },
+      {
+        url: "/assets/services/illustrations/illustration_seventeen.png",
         type: "image",
       },
     ],
