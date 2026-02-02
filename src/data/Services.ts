@@ -73,6 +73,23 @@ export const Services: Service[] = [
     ],
   },
   {
+    title: "Pages de Gardes",
+    price: "Sous Devis",
+    resume:
+      "J'ai créé des pages de gardes pour les romans de fantasy et de science-fiction. Ces pages de gardes sont conçues pour donner une impression de luxe et de qualité à votre livre. Ils sont disponibles en différentes tailles et formats, et peuvent être personnalisés selon vos besoins. N'hésitez pas à me contacter pour obtenir un devis.",
+    cardsPerView: 2,
+    assets: [
+      {
+        url: "/assets/services/pageDeGarde/pdg1.png",
+        type: "image",
+      },
+      {
+        url: "/assets/services/pageDeGarde/pdg2.png",
+        type: "image",
+      },
+    ],
+  },
+  {
     title: "Entête de chapitres",
     price: "A partir de 20€",
     resume:

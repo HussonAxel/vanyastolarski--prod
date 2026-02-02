@@ -1,8 +1,8 @@
-import { useState, useEffect, useRef } from "react";
-import { motion, AnimatePresence } from "motion/react";
 import { cn } from "@components/lib/utils";
+import { ChevronLeft, ChevronRight, X } from "lucide-react";
+import { AnimatePresence, motion } from "motion/react";
+import { useState } from "react";
 
-// Define the type for card data
 interface CardData {
   id: number;
   imgUrl: string;
@@ -15,220 +15,126 @@ interface CardProps {
   cardsPerView?: number;
 }
 
-const Card = ({ data, showCarousel = true, cardsPerView = 4 }: CardProps) => {
+const Carousel = ({ data, showCarousel = true, cardsPerView = 4 }: CardProps) => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [isSingleCard, setIsSingleCard] = useState(false);
-  const [isAnimating, setIsAnimating] = useState(false);
   const [selectedCard, setSelectedCard] = useState<CardData | null>(null);
-  const containerRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    setIsSingleCard(data?.length === 1);
-  }, [data]);
-
-  // Calculate width percentage for each card based on cardsPerView
-  // The container width is ((cardsPerView + 1) * 100) / cardsPerView% of parent
-  // Each card is 100 / (cardsPerView + 1)% of the container width
-  // translateX with % is relative to the element's own width, so we need:
-  // cardWidth = 100 / (cardsPerView + 1)%
-  const cardWidth = 100 / (cardsPerView + 1);
+  const maxIndex = Math.max(0, data.length - cardsPerView);
 
   const nextSlide = () => {
-    if (isAnimating || !showCarousel || !data) return;
-
-    // Don't allow navigation if there aren't enough cards
-    if (data.length <= cardsPerView) return;
-
-    setIsAnimating(true);
-    const nextIndex = (currentIndex + 1) % data.length;
-
-    if (containerRef.current) {
-      // Apply slide out animation
-      containerRef.current.style.transition = "transform 500ms ease";
-      containerRef.current.style.transform = `translateX(-${cardWidth}%)`;
-
-      // After animation completes, reset position and update index
-      setTimeout(() => {
-        setCurrentIndex(nextIndex);
-        if (containerRef.current) {
-          containerRef.current.style.transition = "none";
-          containerRef.current.style.transform = "translateX(0)";
-
-          // Force reflow
-          void containerRef.current.offsetWidth;
-
-          setIsAnimating(false);
-        }
-      }, 500);
+    if (currentIndex < maxIndex) {
+      setCurrentIndex((prev) => prev + 1);
     }
   };
 
   const prevSlide = () => {
-    if (isAnimating || !showCarousel || !data) return;
-    if (data.length <= cardsPerView) return;
-
-    setIsAnimating(true);
-    const prevIndex = (currentIndex - 1 + data.length) % data.length;
-
-    if (containerRef.current) {
-      // First move instantly to the right position
-      containerRef.current.style.transition = "none";
-      containerRef.current.style.transform = `translateX(-${cardWidth}%)`;
-
-      // Update the index immediately
-      setCurrentIndex(prevIndex);
-
-      // Force reflow
-      void containerRef.current.offsetWidth;
-
-      // Then animate back to center
-      containerRef.current.style.transition = "transform 500ms ease";
-      containerRef.current.style.transform = "translateX(0)";
-
-      setTimeout(() => {
-        setIsAnimating(false);
-      }, 500);
+    if (currentIndex > 0) {
+      setCurrentIndex((prev) => prev - 1);
     }
   };
 
-  // Calculate which cards to show
-  const getVisibleCards = () => {
-    if (!showCarousel || !data) return data || [];
+  if (!data || data.length === 0) return <div>No data</div>;
 
-    const visibleCards = [];
-    const totalCards = data.length;
-
-    // For smooth animation, we need cardsPerView visible + 1 extra for next slide animation
-    // This ensures we have enough content to slide out smoothly
-    for (let i = 0; i < cardsPerView + 1; i++) {
-      const index = (currentIndex + i) % totalCards;
-      visibleCards.push(data[index]);
-    }
-
-    return visibleCards;
-  };
-
-  if (!data || data.length === 0) {
-    return <div>No card data available</div>;
-  }
+  const cardWidthPercent = 100 / cardsPerView;
 
   return (
-    <div className="w-full px-4">
-      <div
-        className={`relative ${isSingleCard ? "max-w-sm mx-auto" : "w-full"}`}
-      >
-        {/* Carousel Controls */}
-        {showCarousel && data.length > cardsPerView && (
-          <>
-            <button
-              onClick={prevSlide}
-              className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-black/50 text-white p-2 rounded-full hover:bg-black/70 transition-all duration-300"
-              disabled={isAnimating}
-              aria-label="Previous slide"
+    <div className="w-full px-4 group relative">
+      <div className="relative overflow-hidden py-4">
+        <motion.div
+          className="flex"
+          initial={false}
+          animate={{
+            x: `calc(-${currentIndex * cardWidthPercent}%)`,
+          }}
+          transition={{ type: "spring", stiffness: 300, damping: 30, mass: 1 }}
+        >
+          {data.map((card, idx) => (
+            <motion.div
+              key={card.id || idx}
+              className="relative shrink-0 flex justify-center px-2"
+              style={{ width: `${cardWidthPercent}%` }}
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.2 }}
             >
-              &lt;
-            </button>
-            <button
-              onClick={nextSlide}
-              className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-black/50 text-white p-2 rounded-full hover:bg-black/70 transition-all duration-300"
-              disabled={isAnimating}
-              aria-label="Next slide"
-            >
-              &gt;
-            </button>
-          </>
-        )}
-
-        {/* Cards Container Wrapper - limits visible area */}
-        <div className="overflow-hidden">
-          {/* Sliding Cards Container */}
-          <div
-            ref={containerRef}
-            className="flex"
-            style={{
-              transform: "translateX(0)",
-              width: showCarousel
-                ? `${((cardsPerView + 1) * 100) / cardsPerView}%`
-                : "100%",
-              willChange: "transform",
-            }}
-          >
-            {getVisibleCards().map((card, idx) => (
+              {/* FIX 1: Fixed Height Container 
+                This prevents vertical items from stretching the page.
+                Adjust h-[400px] to your preferred row height.
+              */}
               <div
-                key={`card-${currentIndex}-${idx}`}
-                style={{
-                  width: showCarousel
-                    ? `${100 / (cardsPerView + 1)}%`
-                    : `${100 / Math.min(cardsPerView, data.length)}%`,
-                }}
-                className="px-1"
+                onClick={() => setSelectedCard(card)}
+                className="h-[400px] w-full flex items-center justify-center cursor-pointer"
               >
-                <div
-                  className={cn(
-                    "relative overflow-hidden rounded-lg group cursor-pointer flex items-center justify-center max-w-[400px]"
-                  )}
-                  onClick={() => setSelectedCard(card)}
-                >
-                  <div className="flex items-center justify-center">
-                    <img
-                      src={card.imgUrl}
-                      alt=""
-                      className={cn(
-                        "max-w-full h-[300px] max-h-[500px] object-contain transition-transform duration-300 rounded-md"
-                      )}
-                    />
-                  </div>
-                </div>
+                {/* FIX 2: Styles moved to Image
+                  - 'object-contain': keeps the aspect ratio correct
+                  - 'drop-shadow-md': puts shadow on the ART, not the BOX
+                  - 'max-h-full': ensures it never exceeds the container height
+                */}
+                <img
+                  src={card.imgUrl}
+                  alt={card.content || "Artwork"}
+                  className="max-h-full max-w-full width-auto object-contain drop-shadow-md hover:drop-shadow-xl transition-all duration-300"
+                  loading="lazy"
+                />
               </div>
-            ))}
-          </div>
-        </div>
+            </motion.div>
+          ))}
+        </motion.div>
       </div>
 
-      {/* Full Height Modal */}
+      {/* Navigation Controls */}
+      {showCarousel && data.length > cardsPerView && (
+        <>
+          <button
+            onClick={prevSlide}
+            disabled={currentIndex === 0}
+            className={cn(
+              "absolute left-0 top-1/2 -translate-y-1/2 z-10 p-2 rounded-full transition-all duration-300",
+              "bg-white/50 backdrop-blur-sm hover:bg-white text-black shadow-sm border border-white/20",
+              "disabled:opacity-0 disabled:pointer-events-none",
+              "-ml-2 md:-ml-4"
+            )}
+          >
+            <ChevronLeft size={24} />
+          </button>
+
+          <button
+            onClick={nextSlide}
+            disabled={currentIndex === maxIndex}
+            className={cn(
+              "absolute right-0 top-1/2 -translate-y-1/2 z-10 p-2 rounded-full transition-all duration-300",
+              "bg-white/50 backdrop-blur-sm hover:bg-white text-black shadow-sm border border-white/20",
+              "disabled:opacity-0 disabled:pointer-events-none",
+              "-mr-2 md:-mr-4"
+            )}
+          >
+            <ChevronRight size={24} />
+          </button>
+        </>
+      )}
+
+      {/* Lightbox Modal */}
       <AnimatePresence>
         {selectedCard && (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className={cn(
-              "fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4"
-            )}
+            className="fixed inset-0 z-[60] flex items-center justify-center bg-black/90 backdrop-blur-sm p-4"
             onClick={() => setSelectedCard(null)}
           >
-            <motion.div
+            <button className="absolute top-4 right-4 p-2 text-white/70 hover:text-white hover:bg-white/10 rounded-full transition-colors">
+              <X size={32} />
+            </button>
+
+            <motion.img
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.9, opacity: 0 }}
-              className={cn(
-                "relative max-w-[95vw] max-h-[95vh] flex items-center justify-center pointer-events-none"
-              )}
-            >
-              <div
-                className={cn(
-                  "flex items-center justify-center p-4 pointer-events-auto"
-                )}
-                onClick={(e) => e.stopPropagation()}
-              >
-                <img
-                  src={selectedCard.imgUrl}
-                  alt=""
-                  className={cn(
-                    "max-w-full max-h-[95vh] w-auto h-auto object-contain"
-                  )}
-                />
-              </div>
-              <button
-                className={cn(
-                  "absolute top-4 right-4 text-white text-2xl p-2 hover:bg-white/20 rounded-full transition-colors z-10 pointer-events-auto"
-                )}
-                onClick={() => setSelectedCard(null)}
-                aria-label="Fermer"
-              >
-                ✕
-              </button>
-            </motion.div>
+              src={selectedCard.imgUrl}
+              alt="Full view"
+              className="max-h-[90vh] max-w-[95vw] object-contain drop-shadow-2xl"
+              onClick={(e) => e.stopPropagation()}
+            />
           </motion.div>
         )}
       </AnimatePresence>
@@ -236,4 +142,4 @@ const Card = ({ data, showCarousel = true, cardsPerView = 4 }: CardProps) => {
   );
 };
 
-export default Card;
+export default Carousel;

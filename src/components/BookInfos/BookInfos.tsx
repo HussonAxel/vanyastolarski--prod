@@ -1,6 +1,6 @@
+import Button from "@components/Button/Button";
 import DownloadButton from "@components/DownloadButton/DownloadButton";
 import { BookInfosProps } from "./BookInfos.type";
-import Button from "@components/Button/Button";
 
 const BookInfos = ({
   Synopsis,
