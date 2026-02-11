@@ -37,6 +37,14 @@ export const Services: Service[] = [
         url: "/assets/services/couvertures/cover_4.webp",
         type: "image",
       },
+      {
+        url: "/assets/services/couvertures/cover_5.png",
+        type: "image",
+      },
+      {
+        url: "/assets/services/pageDeGarde/pdg1.png",
+        type: "image",
+      },
     ],
   },
   {
@@ -44,7 +52,7 @@ export const Services: Service[] = [
     price: "80€/120€",
     resume:
       "J'ai créé des jaspages pour les romans de fantasy et de science-fiction. Ces jaspages sont conçus pour donner une impression de luxe et de qualité à votre livre. Ils sont disponibles en différentes tailles et formats, et peuvent être personnalisés selon vos besoins. N'hésitez pas à me contacter pour obtenir un devis.",
-    cardsPerView: 6,
+    cardsPerView: 4,
     assets: [
       {
         url: "/assets/services/jaspages/jaspage_four.webp",
@@ -68,6 +76,19 @@ export const Services: Service[] = [
       },
       {
         url: "/assets/services/jaspages/jaspage_nine.webp",
+        type: "image",
+      },
+    ],
+  },
+  {
+    title: "Pages de Gardes",
+    price: "Sous Devis",
+    resume:
+      "J'ai créé des pages de gardes pour les romans de fantasy et de science-fiction. Ces pages de gardes sont conçues pour donner une impression de luxe et de qualité à votre livre. Ils sont disponibles en différentes tailles et formats, et peuvent être personnalisés selon vos besoins. N'hésitez pas à me contacter pour obtenir un devis.",
+    cardsPerView: 2,
+    assets: [
+      {
+        url: "/assets/services/pageDeGarde/pdg2.png",
         type: "image",
       },
     ],
@@ -122,7 +143,7 @@ export const Services: Service[] = [
     price: "1 page 200€ / 2 pages 400€",
     resume:
       "La cartographie est un élément essentiel pour tout roman de fantasy ou de science-fiction. Je propose de donner vie à vos mondes imaginaires à travers des cartes détaillées et personnalisées, à partir de 200€ pour une page, et 400€ pour deux. Que ce soit pour un royaume médiéval-fantastique, ou un archipel mystérieux, je m'adapte à votre univers et votre style. N'hésitez pas à me contacter pour obtenir un devis. ",
-    cardsPerView: 4,
+    cardsPerView: 5,
     assets: [
       {
         url: "/assets/services/maps/maps_one.webp",
@@ -152,7 +173,7 @@ export const Services: Service[] = [
     price: "Sous devis",
     resume:
       "Je propose des illustrations pour les romans de fantasy et de science-fiction. Ces illustrations sont conçues pour donner une impression de luxe et de qualité à votre livre. Ils sont disponibles en différentes tailles et formats, et peuvent être personnalisés selon vos besoins.",
-    cardsPerView: 6,
+    cardsPerView: 5,
     assets: [
       {
         url: "/assets/services/illustrations/illustration_five.webp",
@@ -200,6 +221,10 @@ export const Services: Service[] = [
       },
       {
         url: "/assets/services/illustrations/illustration_sixteen.webp",
+        type: "image",
+      },
+      {
+        url: "/assets/services/illustrations/illustration_seventeen.png",
         type: "image",
       },
     ],

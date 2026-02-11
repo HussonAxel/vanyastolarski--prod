@@ -1,9 +1,6 @@
 export interface CitationModelProps {
-  quoteNumber: number,
-  CreatedAt: string,
-  Quote: string,
-  AuthorOfQuote: string,
-  Thoughts: string,
+  quoteNumber: number;
+  CreatedAt: string;
+  Quote: string;
+  AuthorOfQuote: string;
 }
-
-

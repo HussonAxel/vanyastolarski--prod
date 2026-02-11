@@ -1,9 +1,9 @@
-import { useState } from "react";
 import Button from "@components/Button/Button";
-import SectionTitle from "@components/ui/SectionTitle/SectionTitle";
 import Pagination from "@components/ui/Pagination/Pagination";
+import SectionTitle from "@components/ui/SectionTitle/SectionTitle";
+import { AnimatePresence, motion } from "motion/react";
+import { useState } from "react";
 import BooksQuotes from "../../data/BooksQuotes.json";
-import { motion, AnimatePresence } from "motion/react";
 
 const LatestReading = () => {
   const BooksInfos = BooksQuotes;

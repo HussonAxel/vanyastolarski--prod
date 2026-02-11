@@ -13,13 +13,13 @@ const QuoteTemplate: React.FC<QuoteTemplateProps> = ({
   linktoReview,
 }) => {
   return (
-    <article className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12 md:mb-16 lg:mb-24 pb-12 md:pb-16 lg:pb-24 font-WorkSans border-b border-b-green">
-      <div className="flex flex-col sm:flex-row gap-6 md:gap-8 lg:gap-12">
+    <article className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-6 md:mb-8 lg:mb-12 pb-6 md:pb-8 lg:pb-12 font-WorkSans border-b border-b-green">
+      <div className="flex flex-col sm:flex-row items-start gap-6 md:gap-8 lg:gap-12">
         {/* Book Cover Container */}
         <div className="w-full max-w-[280px] mx-auto sm:mx-0 sm:w-1/3 lg:w-1/4 flex-shrink-0">
-          <div className="aspect-[2/3] relative">
+          <div className="relative">
             <img
-              className="w-full h-full object-contain rounded-lg absolute inset-0"
+              className="w-full h-auto object-contain rounded-lg"
               src={BookCover}
               alt={BookCoverAlt || "Book cover"}
             />
@@ -27,7 +27,7 @@ const QuoteTemplate: React.FC<QuoteTemplateProps> = ({
         </div>
 
         {/* Content Container */}
-        <div className="flex flex-col w-full sm:w-2/3 lg:w-3/4 space-y-4 md:space-y-6">
+        <div className="flex flex-col w-full sm:w-2/3 lg:w-3/4 space-y-3 md:space-y-4">
           {/* Header Section */}
           <div className="flex flex-col sm:flex-row justify-between gap-4">
             {/* Title Section */}
@@ -53,7 +53,7 @@ const QuoteTemplate: React.FC<QuoteTemplateProps> = ({
           </div>
 
           {/* Button Container */}
-          <div className="pt-4 md:pt-6">
+          <div className="pt-2 md:pt-3">
             <Button
               text="LIRE LA REVIEW"
               isPrimary={true}

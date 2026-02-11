@@ -56,7 +56,6 @@ const CitationIndex = () => {
             CreatedAt={citation.CreatedAt}
             Quote={citation.Quote}
             AuthorOfQuote={citation.AuthorOfQuote}
-            Thoughts={citation.Thoughts}
           />
         ))}
       </ColoredSection>

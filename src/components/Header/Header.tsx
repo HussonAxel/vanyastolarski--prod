@@ -144,16 +144,14 @@ const Header: React.FC = () => {
         `}
       >
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
-          <div className="flex items-center justify-between h-20 lg:h-24">
-            {/* Logo */}
-            {/* Logo */}
+          <div className="flex items-center justify-between">
             <div className="group relative inline-block py-2">
               <Link
                 to="/"
                 className="group relative inline-block py-2"
                 onClick={() => setIsMenuOpen(false)}
               >
-                <h1 className="font-serif text-xl sm:text-2xl lg:text-3xl text-black font-light tracking-[0.2em] uppercase">
+                <h1 className="font-serif text-xl sm:text-2xl lg:text-2xl text-black font-light tracking-[0.2em] uppercase">
                   <span className="relative inline-block">
                     Vanya
                     <span className="absolute -bottom-1 left-0 w-full h-px bg-green origin-left" />
@@ -427,9 +425,6 @@ const Header: React.FC = () => {
           </>
         )}
       </AnimatePresence>
-
-      {/* Spacer to prevent content from going under fixed header */}
-      <div className="h-20 lg:h-24" />
     </>
   );
 };

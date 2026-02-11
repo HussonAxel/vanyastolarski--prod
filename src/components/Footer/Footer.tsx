@@ -15,9 +15,8 @@ const Footer: React.FC = () => {
   ];
 
   const books = [
-    { to: "/livres/terres-de-guerre", text: "Terres de Guerre" },
+    { to: "/livres/coeur-de-renard", text: "Coeur de Renard" },
     { to: "/livres/fous-papillons", text: "Fous Papillons" },
-    { to: "/livres/les-douze-divins", text: "Les Douze Divins" },
     { to: "/livres/le-coeur-dankaa", text: "Le coeur d'Ankaa" },
   ];
 
@@ -91,7 +90,7 @@ const Footer: React.FC = () => {
                 </a>
                 <a
                   aria-label="Visite notre page ulule"
-                  href="https://ulule.com/edition-reliee-et-brochee---fous-papillons"
+                  href="https://fr.ulule.com/users/vanya-stolarski/#/projects/online/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-2xl hover:text-green transition-all duration-300 ease-in-out transform hover:scale-110"

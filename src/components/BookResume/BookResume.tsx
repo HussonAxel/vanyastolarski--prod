@@ -118,6 +118,9 @@ const BookResume = () => {
                     isBGGreen={true}
                     linkTo={`/livres/${BookData.slug}`}
                     className="flex-1 w-full h-14 py-2"
+                    onClick={() => {
+                      window.scrollTo({ top: 0, behavior: "smooth" });
+                    }}
                   />
                   {BookData.firstChapterLink ? (
                     <Button

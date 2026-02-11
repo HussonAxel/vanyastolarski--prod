@@ -5,4 +5,5 @@ export interface ButtonProps {
   linkTo?: string;
   className?: string;
   disabled?: boolean;
+  onClick?: () => void;
 }

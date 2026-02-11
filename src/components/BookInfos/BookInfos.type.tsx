@@ -5,6 +5,7 @@ export interface BookInfosProps {
   ContexteSectionContent: string;
   picture: string;
   amazonLink?: string;
+  sumpUpLink?: string;
   BookSaga?: string;
   BookTitle: string;
   firstChapterLink?: string;

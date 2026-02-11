@@ -1,12 +1,13 @@
+import Button from "@components/Button/Button";
 import DownloadButton from "@components/DownloadButton/DownloadButton";
 import { BookInfosProps } from "./BookInfos.type";
-import Button from "@components/Button/Button";
 
 const BookInfos = ({
   Synopsis,
   Contexte,
   picture,
   amazonLink,
+  sumpUpLink,
   SynopsisSectionContent,
   ContexteSectionContent,
   BookSaga,
@@ -51,6 +52,14 @@ const BookInfos = ({
               isPrimary={false}
               isBGGreen={false}
               linkTo={amazonLink}
+            />
+          )}
+          {sumpUpLink && (
+            <Button
+              text={"Achetez sur sumup"}
+              isPrimary={false}
+              isBGGreen={false}
+              linkTo={sumpUpLink}
             />
           )}
           {firstChapterLink && (
