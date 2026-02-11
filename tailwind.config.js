@@ -13,14 +13,6 @@ export default {
   			WorkSans: [
   				'Work Sans'
   			],
-  			Large: [
-  				'Large',
-  				'sans-serif'
-  			],
-  			LargeItalic: [
-  				'Large-Italic',
-  				'sans-serif'
-  			]
   		},
   		maxWidth: {
   			xl: '1440px'

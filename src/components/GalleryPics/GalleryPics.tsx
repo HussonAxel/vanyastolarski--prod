@@ -1,5 +1,5 @@
+import { AnimatePresence, motion } from "motion/react";
 import { useMemo, useState } from "react";
-import { motion, AnimatePresence } from "motion/react";
 import Masonry from "react-masonry-css";
 
 interface GalleryImage {
