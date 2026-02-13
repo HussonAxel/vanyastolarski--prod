@@ -34,15 +34,29 @@ export const Services: Service[] = [
         type: "image",
       },
       {
-        url: "/assets/services/couvertures/cover_4.webp",
-        type: "image",
-      },
-      {
         url: "/assets/services/couvertures/cover_5.png",
         type: "image",
       },
       {
         url: "/assets/services/pageDeGarde/pdg1.png",
+        type: "image",
+      },
+    ],
+  },
+
+  {
+    title: "Premades",
+    price: "X",
+    resume:
+      "Je propose des premades pour les romans de fantasy et de science-fiction. Ces premades sont conçues pour donner une impression de luxe et de qualité à votre livre. Ils sont disponibles en différentes tailles et formats, et peuvent être personnalisés selon vos besoins. N'hésitez pas à me contacter pour obtenir un devis.",
+    cardsPerView: 3,
+    assets: [
+      {
+        url: "/assets/services/premades/premade.png",
+        type: "image",
+      },
+      {
+        url: "/assets/services/premades/premade2.webp",
         type: "image",
       },
     ],
@@ -89,6 +103,10 @@ export const Services: Service[] = [
     assets: [
       {
         url: "/assets/services/pageDeGarde/pdg2.png",
+        type: "image",
+      },
+      {
+        url: "/assets/services/pageDeGarde/pdg3.png",
         type: "image",
       },
     ],
@@ -165,6 +183,10 @@ export const Services: Service[] = [
         url: "/assets/services/maps/maps_seven.webp",
         type: "image",
       },
+      {
+        url: "/assets/services/maps/maps_eight.png",
+        type: "image",
+      },
     ],
   },
 
@@ -225,6 +247,10 @@ export const Services: Service[] = [
       },
       {
         url: "/assets/services/illustrations/illustration_seventeen.png",
+        type: "image",
+      },
+      {
+        url: "/assets/services/illustrations/illustration_eighteen.png",
         type: "image",
       },
     ],
