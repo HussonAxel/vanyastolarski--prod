@@ -1,6 +1,6 @@
+import Button from "@components/Button/Button";
 import React from "react";
 import { QuoteTemplateProps } from "./QuoteTemplate.type";
-import Button from "@components/Button/Button";
 
 const QuoteTemplate: React.FC<QuoteTemplateProps> = ({
   BookSaga,
@@ -31,7 +31,7 @@ const QuoteTemplate: React.FC<QuoteTemplateProps> = ({
           {/* Header Section */}
           <div className="flex flex-col sm:flex-row justify-between gap-4">
             {/* Title Section */}
-            <div className="flex-grow font-Large">
+            <div className="flex-grow font-WorkSans">
               <h1 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-green mb-2">
                 {BookSaga}
               </h1>

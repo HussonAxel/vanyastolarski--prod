@@ -1,6 +1,6 @@
+import { Link } from "@tanstack/react-router";
 import React from "react";
 import data from "../../data/data.json";
-import { Link } from "@tanstack/react-router";
 
 const OtherBooks: React.FC = () => {
   const otherBooks = data.books.slice(0, 4);
@@ -8,7 +8,7 @@ const OtherBooks: React.FC = () => {
   return (
     <section className="px-4">
       <div className="max-w-7xl mx-auto">
-        <h2 className="font-Large text-3xl sm:text-4xl lg:text-5xl text-green mb-8 md:mb-12 text-center">
+        <h2 className="font-WorkSans text-3xl sm:text-4xl lg:text-5xl text-green mb-8 md:mb-12 text-center">
           <span className="border-b-2 border-green pb-2">
             Mes autres livres
           </span>

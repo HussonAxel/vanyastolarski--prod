@@ -88,7 +88,7 @@ const LatestReading = () => {
           </div>
 
           <div className="font-WorkSans">
-            <h2 className="text-2xl md:text-3xl text-green font-Large">
+            <h2 className="text-2xl md:text-3xl text-green font-WorkSans">
               {title || saga}
             </h2>
           </div>

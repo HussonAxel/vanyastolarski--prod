@@ -1,13 +1,13 @@
-import BooksData from "@data/data.json";
 import Button from "@components/Button/Button";
-import SectionTitle from "@components/ui/SectionTitle/SectionTitle";
 import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
+    Carousel,
+    CarouselContent,
+    CarouselItem,
+    CarouselNext,
+    CarouselPrevious,
 } from "@components/components/carousel";
+import SectionTitle from "@components/ui/SectionTitle/SectionTitle";
+import BooksData from "@data/data.json";
 
 const BookResume = () => {
   return (
@@ -65,7 +65,7 @@ const BookResume = () => {
 
               <div className="flex flex-col gap-5 min-w-0 text-white w-full flex-1">
                 <div className="flex flex-col text-left gap-3">
-                  <h2 className="text-2xl sm:text-3xl font-semibold mb-0 font-Large">
+                  <h2 className="text-2xl sm:text-3xl font-semibold mb-0 font-WorkSans">
                     {BookData.title}
                   </h2>
                   <div className="hidden md:flex items-center gap-3 text-white/80 text-sm font-WorkSans">

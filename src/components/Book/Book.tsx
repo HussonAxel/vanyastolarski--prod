@@ -1,6 +1,6 @@
-import { BookProps } from "./BookProps.type";
 import Button from "@components/Button/Button";
 import DownloadButton from "@components/DownloadButton/DownloadButton";
+import { BookProps } from "./BookProps.type";
 
 const Book: React.FC<BookProps> = ({
   BookSaga,
@@ -34,7 +34,7 @@ const Book: React.FC<BookProps> = ({
         {/* Right column */}
         <div className="flex flex-col min-w-0 w-full lg:w-auto space-y-5 sm:space-y-6">
           <div className="flex flex-col gap-3 sm:gap-4">
-            <div className="font-Large text-left">
+            <div className="font-WorkSans text-left">
               {BookSaga ? (
                 <>
                   <h1 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-green mb-1">

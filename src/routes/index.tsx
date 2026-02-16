@@ -1,8 +1,7 @@
-import { createFileRoute } from "@tanstack/react-router";
-import LatestRelease from "@components/LatestRelease/LatestRelease.tsx";
 import BookResume from "@components/BookResume/BookResume";
 import LatestReading from "@components/LatestReading/LatestReading";
-import SectionTitle from "@components/ui/SectionTitle/SectionTitle";
+import LatestRelease from "@components/LatestRelease/LatestRelease.tsx";
+import { createFileRoute } from "@tanstack/react-router";
 import { Helmet } from "react-helmet-async";
 
 import ColoredSection from "@components/ColoredSection.tsx";
@@ -58,19 +57,6 @@ const IndexComponent = () => {
       </ColoredSection>
       <ColoredSection bgColor="bg-white">
         <LatestReading />
-      </ColoredSection>
-      <ColoredSection bgColor="bg-green">
-        <SectionTitle title="Ma newsletter" isGreen={true} />
-        <div className="flex justify-center w-full max-w-4xl mx-auto py-8">
-          <iframe
-            src="https://vanyastolarski.substack.com/embed"
-            width="100%"
-            height="320"
-            className="border-0 rounded-lg shadow-md"
-            title="Vanya Stolarski's Newsletter"
-            loading="lazy"
-          ></iframe>
-        </div>
       </ColoredSection>
     </>
   );

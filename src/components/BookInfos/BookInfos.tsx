@@ -16,7 +16,7 @@ const BookInfos = ({
 }: BookInfosProps) => {
   const Section = ({ title, content }: { title: string; content: string }) => (
     <div className="mb-8">
-      <h2 className="font-Large text-2xl md:text-3xl lg:text-4xl text-green pb-4 md:pb-6 lg:pb-8 underline">
+      <h2 className="font-WorkSans text-2xl md:text-3xl lg:text-4xl text-green pb-4 md:pb-6 lg:pb-8 underline">
         {title}
       </h2>
       <p className="text-black font-WorkSans text-base md:text-lg leading-relaxed">
@@ -28,7 +28,7 @@ const BookInfos = ({
   return (
     <div className="container mx-auto px-4 py-8">
       {/* Header Section */}
-      <div className="text-green font-Large text-center mb-12 md:mb-16 lg:mb-32 ">
+      <div className="text-green font-WorkSans text-center mb-12 md:mb-16 lg:mb-32 ">
         <h1 className="text-4xl md:text-5xl lg:text-7xl mb-2 md:mb-4 underline ">
           {BookSaga}
         </h1>

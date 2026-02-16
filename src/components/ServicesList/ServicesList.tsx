@@ -1,10 +1,10 @@
+import Card from "@components/components/ui/carousel-card-1";
+import { cn } from "@components/lib/utils";
 import SectionTitle from "@components/ui/SectionTitle/SectionTitle";
 import { Services } from "@data/Services";
-import { motion, AnimatePresence } from "motion/react";
-import { useState } from "react";
 import { Download, FileText } from "lucide-react";
-import { cn } from "@components/lib/utils";
-import Card from "@components/components/ui/carousel-card-1";
+import { AnimatePresence, motion } from "motion/react";
+import { useState } from "react";
 interface ServiceAsset {
   url: string;
   type: "image" | "file";
@@ -90,7 +90,7 @@ const ServicesList = () => {
 
         return (
           <div key={index} className={cn("border-b p-8 text-green")}>
-            <h2 className={cn("font-Large text-3xl font-semibold mb-6")}>
+            <h2 className={cn("font-WorkSans text-3xl font-semibold mb-6")}>
               {service.title}
             </h2>
 

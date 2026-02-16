@@ -1,8 +1,8 @@
+import UluleIcon from "@components/ululeIcon/UluleIcon";
+import { Link } from "@tanstack/react-router";
 import React from "react";
 import { FaInstagram } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
-import { Link } from "@tanstack/react-router";
-import UluleIcon from "@components/ululeIcon/UluleIcon";
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -36,7 +36,7 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-3 gap-8 lg:gap-12 mb-8">
           {/* Navigation Section */}
           <div className="text-center sm:text-left">
-            <p className="text-lg lg:text-xl mb-4 font-bold hover:text-green/80 transition-all duration-300 ease-in-out font-Large">
+            <p className="text-lg lg:text-xl mb-4 font-bold hover:text-green/80 transition-all duration-300 ease-in-out font-WorkSans">
               Navigation
             </p>
             <ul className="space-y-2">
@@ -50,7 +50,7 @@ const Footer: React.FC = () => {
 
           {/* Books Section */}
           <div className="text-center sm:text-left">
-            <p className="text-lg lg:text-xl mb-4 font-bold hover:text-green/80 transition-all duration-300 ease-in-out font-Large">
+            <p className="text-lg lg:text-xl mb-4 font-bold hover:text-green/80 transition-all duration-300 ease-in-out font-WorkSans">
               Mes Livres
             </p>
             <ul className="space-y-2">
@@ -64,7 +64,7 @@ const Footer: React.FC = () => {
 
           {/* Contact Section */}
           <div className="text-center sm:text-left">
-            <p className="text-lg lg:text-xl mb-4 font-bold hover:text-green/80 transition-all duration-300 ease-in-out font-Large">
+            <p className="text-lg lg:text-xl mb-4 font-bold hover:text-green/80 transition-all duration-300 ease-in-out font-WorkSans">
               Contact
             </p>
             <div className="space-y-4">

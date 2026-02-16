@@ -1,13 +1,12 @@
-import { createFileRoute } from "@tanstack/react-router";
-import { useParams } from "@tanstack/react-router";
-import { useState } from "react";
-import { Helmet } from "react-helmet-async";
 import BookInfos from "@components/BookInfos/BookInfos";
 import CharacterPanel from "@components/CharacterPanel/CharacterPanel";
 import ColoredSection from "@components/ColoredSection";
-import Pagination from "@components/ui/Pagination/Pagination";
-import data from "../../data/data.json";
 import OtherBooks from "@components/OtherBooks/OtherBooks";
+import Pagination from "@components/ui/Pagination/Pagination";
+import { createFileRoute, useParams } from "@tanstack/react-router";
+import { useState } from "react";
+import { Helmet } from "react-helmet-async";
+import data from "../../data/data.json";
 
 const LivreComponents = () => {
   const { slug } = useParams({ from: "/livres/$slug" });
@@ -84,7 +83,7 @@ const LivreComponents = () => {
       </ColoredSection>
 
       <ColoredSection bgColor="bg-green">
-        <h2 className="font-Large text-3xl md:text-5xl text-white pb-4 text-center relative underline">
+        <h2 className="font-WorkSans text-3xl md:text-5xl text-white pb-4 text-center relative underline">
           Personnages
         </h2>
         <div className="space-y-8 w-full lg:w-10/12 m-auto px-4">

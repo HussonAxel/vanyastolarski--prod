@@ -1,7 +1,7 @@
-import { createFileRoute } from "@tanstack/react-router";
 import ColoredSection from "@components/ColoredSection";
 import SectionTitle from "@components/ui/SectionTitle/SectionTitle";
 import { Services } from "@data/Services";
+import { createFileRoute } from "@tanstack/react-router";
 
 export const Route = createFileRoute("/tarifs")({
   component: tarifsLayout,
@@ -42,7 +42,7 @@ function tarifsLayout() {
               className="border-b border-green/20 pb-8 last:border-b-0"
             >
               <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-                <h3 className="font-Large text-2xl md:text-3xl font-semibold text-green">
+                <h3 className="font-WorkSans text-2xl md:text-3xl font-semibold text-green">
                   {service.title}
                 </h3>
                 {service.price && (

@@ -1,8 +1,8 @@
+import ColoredSection from "@components/ColoredSection";
 import { useParams } from "@tanstack/react-router";
 import { motion } from "motion/react";
 import { Helmet } from "react-helmet-async";
 import { reviewsData } from "./Reviews";
-import ColoredSection from "@components/ColoredSection";
 
 const ReviewRating = ({
   rating,
@@ -28,7 +28,7 @@ const ReviewRating = ({
 
 const Section = ({ title, content }: { title: string; content: string }) => (
   <div className="mb-6 md:mb-8">
-    <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold font-Large text-green mb-4">
+    <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold font-WorkSans text-green mb-4">
       {title}
     </h3>
     <p className="text-base md:text-lg leading-relaxed">{content}</p>
@@ -51,7 +51,7 @@ const ReviewSection = ({
     className="space-y-4"
   >
     <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 sm:gap-0">
-      <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold font-Large">
+      <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold font-WorkSans">
         {title}
       </h3>
       <ReviewRating rating={rating} size="large" />
@@ -119,7 +119,7 @@ const ReviewPage = () => {
 
       <ColoredSection bgColor="bg-white">
         <div className="px-4 md:px-6 lg:px-8">
-          <div className="text-green font-Large text-center mb-12 md:mb-20 lg:mb-32">
+          <div className="text-green font-WorkSans text-center mb-12 md:mb-20 lg:mb-32">
             <h1 className="text-4xl md:text-5xl lg:text-7xl mb-2 md:mb-4 border-b border-green inline-block pb-2">
               {review.bookSaga}
             </h1>

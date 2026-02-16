@@ -1,5 +1,5 @@
-import { motion, AnimatePresence } from "motion/react";
-import { useState, useEffect } from "react";
+import { AnimatePresence, motion } from "motion/react";
+import { useEffect, useState } from "react";
 import YouTube from "react-youtube";
 
 interface ModalProps {
@@ -45,7 +45,7 @@ const Modal: React.FC<ModalProps> = ({ videoUrl }) => {
                 >
                   ✕
                 </button>
-                <h2 className="text-xl md:text-2xl lg:text-4xl text-green font-Large text-center mb-4 md:mb-8 mt-2">
+                <h2 className="text-xl md:text-2xl lg:text-4xl text-green font-WorkSans text-center mb-4 md:mb-8 mt-2">
                   LA CAMPAGNE POUR FOUS PAPILLONS EST EN LIGNE !
                 </h2>
                 <p className="text-black mb-4 text-sm md:text-base text-center px-2 md:px-4">

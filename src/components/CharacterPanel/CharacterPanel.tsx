@@ -13,7 +13,7 @@ const CharacterPanel = ({ name, resume, picture }: CharacterPanelProps) => {
       </div>
 
       <div className="flex flex-col justify-center space-y-3 sm:space-y-4">
-        <h3 className="font-Large text-2xl sm:text-2xl md:text-3xl text-white font-semibold tracking-tight">
+        <h3 className="font-WorkSans text-2xl sm:text-2xl md:text-3xl text-white font-semibold tracking-tight">
           {name}
         </h3>
         <p className="text-sm sm:text-base text-white font-WorkSans leading-relaxed max-w-prose">
