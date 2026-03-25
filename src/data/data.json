@@ -5,9 +5,9 @@
       "title": "Coeur de Renard",
       "slug": "coeur-de-renard",
       "volume": 1,
-      "cover": "/assets/covers/CdR_Cover.webp",
+      "cover": "/assets/covers/CdR_Cover.png",
       "covers": [
-        "/assets/covers/CdR_Cover.webp",
+        "/assets/covers/CdR_Cover.png",
         "/assets/covers/CdR_Cover_Broche.png"
       ],
       "coverDescriptions": [
